@@ -1,0 +1,63 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+# 【1†`Box`ing errors】
+
+A way to write simple code while preserving the original errors is to 【2†`Box`】 them. The drawback is that the underlying error type is only known at runtime and not 【3†statically determined】.
+The stdlib helps in boxing our errors by having `Box` implement conversion from any type that implements the `Error` trait into the trait object `Box<Error>`, via 【4†`From`】.
+
+    `use std::error;
+    use std::fmt;
+
+    // Change the alias to use `Box<dyn error::Error>`.
+    type Result<T> = std::result::Result<T, Box<dyn error::Error>>;
+
+    #[derive(Debug, Clone)]
+    struct EmptyVec;
+
+    impl fmt::Display for EmptyVec {
+        fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+            write!(f, "invalid first item to double")
+        }
+    }
+
+    impl error::Error for EmptyVec {}
+
+    fn double_first(vec: Vec<&str>) -> Result<i32> {
+        vec.first()
+            .ok_or_else(|| EmptyVec.into()) // Converts to Box using Into trait.
+            .and_then(|s| {
+                s.parse::<i32>()
+                    .map_err(From::from) // Converts to Box using From::from fn pointer.
+                    .map(|i| 2 * i)
+            })
+    }
+    fn print(result: Result<i32>) {
+        match result {
+            Ok(n) => println!("The first doubled is {}", n),
+            Err(e) => println!("Error: {}", e),
+        }
+    }
+
+    fn main() {
+        let numbers = vec!["42", "93", "18"];
+        let empty = vec![];
+        let strings = vec!["tofu", "93", "18"];
+
+        print(double_first(numbers));
+        print(double_first(empty));
+        print(double_first(strings));
+    }`
+### 【5†See also:】
+
+【3†Dynamic dispatch】 and 【6†`Error` trait】

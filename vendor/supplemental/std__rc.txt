@@ -1,0 +1,615 @@
+【0†Skip to main content】
+
+## 【1†Rc】
+
+## 【2†std】1.99.1
+
+(58cf8f9c3 2026-10-13)
+
+## 【1†Rc】
+### 【3†Associated Functions】
+  * 【4†new】
+  * 【5†new_cyclic】
+  * 【6†new_uninit】
+  * 【7†new_zeroed】
+  * 【8†try_new】
+  * 【9†try_new_uninit】
+  * 【10†try_new_zeroed】
+  * 【11†pin】
+  * 【12†map】
+  * 【13†try_map】
+  * 【14†new_in】
+  * 【15†new_uninit_in】
+  * 【16†new_zeroed_in】
+  * 【17†new_cyclic_in】
+  * 【18†try_new_in】
+  * 【19†try_new_uninit_in】
+  * 【20†try_new_zeroed_in】
+  * 【21†pin_in】
+  * 【22†try_unwrap】
+  * 【23†into_inner】
+  * 【24†new_uninit_slice】
+  * 【25†new_zeroed_slice】
+  * 【26†new_uninit_slice_in】
+  * 【27†new_zeroed_slice_in】
+  * 【28†clone_from_ref】
+  * 【29†try_clone_from_ref】
+  * 【30†clone_from_ref_in】
+  * 【31†try_clone_from_ref_in】
+  * 【32†from_raw】
+  * 【33†into_raw】
+  * 【34†increment_strong_count】
+  * 【35†decrement_strong_count】
+  * 【36†allocator】
+  * 【37†into_raw_with_allocator】
+  * 【38†as_ptr】
+  * 【39†from_raw_in】
+  * 【40†downgrade】
+  * 【41†weak_count】
+  * 【42†strong_count】
+  * 【43†increment_strong_count_in】
+  * 【44†decrement_strong_count_in】
+  * 【45†get_mut】
+  * 【46†get_mut_unchecked】
+  * 【47†ptr_eq】
+  * 【48†make_mut】
+  * 【49†unwrap_or_clone】
+### 【3†Methods】
+
+  * 【50†assume_init】
+  * 【51†assume_init】
+  * 【52†downcast】
+  * 【53†downcast_unchecked】
+  * 【54†into_array】
+### 【55†Trait Implementations】
+  * 【56†!Send】
+  * 【57†!Sync】
+  * 【58†Allocator】
+  * 【59†AllocatorClone】
+  * 【60†AsFd】
+  * 【61†AsHandle】
+  * 【62†AsRawFd】
+  * 【63†AsRef<T>】
+  * 【64†AsSocket】
+  * 【65†Borrow<T>】
+  * 【66†Clone】
+  * 【67†CloneFromCell】
+  * 【68†CoerceUnsized<Rc<U, A>>】
+  * 【69†Debug】
+  * 【70†Default】
+  * 【71†Default】
+  * 【72†Default】
+  * 【73†Default】
+  * 【74†Default】
+  * 【75†Deref】
+  * 【76†DerefPure】
+  * 【77†DispatchFromDyn<Rc<U>>】
+  * 【78†Display】
+  * 【79†Drop】
+  * 【80†Eq】
+  * 【81†From<&CStr>】
+  * 【82†From<&OsStr>】
+  * 【83†From<&Path>】
+  * 【84†From<&[T]>】
+  * 【85†From<&mut CStr>】
+  * 【86†From<&mut OsStr>】
+  * 【87†From<&mut Path>】
+  * 【88†From<&mut [T]>】
+  * 【89†From<&mut str>】
+  * 【90†From<&str>】
+  * 【91†From<Box<T, A>>】
+  * 【92†From<CString>】
+  * 【93†From<Cow<'a, B>>】
+  * 【94†From<OsString>】
+  * 【95†From<PathBuf>】
+  * 【96†From<Rc<ByteStr>>】
+  * 【97†From<Rc<W>>】
+  * 【98†From<Rc<W>>】
+  * 【99†From<Rc<[u8]>>】
+  * 【100†From<Rc<str>>】
+  * 【101†From<String>】
+  * 【102†From<T>】
+  * 【103†From<Vec<T, A>>】
+  * 【104†From<[T; N]>】
+  * 【105†FromIterator<T>】
+  * 【106†Hash】
+  * 【107†Ord】
+  * 【108†PartialEq】
+  * 【109†PartialOrd】
+  * 【110†PinSafePointer】
+  * 【111†Pointer】
+  * 【112†RefUnwindSafe】
+  * 【113†Share】
+  * 【114†TryFrom<Rc<[T], A>>】
+  * 【115†Unpin】
+  * 【116†UnwindSafe】
+  * 【117†UseCloned】
+### 【118†Auto Trait Implementations】
+
+  * 【119†Freeze】
+  * 【120†UnsafeUnpin】
+
+### 【121†Blanket Implementations】
+
+  * 【122†Any】
+  * 【123†Borrow<T>】
+  * 【124†BorrowMut<T>】
+  * 【125†CloneToUninit】
+  * 【126†From<!>】
+  * 【127†From<T>】
+  * 【128†Into<U>】
+  * 【129†Receiver】
+  * 【130†ToOwned】
+  * 【131†ToString】
+  * 【132†TryFrom<U>】
+  * 【133†TryInto<U>】
+
+## 【134†In std::rc】
+# Struct Rc [Button: Copy item path]
+
+1.0.0 · 【135†Source】
+
+    `pub struct Rc<T, A = 【136†Global】>
+
+    where
+        A: 【137†Allocator】,
+        T: ?【138†Sized】,
+
+    { /* private fields */ }`
+
+Expand description
+
+A single-threaded reference-counting pointer. ‘Rc’ stands for ‘Reference Counted’.
+
+See the 【134†module-level documentation】 for more details.
+The inherent methods of `Rc` are all associated functions, which means that you have to call them as e.g., 【45†`Rc::get_mut(&mut value)`】 instead of `value.get_mut()`. This avoids conflicts with methods of the inner type `T`.
+## Implementations【3†§】
+
+【139†Source】【140†§】
+
+### impl<T> 【141†Rc】<T>
+
+1.0.0 · 【142†Source】
+
+#### pub fn 【4†new】(value: T) -> 【141†Rc】<T>
+
+Constructs a new `Rc<T>`.
+
+##### 【143†§】Examples
+
+    `use std::rc::Rc;
+
+    let five = Rc::new(5);`
+
+1.60.0 · 【144†Source】
+#### pub fn 【5†new_cyclic】<F>(data_fn: F) -> 【141†Rc】<T>
+
+where F: 【145†FnOnce】(&【146†Weak】<T>) -> T,
+
+Constructs a new `Rc<T>` while giving you a `Weak<T>` to the allocation, to allow you to construct a `T` which holds a weak pointer to itself.
+Generally, a structure circularly referencing itself, either directly or indirectly, should not hold a strong reference to itself to prevent a memory leak. Using this function, you get access to the weak pointer during the initialization of `T`, before the `Rc<T>` is created, such that you can clone and store it inside the `T`.
+`new_cyclic` first allocates the managed allocation for the `Rc<T>`, then calls your closure, giving it a `Weak<T>` to this allocation, and only afterwards completes the construction of the `Rc<T>` by placing the `T` returned from your closure into the allocation.
+
+Since the new `Rc<T>` is not fully-constructed until `Rc<T>::new_cyclic` returns, calling 【147†`upgrade`】 on the weak reference inside your closure will fail and result in a `None` value.
+##### 【148†§】Panics
+
+If `data_fn` panics, the panic is propagated to the caller, and the temporary 【146†`Weak<T>`】 is dropped normally.
+##### 【149†§】Examples
+
+    `use std::rc::{Rc, Weak};
+
+    struct Gadget {
+        me: Weak<Gadget>,
+    }
+
+    impl Gadget {
+        /// Constructs a reference counted Gadget.
+        fn new() -> Rc<Self> {
+            // `me` is a `Weak<Gadget>` pointing at the new allocation of the
+            // `Rc` we're constructing.
+            Rc::new_cyclic(|me| {
+                // Create the actual struct here.
+                Gadget { me: me.clone() }
+            })
+        }
+        /// Returns a reference counted pointer to Self.
+        fn me(&self) -> Rc<Self> {
+            self.me.upgrade().unwrap()
+        }
+    }`
+1.82.0 · 【150†Source】
+#### pub fn 【6†new_uninit】() -> 【141†Rc】<【151†MaybeUninit】<T>>
+
+Constructs a new `Rc` with uninitialized contents.
+
+##### 【152†§】Examples
+
+    `use std::rc::Rc;
+
+    let mut five = Rc::<u32>::new_uninit();
+
+    // Deferred initialization:
+    Rc::get_mut(&mut five).unwrap().write(5);
+
+    let five = unsafe { five.assume_init() };
+
+    assert_eq!(*five, 5)`
+
+1.92.0 · 【153†Source】
+#### pub fn 【7†new_zeroed】() -> 【141†Rc】<【151†MaybeUninit】<T>>
+
+Constructs a new `Rc` with uninitialized contents, with the memory being filled with `0` bytes.
+
+See 【154†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+
+##### 【155†§】Examples
+
+    `use std::rc::Rc;
+
+    let zero = Rc::<u32>::new_zeroed();
+    let zero = unsafe { zero.assume_init() };
+
+    assert_eq!(*zero, 0)`
+
+【156†Source】
+#### pub fn 【8†try_new】(value: T) -> 【157†Result】<【141†Rc】<T>, 【158†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Rc<T>`, returning an error if the allocation fails
+
+##### 【160†§】Examples
+
+    `#![feature(allocator_api)]
+    use std::rc::Rc;
+
+    let five = Rc::try_new(5);`
+
+【161†Source】
+#### pub fn 【9†try_new_uninit】() -> 【157†Result】<【141†Rc】<【151†MaybeUninit】<T>>, 【158†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Rc` with uninitialized contents, returning an error if the allocation fails
+##### 【162†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::rc::Rc;
+
+    let mut five = Rc::<u32>::try_new_uninit()?;
+
+    // Deferred initialization:
+    Rc::get_mut(&mut five).unwrap().write(5);
+
+    let five = unsafe { five.assume_init() };
+
+    assert_eq!(*five, 5);`
+
+【163†Source】
+#### pub fn 【10†try_new_zeroed】() -> 【157†Result】<【141†Rc】<【151†MaybeUninit】<T>>, 【158†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Rc` with uninitialized contents, with the memory being filled with `0` bytes, returning an error if the allocation fails
+
+See 【154†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+##### 【164†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::rc::Rc;
+
+    let zero = Rc::<u32>::try_new_zeroed()?;
+    let zero = unsafe { zero.assume_init() };
+
+    assert_eq!(*zero, 0);`
+
+1.33.0 · 【165†Source】
+
+#### pub fn 【11†pin】(value: T) -> 【166†Pin】<【141†Rc】<T>>
+
+Constructs a new `Pin<Rc<T>>`. If `T` does not implement `Unpin`, then `value` will be pinned in memory and unable to be moved.
+
+【167†Source】
+#### pub fn 【12†map】<U>(this: 【141†Rc】<T>, f: impl 【145†FnOnce】(【168†&T】) -> U) -> 【141†Rc】<U>
+
+🔬This is a nightly-only experimental API. (`smart_pointer_try_map` 【169†#144419†github.com】)
+
+Maps the value in an `Rc`, reusing the allocation if possible.
+
+`f` is called on a reference to the value in the `Rc`, and the result is returned, also in an `Rc`.
+Note: this is an associated function, which means that you have to call it as `Rc::map(r, f)` instead of `r.map(f)`. This is so that there is no conflict with a method on the inner type.
+##### 【170†§】Examples
+
+    `#![feature(smart_pointer_try_map)]
+
+    use std::rc::Rc;
+
+    let r = Rc::new(7);
+    let new = Rc::map(r, |i| i + 7);
+    assert_eq!(*new, 14);`
+
+【171†Source】
+#### pub fn 【13†try_map】<R>( this: 【141†Rc】<T>, f: impl 【145†FnOnce】(【168†&T】) -> R, ) -> <<R as 【172†Try】>::【173†Residual】 as 【174†Residual】<【141†Rc】<<R as 【172†Try】>::【175†Output】>>>::【176†TryType】
+
+where R: 【172†Try】, <R as 【172†Try】>::【173†Residual】: 【174†Residual】<【141†Rc】<<R as 【172†Try】>::【175†Output】>>,
+
+🔬This is a nightly-only experimental API. (`smart_pointer_try_map` 【169†#144419†github.com】)
+
+Attempts to map the value in an `Rc`, reusing the allocation if possible.
+`f` is called on a reference to the value in the `Rc`, and if the operation succeeds, the result is returned, also in an `Rc`.
+
+Note: this is an associated function, which means that you have to call it as `Rc::try_map(r, f)` instead of `r.try_map(f)`. This is so that there is no conflict with a method on the inner type.
+##### 【177†§】Examples
+
+    `#![feature(smart_pointer_try_map)]
+
+    use std::rc::Rc;
+
+    let b = Rc::new(7);
+    let new = Rc::try_map(b, |&i| u32::try_from(i)).unwrap();
+    assert_eq!(*new, 7);`
+
+【178†Source】【179†§】
+
+### impl<T, A> 【141†Rc】<T, A>
+
+where A: 【137†Allocator】,
+
+【180†Source】
+
+#### pub fn 【14†new_in】(value: T, alloc: A) -> 【141†Rc】<T, A>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Rc` in the provided allocator.
+##### 【181†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::rc::Rc;
+    use std::alloc::System;
+
+    let five = Rc::new_in(5, System);`
+
+【182†Source】
+
+#### pub fn 【15†new_uninit_in】(alloc: A) -> 【141†Rc】<【151†MaybeUninit】<T>, A>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Rc` with uninitialized contents in the provided allocator.
+##### 【183†§】Examples
+
+    `#![feature(get_mut_unchecked)]
+    #![feature(allocator_api)]
+
+    use std::rc::Rc;
+    use std::alloc::System;
+
+    let mut five = Rc::<u32, _>::new_uninit_in(System);
+
+    let five = unsafe {
+        // Deferred initialization:
+        Rc::get_mut_unchecked(&mut five).as_mut_ptr().write(5);
+
+        five.assume_init()
+    };
+
+    assert_eq!(*five, 5)`
+
+【184†Source】
+#### pub fn 【16†new_zeroed_in】(alloc: A) -> 【141†Rc】<【151†MaybeUninit】<T>, A>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Rc` with uninitialized contents, with the memory being filled with `0` bytes, in the provided allocator.
+
+See 【154†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+##### 【185†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::rc::Rc;
+    use std::alloc::System;
+
+    let zero = Rc::<u32, _>::new_zeroed_in(System);
+    let zero = unsafe { zero.assume_init() };
+
+    assert_eq!(*zero, 0)`
+
+【186†Source】
+#### pub fn 【17†new_cyclic_in】<F>(data_fn: F, alloc: A) -> 【141†Rc】<T, A>
+
+where F: 【145†FnOnce】(&【146†Weak】<T, A>) -> T,
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Rc<T, A>` in the given allocator while giving you a `Weak<T, A>` to the allocation, to allow you to construct a `T` which holds a weak pointer to itself.
+Generally, a structure circularly referencing itself, either directly or indirectly, should not hold a strong reference to itself to prevent a memory leak. Using this function, you get access to the weak pointer during the initialization of `T`, before the `Rc<T, A>` is created, such that you can clone and store it inside the `T`.
+`new_cyclic_in` first allocates the managed allocation for the `Rc<T, A>`, then calls your closure, giving it a `Weak<T, A>` to this allocation, and only afterwards completes the construction of the `Rc<T, A>` by placing the `T` returned from your closure into the allocation.
+
+Since the new `Rc<T, A>` is not fully-constructed until `Rc<T, A>::new_cyclic_in` returns, calling 【147†`upgrade`】 on the weak reference inside your closure will fail and result in a `None` value.
+##### 【187†§】Panics
+
+If `data_fn` panics, the panic is propagated to the caller, and the temporary 【146†`Weak<T, A>`】 is dropped normally.
+
+##### 【188†§】Examples
+
+See 【5†`new_cyclic`】.
+
+【189†Source】
+
+#### pub fn 【18†try_new_in】(value: T, alloc: A) -> 【157†Result】<【141†Rc】<T, A>, 【158†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Rc<T>` in the provided allocator, returning an error if the allocation fails
+##### 【190†§】Examples
+
+    `#![feature(allocator_api)]
+    use std::rc::Rc;
+    use std::alloc::System;
+
+    let five = Rc::try_new_in(5, System);`
+
+【191†Source】
+
+#### pub fn 【19†try_new_uninit_in】(alloc: A) -> 【157†Result】<【141†Rc】<【151†MaybeUninit】<T>, A>, 【158†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Rc` with uninitialized contents, in the provided allocator, returning an error if the allocation fails
+##### 【192†§】Examples
+
+    `#![feature(allocator_api)]
+    #![feature(get_mut_unchecked)]
+
+    use std::rc::Rc;
+    use std::alloc::System;
+
+    let mut five = Rc::<u32, _>::try_new_uninit_in(System)?;
+
+    let five = unsafe {
+        // Deferred initialization:
+        Rc::get_mut_unchecked(&mut five).as_mut_ptr().write(5);
+
+        five.assume_init()
+    };
+
+    assert_eq!(*five, 5);`
+
+【193†Source】
+#### pub fn 【20†try_new_zeroed_in】(alloc: A) -> 【157†Result】<【141†Rc】<【151†MaybeUninit】<T>, A>, 【158†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Rc` with uninitialized contents, with the memory being filled with `0` bytes, in the provided allocator, returning an error if the allocation fails
+
+See 【154†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+##### 【194†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::rc::Rc;
+    use std::alloc::System;
+
+    let zero = Rc::<u32, _>::try_new_zeroed_in(System)?;
+    let zero = unsafe { zero.assume_init() };
+
+    assert_eq!(*zero, 0);`
+
+【195†Source】
+#### pub fn 【21†pin_in】(value: T, alloc: A) -> 【166†Pin】<【141†Rc】<T, A>>
+
+where A: 'static,
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new `Pin<Rc<T>>` in the provided allocator. If `T` does not implement `Unpin`, then `value` will be pinned in memory and unable to be moved.
+
+1.4.0 · 【196†Source】
+#### pub fn 【22†try_unwrap】(this: 【141†Rc】<T, A>) -> 【157†Result】<T, 【141†Rc】<T, A>>
+
+Returns the inner value, if the `Rc` has exactly one strong reference.
+
+Otherwise, an 【197†`Err`】 is returned with the same `Rc` that was passed in.
+
+This will succeed even if there are outstanding weak references.
+##### 【198†§】Examples
+
+    `use std::rc::Rc;
+
+    let x = Rc::new(3);
+    assert_eq!(Rc::try_unwrap(x), Ok(3));
+
+    let x = Rc::new(4);
+    let _y = Rc::clone(&x);
+    assert_eq!(*Rc::try_unwrap(x).unwrap_err(), 4);`
+
+1.70.0 · 【199†Source】
+#### pub fn 【23†into_inner】(this: 【141†Rc】<T, A>) -> 【200†Option】<T>
+
+Returns the inner value, if the `Rc` has exactly one strong reference.
+
+Otherwise, 【201†`None`】 is returned and the `Rc` is dropped.
+
+This will succeed even if there are outstanding weak references.
+
+If `Rc::into_inner` is called on every clone of this `Rc`, it is guaranteed that exactly one of the calls returns the inner value. This means in particular that the inner value is not dropped.
+【22†`Rc::try_unwrap`】 is conceptually similar to `Rc::into_inner`. And while they are meant for different use-cases, `Rc::into_inner(this)` is in fact equivalent to `【22†Rc::try_unwrap】(this).【202†ok】()`. (Note that the same kind of equivalence does not hold true for 【203†`Arc`】, due to race conditions that do not apply to `Rc`!)
+##### 【204†§】Examples
+
+    `use std::rc::Rc;
+
+    let x = Rc::new(3);
+    assert_eq!(Rc::into_inner(x), Some(3));
+
+    let x = Rc::new(4);
+    let y = Rc::clone(&x);
+
+    assert_eq!(Rc::into_inner(y), None);
+    assert_eq!(Rc::into_inner(x), Some(4));`
+
+【205†Source】【206†§】
+
+### impl<T> 【141†Rc】<【207†[T]】>
+
+1.82.0 · 【208†Source】
+
+#### pub fn 【24†new_uninit_slice】(len: 【209†usize】) -> 【141†Rc】<[【151†MaybeUninit】<T>]>
+
+Constructs a new reference-counted slice with uninitialized contents.
+##### 【210†§】Examples
+
+    `use std::rc::Rc;
+
+    let mut values = Rc::<[u32]>::new_uninit_slice(3);
+
+    // Deferred initialization:
+    let data = Rc::get_mut(&mut values).unwrap();
+    data[0].write(1);
+    data[1].write(2);
+    data[2].write(3);
+
+    let values = unsafe { values.assume_init() };
+
+    assert_eq!(*values, [1, 2, 3])`
+
+1.92.0 · 【211†Source】
+#### pub fn 【25†new_zeroed_slice】(len: 【209†usize】) -> 【141†Rc】<[【151†MaybeUninit】<T>]>
+
+Constructs a new reference-counted slice with uninitialized contents, with the memory being filled with `0` bytes.
+
+See 【154†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+##### 【212†§】Examples
+
+    `use std::rc::Rc;
+
+    let values = Rc::<[u32]>::new_zeroed_slice(3);
+    let values = unsafe { values.assume_init() };
+
+    assert_eq!(*values, [0, 0, 0])`
+
+【213†Source】【214†§】
+
+### impl<T, A> 【141†Rc】<【207†[T]】, A>
+
+where A: 【137†Allocator】,
+
+【215†Source】
+#### pub fn 【26†new_uninit_slice_in】(len: 【209†usize】, alloc: A) -> 【141†Rc】<[【151†MaybeUninit】<T>], A>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【159†#32838†github.com】)
+
+Constructs a new reference-counted slice with uninitialized contents.
+##### 【216†§】Examples
+
+    `#![feature(get_mut_unchecked)]
+    #![feature(allocator_api)]
+
+    use std::rc::Rc;
+    use std::alloc::System;
+
+    let mut values = Rc::<[u32], _>::new_uninit_slice_in(3, System);

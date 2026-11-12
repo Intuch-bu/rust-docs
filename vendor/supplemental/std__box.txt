@@ -1,0 +1,656 @@
+【0†Skip to main content】
+
+## 【1†Box】
+
+## 【2†std】1.99.1
+
+(58cf8f9c3 2026-10-13)
+
+## 【1†Box】
+### 【3†Associated Functions】
+  * 【4†new】
+  * 【5†new_uninit】
+  * 【6†new_zeroed】
+  * 【7†pin】
+  * 【8†try_new】
+  * 【9†try_new_uninit】
+  * 【10†try_new_zeroed】
+  * 【11†map】
+  * 【12†try_map】
+  * 【13†new_in】
+  * 【14†try_new_in】
+  * 【15†new_uninit_in】
+  * 【16†try_new_uninit_in】
+  * 【17†new_zeroed_in】
+  * 【18†try_new_zeroed_in】
+  * 【19†pin_in】
+  * 【20†into_boxed_slice】
+  * 【21†into_inner】
+  * 【22†take】
+  * 【23†clone_from_ref】
+  * 【24†try_clone_from_ref】
+  * 【25†clone_from_ref_in】
+  * 【26†try_clone_from_ref_in】
+  * 【27†new_uninit_slice】
+  * 【28†new_zeroed_slice】
+  * 【29†try_new_uninit_slice】
+  * 【30†try_new_zeroed_slice】
+  * 【31†new_uninit_slice_in】
+  * 【32†new_zeroed_slice_in】
+  * 【33†try_new_uninit_slice_in】
+  * 【34†try_new_zeroed_slice_in】
+  * 【35†write】
+  * 【36†from_raw】
+  * 【37†from_non_null】
+  * 【38†into_raw】
+  * 【39†into_non_null】
+  * 【40†from_raw_in】
+  * 【41†from_non_null_in】
+  * 【42†into_raw_with_allocator】
+  * 【43†into_non_null_with_allocator】
+  * 【44†as_mut_ptr】
+  * 【45†as_ptr】
+  * 【46†as_non_null】
+  * 【47†allocator】
+  * 【48†leak】
+  * 【49†into_pin】
+### 【3†Methods】
+
+  * 【50†assume_init】
+  * 【51†assume_init】
+  * 【52†downcast】
+  * 【53†downcast】
+  * 【54†downcast】
+  * 【55†downcast_unchecked】
+  * 【56†downcast_unchecked】
+  * 【57†downcast_unchecked】
+  * 【58†into_array】
+### 【59†Trait Implementations】
+  * 【60†!Iterator】
+  * 【61†!Iterator】
+  * 【62†!Iterator】
+  * 【63†!Iterator】
+  * 【64†!Iterator】
+  * 【65†!Iterator】
+  * 【66†Allocator】
+  * 【67†AsFd】
+  * 【68†AsHandle】
+  * 【69†AsMut<T>】
+  * 【70†AsRawFd】
+  * 【71†AsRef<T>】
+  * 【72†AsSocket】
+  * 【73†AsyncFn<Args>】
+  * 【74†AsyncFnMut<Args>】
+  * 【75†AsyncFnOnce<Args>】
+  * 【76†AsyncIterator】
+  * 【77†Borrow<T>】
+  * 【78†BorrowMut<T>】
+  * 【79†BufRead】
+  * 【80†Clone】
+  * 【81†Clone】
+  * 【82†Clone】
+  * 【83†Clone】
+  * 【84†Clone】
+  * 【85†Clone】
+  * 【86†Clone】
+  * 【87†CoerceUnsized<Box<U, A>>】
+  * 【88†Coroutine<R>】
+  * 【89†Coroutine<R>】
+  * 【90†Debug】
+  * 【91†Default】
+  * 【92†Default】
+  * 【93†Default】
+  * 【94†Default】
+  * 【95†Default】
+  * 【96†Default】
+  * 【97†Deref】
+  * 【98†DerefMut】
+  * 【99†DerefPure】
+  * 【100†DispatchFromDyn<Box<U>>】
+  * 【101†Display】
+  * 【102†DoubleEndedIterator】
+  * 【103†Drop】
+  * 【104†Eq】
+  * 【105†Error】
+  * 【106†ExactSizeIterator】
+  * 【107†Extend<Box<str, A>>】
+  * 【108†Fn<Args>】
+  * 【109†FnMut<Args>】
+  * 【110†FnOnce<Args>】
+  * 【111†From<&CStr>】
+  * 【112†From<&OsStr>】
+  * 【113†From<&Path>】
+  * 【114†From<&[T]>】
+  * 【115†From<&mut CStr>】
+  * 【116†From<&mut OsStr>】
+  * 【117†From<&mut Path>】
+  * 【118†From<&mut [T]>】
+  * 【119†From<&mut str>】
+  * 【120†From<&str>】
+  * 【121†From<&str>】
+  * 【122†From<&str>】
+  * 【123†From<Box<ByteStr>>】
+  * 【124†From<Box<CStr>>】
+  * 【125†From<Box<OsStr>>】
+  * 【126†From<Box<Path>>】
+  * 【127†From<Box<T, A>>】
+  * 【128†From<Box<T, A>>】
+  * 【129†From<Box<T, A>>】
+  * 【130†From<Box<[T], A>>】
+  * 【131†From<Box<[u8]>>】
+  * 【132†From<Box<str, A>>】
+  * 【133†From<Box<str>>】
+  * 【134†From<CString>】
+  * 【135†From<Cow<'_, CStr>>】
+  * 【136†From<Cow<'_, OsStr>>】
+  * 【137†From<Cow<'_, Path>>】
+  * 【138†From<Cow<'_, [T]>>】
+  * 【139†From<Cow<'_, str>>】
+  * 【140†From<Cow<'b, str>>】
+  * 【141†From<Cow<'b, str>>】
+  * 【142†From<E>】
+  * 【143†From<E>】
+  * 【144†From<OsString>】
+  * 【145†From<PathBuf>】
+  * 【146†From<String>】
+  * 【147†From<String>】
+  * 【148†From<String>】
+  * 【149†From<T>】
+  * 【150†From<Vec<T, A>>】
+  * 【151†From<[T; N]>】
+  * 【152†FromIterator<&'a char>】
+  * 【153†FromIterator<&'a str>】
+  * 【154†FromIterator<Box<str, A>>】
+  * 【155†FromIterator<Box<str, A>>】
+  * 【156†FromIterator<Cow<'a, str>>】
+  * 【157†FromIterator<I>】
+  * 【158†FromIterator<String>】
+  * 【159†FromIterator<char>】
+  * 【160†FusedIterator】
+  * 【161†Future】
+  * 【162†Hash】
+  * 【163†Hasher】
+  * 【164†IntoIterator】
+  * 【165†IntoIterator】
+  * 【166†IntoIterator】
+  * 【167†IntoIterator】
+  * 【168†IntoIterator】
+  * 【169†IntoIterator】
+  * 【170†Iterator】
+  * 【171†Ord】
+  * 【172†PartialEq】
+  * 【173†PartialOrd】
+  * 【174†PinSafePointer】
+  * 【175†Pointer】
+  * 【176†Read】
+  * 【177†Seek】
+  * 【178†TryFrom<Box<[T]>>】
+  * 【179†TryFrom<Vec<T>>】
+  * 【180†Unpin】
+  * 【181†Write】
+### 【182†Auto Trait Implementations】
+
+  * 【183†Freeze】
+  * 【184†RefUnwindSafe】
+  * 【185†Send】
+  * 【186†Sync】
+  * 【187†UnsafeUnpin】
+  * 【188†UnwindSafe】
+
+### 【189†Blanket Implementations】
+
+  * 【190†Any】
+  * 【191†Borrow<T>】
+  * 【192†BorrowMut<T>】
+  * 【193†CloneToUninit】
+  * 【194†From<!>】
+  * 【195†From<T>】
+  * 【196†Into<U>】
+  * 【197†IntoAsyncIterator】
+  * 【198†IntoFuture】
+  * 【199†IntoIterator】
+  * 【200†Pattern】
+  * 【201†Receiver】
+  * 【202†ToOwned】
+  * 【203†ToString】
+  * 【204†TryFrom<U>】
+  * 【205†TryInto<U>】
+## 【206†In std::boxed】
+
+# Struct Box [Button: Copy item path]
+
+1.0.0 · 【207†Source】
+
+    `pub struct Box<T, A = 【208†Global】>(/* private fields */)
+    where
+        A: 【209†Allocator】,
+        T: ?【210†Sized】;`
+
+Expand description
+
+A pointer type that uniquely owns a heap allocation of type `T`.
+
+See the 【206†module-level documentation】 for more.
+
+## Implementations【3†§】
+
+【211†Source】【212†§】
+
+### impl<A> 【213†Box】<dyn 【214†Any】, A>
+
+where A: 【209†Allocator】,
+
+1.0.0 · 【215†Source】
+#### pub fn 【52†downcast】<T>(self) -> 【216†Result】<【213†Box】<T, A>, 【213†Box】<dyn 【214†Any】, A>>
+
+where T: 【214†Any】,
+
+Attempts to downcast the box to a concrete type.
+##### 【217†§】Examples
+
+    `use std::any::Any;
+
+    fn print_if_string(value: Box<dyn Any>) {
+        if let Ok(string) = value.downcast::<String>() {
+            println!("String ({}): {}", string.len(), string);
+        }
+    }
+
+    let my_string = "Hello World".to_string();
+    print_if_string(Box::new(my_string));
+    print_if_string(Box::new(0i8));`
+
+【218†Source】
+#### pub unsafe fn 【55†downcast_unchecked】<T>(self) -> 【213†Box】<T, A>
+
+where T: 【214†Any】,
+
+🔬This is a nightly-only experimental API. (`downcast_unchecked` 【219†#90850†github.com】)
+
+Downcasts the box to a concrete type.
+
+For a safe alternative see 【52†`downcast`】.
+
+##### 【220†§】Examples
+
+    `#![feature(downcast_unchecked)]
+
+    use std::any::Any;
+
+    let x: Box<dyn Any> = Box::new(1_usize);
+
+    unsafe {
+        assert_eq!(*x.downcast_unchecked::<usize>(), 1);
+    }`
+##### 【221†§】Safety
+
+The contained value must be of type `T`. Calling this method with the incorrect type is undefined behavior.
+
+【222†Source】【223†§】
+
+### impl<A> 【213†Box】<dyn 【214†Any】 + 【224†Send】, A>
+
+where A: 【209†Allocator】,
+
+1.0.0 · 【225†Source】
+
+#### pub fn 【53†downcast】<T>(self) -> 【216†Result】<【213†Box】<T, A>, 【213†Box】<dyn 【214†Any】 + 【224†Send】, A>>
+
+where T: 【214†Any】,
+
+Attempts to downcast the box to a concrete type.
+##### 【226†§】Examples
+
+    `use std::any::Any;
+
+    fn print_if_string(value: Box<dyn Any + Send>) {
+        if let Ok(string) = value.downcast::<String>() {
+            println!("String ({}): {}", string.len(), string);
+        }
+    }
+
+    let my_string = "Hello World".to_string();
+    print_if_string(Box::new(my_string));
+    print_if_string(Box::new(0i8));`
+
+【227†Source】
+#### pub unsafe fn 【56†downcast_unchecked】<T>(self) -> 【213†Box】<T, A>
+
+where T: 【214†Any】,
+
+🔬This is a nightly-only experimental API. (`downcast_unchecked` 【219†#90850†github.com】)
+
+Downcasts the box to a concrete type.
+
+For a safe alternative see 【52†`downcast`】.
+
+##### 【228†§】Examples
+
+    `#![feature(downcast_unchecked)]
+
+    use std::any::Any;
+
+    let x: Box<dyn Any + Send> = Box::new(1_usize);
+
+    unsafe {
+        assert_eq!(*x.downcast_unchecked::<usize>(), 1);
+    }`
+##### 【229†§】Safety
+
+The contained value must be of type `T`. Calling this method with the incorrect type is undefined behavior.
+
+【230†Source】【231†§】
+
+### impl<A> 【213†Box】<dyn 【214†Any】 + 【224†Send】 + 【232†Sync】, A>
+
+where A: 【209†Allocator】,
+
+1.51.0 · 【233†Source】
+
+#### pub fn 【54†downcast】<T>(self) -> 【216†Result】<【213†Box】<T, A>, 【213†Box】<dyn 【214†Any】 + 【224†Send】 + 【232†Sync】, A>>
+
+where T: 【214†Any】,
+
+Attempts to downcast the box to a concrete type.
+##### 【234†§】Examples
+
+    `use std::any::Any;
+
+    fn print_if_string(value: Box<dyn Any + Send + Sync>) {
+        if let Ok(string) = value.downcast::<String>() {
+            println!("String ({}): {}", string.len(), string);
+        }
+    }
+
+    let my_string = "Hello World".to_string();
+    print_if_string(Box::new(my_string));
+    print_if_string(Box::new(0i8));`
+
+【235†Source】
+#### pub unsafe fn 【57†downcast_unchecked】<T>(self) -> 【213†Box】<T, A>
+
+where T: 【214†Any】,
+
+🔬This is a nightly-only experimental API. (`downcast_unchecked` 【219†#90850†github.com】)
+
+Downcasts the box to a concrete type.
+
+For a safe alternative see 【52†`downcast`】.
+
+##### 【236†§】Examples
+
+    `#![feature(downcast_unchecked)]
+
+    use std::any::Any;
+
+    let x: Box<dyn Any + Send + Sync> = Box::new(1_usize);
+
+    unsafe {
+        assert_eq!(*x.downcast_unchecked::<usize>(), 1);
+    }`
+##### 【237†§】Safety
+
+The contained value must be of type `T`. Calling this method with the incorrect type is undefined behavior.
+
+【238†Source】【239†§】
+
+### impl<T> 【213†Box】<T>
+
+1.0.0 · 【240†Source】
+
+#### pub fn 【4†new】(x: T) -> 【213†Box】<T>
+
+Allocates memory on the heap and then places `x` into it.
+
+This doesn’t actually allocate if `T` is zero-sized.
+
+##### 【241†§】Examples
+
+    `let five = Box::new(5);`
+
+1.82.0 (const: 【242†unstable†github.com】) · 【243†Source】
+#### pub fn 【5†new_uninit】() -> 【213†Box】<【244†MaybeUninit】<T>>
+
+Constructs a new box with uninitialized contents.
+
+##### 【245†§】Examples
+
+    `let mut five = Box::<u32>::new_uninit();
+    // Deferred initialization:
+    five.write(5);
+    let five = unsafe { five.assume_init() };
+
+    assert_eq!(*five, 5)`
+
+1.92.0 · 【246†Source】
+#### pub fn 【6†new_zeroed】() -> 【213†Box】<【244†MaybeUninit】<T>>
+
+Constructs a new `Box` with uninitialized contents, with the memory being filled with `0` bytes.
+
+See 【247†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+
+##### 【248†§】Examples
+
+    `let zero = Box::<u32>::new_zeroed();
+    let zero = unsafe { zero.assume_init() };
+
+    assert_eq!(*zero, 0)`
+
+1.33.0 · 【249†Source】
+#### pub fn 【7†pin】(x: T) -> 【250†Pin】<【213†Box】<T>>
+
+Constructs a new `Pin<Box<T>>`. If `T` does not implement 【251†`Unpin`】, then `x` will be pinned in memory and unable to be moved.
+
+Constructing and pinning of the `Box` can also be done in two steps: `Box::pin(x)` does the same as `【49†Box::into_pin】(【4†Box::new】(x))`. Consider using 【49†`into_pin`】 if you already have a `Box<T>`, or if you want to construct a (pinned) `Box` in a different way than with 【4†`Box::new`】.
+
+【252†Source】
+#### pub fn 【8†try_new】(x: T) -> 【216†Result】<【213†Box】<T>, 【253†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【254†#32838†github.com】)
+
+Allocates memory on the heap then places `x` into it, returning an error if the allocation fails
+
+This doesn’t actually allocate if `T` is zero-sized.
+
+##### 【255†§】Examples
+
+    `#![feature(allocator_api)]
+
+    let five = Box::try_new(5)?;`
+
+【256†Source】
+#### pub fn 【9†try_new_uninit】() -> 【216†Result】<【213†Box】<【244†MaybeUninit】<T>>, 【253†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【254†#32838†github.com】)
+
+Constructs a new box with uninitialized contents on the heap, returning an error if the allocation fails
+##### 【257†§】Examples
+
+    `#![feature(allocator_api)]
+
+    let mut five = Box::<u32>::try_new_uninit()?;
+    // Deferred initialization:
+    five.write(5);
+    let five = unsafe { five.assume_init() };
+
+    assert_eq!(*five, 5);`
+
+【258†Source】
+#### pub fn 【10†try_new_zeroed】() -> 【216†Result】<【213†Box】<【244†MaybeUninit】<T>>, 【253†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【254†#32838†github.com】)
+
+Constructs a new `Box` with uninitialized contents, with the memory being filled with `0` bytes on the heap
+
+See 【247†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+##### 【259†§】Examples
+
+    `#![feature(allocator_api)]
+
+    let zero = Box::<u32>::try_new_zeroed()?;
+    let zero = unsafe { zero.assume_init() };
+
+    assert_eq!(*zero, 0);`
+
+【260†Source】
+#### pub fn 【11†map】<U>(this: 【213†Box】<T>, f: impl 【261†FnOnce】(T) -> U) -> 【213†Box】<U>
+
+🔬This is a nightly-only experimental API. (`smart_pointer_try_map` 【262†#144419†github.com】)
+
+Maps the value in a box, reusing the allocation if possible.
+
+`f` is called on the value in the box, and the result is returned, also boxed.
+Note: this is an associated function, which means that you have to call it as `Box::map(b, f)` instead of `b.map(f)`. This is so that there is no conflict with a method on the inner type.
+##### 【263†§】Examples
+
+    `#![feature(smart_pointer_try_map)]
+
+    let b = Box::new(7);
+    let new = Box::map(b, |i| i + 7);
+    assert_eq!(*new, 14);`
+
+【264†Source】
+#### pub fn 【12†try_map】<R>( this: 【213†Box】<T>, f: impl 【261†FnOnce】(T) -> R, ) -> <<R as 【265†Try】>::【266†Residual】 as 【267†Residual】<【213†Box】<<R as 【265†Try】>::【268†Output】>>>::【269†TryType】
+
+where R: 【265†Try】, <R as 【265†Try】>::【266†Residual】: 【267†Residual】<【213†Box】<<R as 【265†Try】>::【268†Output】>>,
+
+🔬This is a nightly-only experimental API. (`smart_pointer_try_map` 【262†#144419†github.com】)
+
+Attempts to map the value in a box, reusing the allocation if possible.
+`f` is called on the value in the box, and if the operation succeeds, the result is returned, also boxed.
+
+Note: this is an associated function, which means that you have to call it as `Box::try_map(b, f)` instead of `b.try_map(f)`. This is so that there is no conflict with a method on the inner type.
+##### 【270†§】Examples
+
+    `#![feature(smart_pointer_try_map)]
+
+    let b = Box::new(7);
+    let new = Box::try_map(b, u32::try_from).unwrap();
+    assert_eq!(*new, 7);`
+
+【271†Source】【272†§】
+
+### impl<T, A> 【213†Box】<T, A>
+
+where A: 【209†Allocator】,
+
+【273†Source】
+#### pub fn 【13†new_in】(x: T, alloc: A) -> 【213†Box】<T, A>
+
+where A: 【209†Allocator】,
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【254†#32838†github.com】)
+
+Allocates memory in the given allocator then places `x` into it.
+
+This doesn’t actually allocate if `T` is zero-sized.
+
+##### 【274†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::alloc::System;
+
+    let five = Box::new_in(5, System);`
+
+【275†Source】
+#### pub fn 【14†try_new_in】(x: T, alloc: A) -> 【216†Result】<【213†Box】<T, A>, 【253†AllocError】>
+
+where A: 【209†Allocator】,
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【254†#32838†github.com】)
+
+Allocates memory in the given allocator then places `x` into it, returning an error if the allocation fails
+
+This doesn’t actually allocate if `T` is zero-sized.
+##### 【276†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::alloc::System;
+
+    let five = Box::try_new_in(5, System)?;`
+
+【277†Source】
+
+#### pub fn 【15†new_uninit_in】(alloc: A) -> 【213†Box】<【244†MaybeUninit】<T>, A>
+
+where A: 【209†Allocator】,
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【254†#32838†github.com】)
+
+Constructs a new box with uninitialized contents in the provided allocator.
+##### 【278†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::alloc::System;
+
+    let mut five = Box::<u32, _>::new_uninit_in(System);
+    // Deferred initialization:
+    five.write(5);
+    let five = unsafe { five.assume_init() };
+
+    assert_eq!(*five, 5)`
+
+【279†Source】
+#### pub fn 【16†try_new_uninit_in】(alloc: A) -> 【216†Result】<【213†Box】<【244†MaybeUninit】<T>, A>, 【253†AllocError】>
+
+where A: 【209†Allocator】,
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【254†#32838†github.com】)
+
+Constructs a new box with uninitialized contents in the provided allocator, returning an error if the allocation fails
+##### 【280†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::alloc::System;
+
+    let mut five = Box::<u32, _>::try_new_uninit_in(System)?;
+    // Deferred initialization:
+    five.write(5);
+    let five = unsafe { five.assume_init() };
+
+    assert_eq!(*five, 5);`
+
+【281†Source】
+#### pub fn 【17†new_zeroed_in】(alloc: A) -> 【213†Box】<【244†MaybeUninit】<T>, A>
+
+where A: 【209†Allocator】,
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【254†#32838†github.com】)
+
+Constructs a new `Box` with uninitialized contents, with the memory being filled with `0` bytes in the provided allocator.
+
+See 【247†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+##### 【282†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::alloc::System;
+
+    let zero = Box::<u32, _>::new_zeroed_in(System);
+    let zero = unsafe { zero.assume_init() };
+
+    assert_eq!(*zero, 0)`
+
+【283†Source】
+#### pub fn 【18†try_new_zeroed_in】(alloc: A) -> 【216†Result】<【213†Box】<【244†MaybeUninit】<T>, A>, 【253†AllocError】>
+
+where A: 【209†Allocator】,
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【254†#32838†github.com】)
+
+Constructs a new `Box` with uninitialized contents, with the memory being filled with `0` bytes in the provided allocator, returning an error if the allocation fails,
+
+See 【247†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+##### 【284†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::alloc::System;
+
+    let zero = Box::<u32, _>::try_new_zeroed_in(System)?;
+    let zero = unsafe { zero.assume_init() };
+

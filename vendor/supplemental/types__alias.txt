@@ -1,0 +1,64 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# The Rust Reference
+
+【1†[items.type]】
+# 【2†Type aliases】
+
+【3†[items.type.syntax]】
+
+^{Syntax}
+【4†TypeAlias】 →
+    type 【5†IDENTIFIER】 【6†GenericParams】^{?} ( : 【7†Bounds】^{?} )^{?}
+        【8†WhereClause】^{?}
+        ( = 【9†Type】 【8†WhereClause】^{?} )^{?} ;
+
+[Button: Show Railroad]
+
+【10†[items.type.intro]】
+A type alias defines a new name for an existing 【11†type】 in the 【12†type namespace】 of the module or block where it is located. Type aliases are declared with the keyword `type`. Every value has a single, specific type, but may implement several different traits, and may be compatible with several different type constraints.
+For example, the following defines the type `Point` as a synonym for the type `(u8, u8)`, the type of pairs of unsigned 8 bit integers:
+
+    `#![allow(unused)]
+    fn main() {
+    type Point = (u8, u8);
+    let p: Point = (41, 68);
+    }`
+
+【13†[items.type.constructor-alias]】
+A type alias to a tuple-struct or unit-struct cannot be used to qualify that type’s constructor:
+
+    `#![allow(unused)]
+    fn main() {
+    struct MyStruct(u32);
+
+    use MyStruct as UseAlias;
+    type TypeAlias = MyStruct;
+
+    let _ = UseAlias(5); // OK
+    let _ = TypeAlias(5); // Doesn't work
+    }`
+
+【14†[items.type.associated-type]】
+
+A type alias, when not used as an 【15†associated type】, must include a 【9†Type】 and may not include 【7†Bounds】.
+
+【16†[items.type.associated-trait]】
+A type alias, when used as an 【15†associated type】 in a 【17†trait】, must not include a 【9†Type】 specification but may include 【7†Bounds】.
+
+【18†[items.type.associated-impl]】
+
+A type alias, when used as an 【15†associated type】 in a 【19†trait impl】, must include a 【9†Type】 specification and may not include 【7†Bounds】.
+
+【20†[items.type.deprecated]】
+Where clauses before the equals sign on a type alias in a 【19†trait impl】 (like `type TypeAlias<T> where T: Foo = Bar<T>`) are deprecated. Where clauses after the equals sign (like `type TypeAlias<T> = Bar<T> where T: Foo`) are preferred.

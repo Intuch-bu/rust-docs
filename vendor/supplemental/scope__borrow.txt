@@ -1,0 +1,612 @@
+【0†Skip to main content】
+
+## 【1†str】
+
+## 【2†std】1.99.1
+
+(58cf8f9c3 2026-10-13)
+
+## 【1†str】
+
+### 【1†Sections】
+
+  * 【3†Basic Usage】
+  * 【4†Representation】
+  * 【5†Invariant】
+
+### 【6†Associated Functions】
+
+  * 【7†from_utf8】
+  * 【8†from_utf8_mut】
+  * 【9†from_utf8_unchecked】
+  * 【10†from_utf8_unchecked_mut】
+### 【6†Methods】
+  * 【11†as_ascii】
+  * 【12†as_ascii_unchecked】
+  * 【13†as_bytes】
+  * 【14†as_bytes_mut】
+  * 【15†as_mut_ptr】
+  * 【16†as_ptr】
+  * 【17†as_str】
+  * 【18†bytes】
+  * 【19†ceil_char_boundary】
+  * 【20†char_indices】
+  * 【21†chars】
+  * 【22†contains】
+  * 【23†copy_from_str】
+  * 【24†encode_utf16】
+  * 【25†ends_with】
+  * 【26†eq_ignore_ascii_case】
+  * 【27†eq_ignore_case_unnormalized】
+  * 【28†escape_debug】
+  * 【29†escape_default】
+  * 【30†escape_unicode】
+  * 【31†find】
+  * 【32†floor_char_boundary】
+  * 【33†get】
+  * 【34†get_mut】
+  * 【35†get_unchecked】
+  * 【36†get_unchecked_mut】
+  * 【37†into_boxed_bytes】
+  * 【38†into_string】
+  * 【39†is_ascii】
+  * 【40†is_char_boundary】
+  * 【41†is_empty】
+  * 【42†len】
+  * 【43†lines】
+  * 【44†lines_any】
+  * 【45†make_ascii_lowercase】
+  * 【46†make_ascii_uppercase】
+  * 【47†match_indices】
+  * 【48†matches】
+  * 【49†parse】
+  * 【50†repeat】
+  * 【51†replace】
+  * 【52†replacen】
+  * 【53†rfind】
+  * 【54†rmatch_indices】
+  * 【55†rmatches】
+  * 【56†rsplit】
+  * 【57†rsplit_once】
+  * 【58†rsplit_terminator】
+  * 【59†rsplitn】
+  * 【60†slice_mut_unchecked】
+  * 【61†slice_unchecked】
+  * 【62†split】
+  * 【63†split_ascii_whitespace】
+  * 【64†split_at】
+  * 【65†split_at_checked】
+  * 【66†split_at_mut】
+  * 【67†split_at_mut_checked】
+  * 【68†split_inclusive】
+  * 【69†split_once】
+  * 【70†split_terminator】
+  * 【71†split_whitespace】
+  * 【72†splitn】
+  * 【73†starts_with】
+  * 【74†strip_circumfix】
+  * 【75†strip_prefix】
+  * 【76†strip_suffix】
+  * 【77†substr_range】
+  * 【78†to_ascii_lowercase】
+  * 【79†to_ascii_uppercase】
+  * 【80†to_casefold_unnormalized】
+  * 【81†to_lowercase】
+  * 【82†to_uppercase】
+  * 【83†trim】
+  * 【84†trim_ascii】
+  * 【85†trim_ascii_end】
+  * 【86†trim_ascii_start】
+  * 【87†trim_end】
+  * 【88†trim_end_matches】
+  * 【89†trim_left】
+  * 【90†trim_left_matches】
+  * 【91†trim_matches】
+  * 【92†trim_prefix】
+  * 【93†trim_right】
+  * 【94†trim_right_matches】
+  * 【95†trim_start】
+  * 【96†trim_start_matches】
+  * 【97†trim_suffix】
+  * 【98†word_to_titlecase】
+### 【99†Trait Implementations】
+  * 【100†!Error】
+  * 【101†Add<&'a str>】
+  * 【102†Add<&str>】
+  * 【103†AddAssign<&'a str>】
+  * 【104†AddAssign<&str>】
+  * 【105†AsMut<str>】
+  * 【106†AsMut<str>】
+  * 【107†AsRef<ByteStr>】
+  * 【108†AsRef<OsStr>】
+  * 【109†AsRef<Path>】
+  * 【110†AsRef<[u8]>】
+  * 【111†AsRef<str>】
+  * 【112†AsRef<str>】
+  * 【113†AsRef<str>】
+  * 【114†AsciiExt】
+  * 【115†Borrow<str>】
+  * 【116†BorrowMut<str>】
+  * 【117†Clone】
+  * 【118†CloneToUninit】
+  * 【119†Concat<str>】
+  * 【120†ConstParamTy_】
+  * 【121†Debug】
+  * 【122†Default】
+  * 【123†Default】
+  * 【124†Default】
+  * 【125†Display】
+  * 【126†Eq】
+  * 【127†Extend<&'a str>】
+  * 【128†Extend<Box<str, A>>】
+  * 【129†From<&'a str>】
+  * 【130†From<&mut str>】
+  * 【131†From<&mut str>】
+  * 【132†From<&mut str>】
+  * 【133†From<&mut str>】
+  * 【134†From<&str>】
+  * 【135†From<&str>】
+  * 【136†From<&str>】
+  * 【137†From<&str>】
+  * 【138†From<&str>】
+  * 【139†From<&str>】
+  * 【140†From<&str>】
+  * 【141†From<Box<str, A>>】
+  * 【142†From<Box<str>>】
+  * 【143†From<Cow<'_, str>>】
+  * 【144†From<String>】
+  * 【145†FromIterator<&'a char>】
+  * 【146†FromIterator<&'a str>】
+  * 【147†FromIterator<&'a str>】
+  * 【148†FromIterator<&'a str>】
+  * 【149†FromIterator<&'b str>】
+  * 【150†FromIterator<Box<str, A>>】
+  * 【151†FromIterator<Box<str, A>>】
+  * 【152†FromIterator<Cow<'a, str>>】
+  * 【153†FromIterator<String>】
+  * 【154†FromIterator<char>】
+  * 【155†Hash】
+  * 【156†Index<I>】
+  * 【157†IndexMut<I>】
+  * 【158†Join<&str>】
+  * 【159†Ord】
+  * 【160†PartialEq】
+  * 【161†PartialEq<&str>】
+  * 【162†PartialEq<&str>】
+  * 【163†PartialEq<&str>】
+  * 【164†PartialEq<&str>】
+  * 【165†PartialEq<&str>】
+  * 【166†PartialEq<ByteStr>】
+  * 【167†PartialEq<ByteStr>】
+  * 【168†PartialEq<ByteString>】
+  * 【169†PartialEq<ByteString>】
+  * 【170†PartialEq<Cow<'_, str>>】
+  * 【171†PartialEq<Cow<'_, str>>】
+  * 【172†PartialEq<OsStr>】
+  * 【173†PartialEq<OsString>】
+  * 【174†PartialEq<OsString>】
+  * 【175†PartialEq<Path>】
+  * 【176†PartialEq<PathBuf>】
+  * 【177†PartialEq<String>】
+  * 【178†PartialEq<String>】
+  * 【179†PartialEq<str>】
+  * 【180†PartialEq<str>】
+  * 【181†PartialEq<str>】
+  * 【182†PartialEq<str>】
+  * 【183†PartialEq<str>】
+  * 【184†PartialEq<str>】
+  * 【185†PartialEq<str>】
+  * 【186†PartialEq<str>】
+  * 【187†PartialOrd】
+  * 【188†PartialOrd<str>】
+  * 【189†PartialOrd<str>】
+  * 【190†Pattern】
+  * 【191†SliceIndex<str>】
+  * 【192†SliceIndex<str>】
+  * 【193†SliceIndex<str>】
+  * 【194†SliceIndex<str>】
+  * 【195†SliceIndex<str>】
+  * 【196†SliceIndex<str>】
+  * 【197†SliceIndex<str>】
+  * 【198†SliceIndex<str>】
+  * 【199†SliceIndex<str>】
+  * 【200†SliceIndex<str>】
+  * 【201†SliceIndex<str>】
+  * 【202†StructuralPartialEq】
+  * 【203†ToOwned】
+  * 【204†ToSocketAddrs】
+  * 【205†TryFrom<&'a ByteStr>】
+  * 【206†TryFrom<&'a ByteString>】
+  * 【207†TryFrom<&'a OsStr>】
+  * 【208†TryFrom<&'a mut ByteStr>】
+### 【209†Auto Trait Implementations】
+
+  * 【210†!Sized】
+  * 【211†Freeze】
+  * 【212†RefUnwindSafe】
+  * 【213†Send】
+  * 【214†Sync】
+  * 【215†Unpin】
+  * 【216†UnsafeUnpin】
+  * 【217†UnwindSafe】
+
+### 【218†Blanket Implementations】
+
+  * 【219†Any】
+  * 【220†Borrow<T>】
+  * 【221†BorrowMut<T>】
+  * 【222†ToString】
+
+## 【2†In crate std】
+# Primitive Type str [Button: Copy item path]
+
+1.0.0
+
+Expand description
+
+String slices.
+
+【223†See also the `std::str` module】.
+
+The `str` type, also called a ‘string slice’, is the most primitive string type. It is usually seen in its borrowed form, `&str`. It is also the type of string literals, `&'static str`.
+## 【3†§】Basic Usage
+
+String literals are string slices:
+
+    `let hello_world = "Hello, World!";`
+
+Here we have declared a string slice initialized with a string literal. String literals have a static lifetime, which means the string `hello_world` is guaranteed to be valid for the duration of the entire program. We can explicitly specify `hello_world`’s lifetime as well:
+
+    `let hello_world: &'static str = "Hello, world!";`
+## 【4†§】Representation
+A `&str` is made up of two components: a pointer to some bytes, and a length. You can look at these with the 【16†`as_ptr`】 and 【42†`len`】 methods:
+
+    `use std::slice;
+    use std::str;
+
+    let story = "Once upon a time...";
+
+    let ptr = story.as_ptr();
+    let len = story.len();
+
+    // story has nineteen bytes
+    assert_eq!(19, len);
+
+    // We can re-build a str out of ptr and len. This is all unsafe because
+    // we are responsible for making sure the two components are valid:
+    let s = unsafe {
+        // First, we build a &[u8]...
+        let slice = slice::from_raw_parts(ptr, len);
+
+        // ... and then convert that slice into a string slice
+        str::from_utf8(slice)
+    };
+
+    assert_eq!(s, Ok(story));`
+Note: This example shows the internals of `&str`. `unsafe` should not be used to get a string slice under normal circumstances. Use `as_str` instead.
+## 【5†§】Invariant
+
+Rust libraries may assume that string slices are always valid UTF-8.
+
+Constructing a non-UTF-8 string slice is not immediate undefined behavior, but any function called on a string slice may assume that it is valid UTF-8, which means that a non-UTF-8 string slice can lead to undefined behavior down the road.
+
+## Implementations【6†§】
+
+【224†Source】【225†§】
+
+### impl 【226†str】
+
+1.0.0 (const: 1.39.0) · 【227†Source】
+#### pub const fn 【42†len】(&self) -> 【228†usize】
+
+Returns the length of `self`.
+
+This length is in bytes, not 【229†`char`】s or graphemes. In other words, it might not be what a human considers the length of the string.
+
+##### 【230†§】Examples
+
+    `let len = "foo".len();
+    assert_eq!(3, len);
+
+    assert_eq!("ƒoo".len(), 4); // fancy f!
+    assert_eq!("ƒoo".chars().count(), 3);`
+
+1.0.0 (const: 1.39.0) · 【231†Source】
+#### pub const fn 【41†is_empty】(&self) -> 【232†bool】
+
+Returns `true` if `self` has a length of zero bytes.
+
+##### 【233†§】Examples
+
+    `let s = "";
+    assert!(s.is_empty());
+
+    let s = "not empty";
+    assert!(!s.is_empty());`
+
+1.87.0 (const: 1.87.0) · 【234†Source】
+#### pub const fn 【7†from_utf8】(v: &[【235†u8】]) -> 【236†Result】<&【226†str】, 【237†Utf8Error】>
+
+Converts a slice of bytes to a string slice.
+
+A string slice (【226†`&str`】) is made of bytes (【235†`u8`】), and a byte slice (【238†`&[u8]`】) is made of bytes, so this function converts between the two. Not all byte slices are valid string slices, however: 【226†`&str`】 requires that it is valid UTF-8. `from_utf8()` checks to ensure that the bytes are valid UTF-8, and then does the conversion.
+If you are sure that the byte slice is valid UTF-8, and you don’t want to incur the overhead of the validity check, there is an unsafe version of this function, 【239†`from_utf8_unchecked`】, which has the same behavior but skips the check.
+
+If you need a `String` instead of a `&str`, consider 【240†`String::from_utf8`】.
+Because you can stack-allocate a `[u8; N]`, and you can take a 【238†`&[u8]`】 of it, this function is one way to have a stack-allocated string. There is an example of this in the examples section below.
+##### 【241†§】Errors
+
+Returns `Err` if the slice is not UTF-8 with a description as to why the provided slice is not UTF-8.
+##### 【242†§】Examples
+
+Basic usage:
+
+    `// some bytes, in a vector
+    let sparkle_heart = vec![240, 159, 146, 150];
+
+    // We can use the ? (try) operator to check if the bytes are valid
+    let sparkle_heart = str::from_utf8(&sparkle_heart)?;
+
+    assert_eq!("💖", sparkle_heart);`
+
+Incorrect bytes:
+
+    `// some invalid bytes, in a vector
+    let sparkle_heart = vec![0, 159, 146, 150];
+
+    assert!(str::from_utf8(&sparkle_heart).is_err());`
+See the docs for 【237†`Utf8Error`】 for more details on the kinds of errors that can be returned.
+
+A “stack allocated string”:
+
+    `// some bytes, in a stack-allocated array
+    let sparkle_heart = [240, 159, 146, 150];
+
+    // We know these bytes are valid, so just use `unwrap()`.
+    let sparkle_heart: &str = str::from_utf8(&sparkle_heart).unwrap();
+
+    assert_eq!("💖", sparkle_heart);`
+
+1.87.0 (const: 1.87.0) · 【243†Source】
+#### pub const fn 【8†from_utf8_mut】(v: &mut [【235†u8】]) -> 【236†Result】<&mut 【226†str】, 【237†Utf8Error】>
+
+Converts a mutable slice of bytes to a mutable string slice.
+##### 【244†§】Examples
+
+Basic usage:
+
+    `// "Hello, Rust!" as a mutable vector
+    let mut hellorust = vec![72, 101, 108, 108, 111, 44, 32, 82, 117, 115, 116, 33];
+
+    // As we know these bytes are valid, we can use `unwrap()`
+    let outstr = str::from_utf8_mut(&mut hellorust).unwrap();
+
+    assert_eq!("Hello, Rust!", outstr);`
+Incorrect bytes:
+
+    `// Some invalid bytes in a mutable vector
+    let mut invalid = vec![128, 223];
+
+    assert!(str::from_utf8_mut(&mut invalid).is_err());`
+
+See the docs for 【237†`Utf8Error`】 for more details on the kinds of errors that can be returned.
+
+1.87.0 (const: 1.87.0) · 【245†Source】
+#### pub const unsafe fn 【9†from_utf8_unchecked】(v: &[【235†u8】]) -> &【226†str】
+
+Converts a slice of bytes to a string slice without checking that the string contains valid UTF-8.
+
+See the safe version, 【246†`from_utf8`】, for more information.
+
+##### 【247†§】Safety
+
+The bytes passed in must be valid UTF-8.
+##### 【248†§】Examples
+
+Basic usage:
+
+    `// some bytes, in a vector
+    let sparkle_heart = vec![240, 159, 146, 150];
+
+    let sparkle_heart = unsafe {
+        str::from_utf8_unchecked(&sparkle_heart)
+    };
+
+    assert_eq!("💖", sparkle_heart);`
+
+1.87.0 (const: 1.87.0) · 【249†Source】
+#### pub const unsafe fn 【10†from_utf8_unchecked_mut】(v: &mut [【235†u8】]) -> &mut 【226†str】
+
+Converts a slice of bytes to a string slice without checking that the string contains valid UTF-8; mutable version.
+
+See the immutable version, 【239†`from_utf8_unchecked()`】 for documentation and safety requirements.
+##### 【250†§】Examples
+
+Basic usage:
+
+    `let mut heart = vec![240, 159, 146, 150];
+    let heart = unsafe { str::from_utf8_unchecked_mut(&mut heart) };
+
+    assert_eq!("💖", heart);`
+
+1.9.0 (const: 1.86.0) · 【251†Source】
+#### pub const fn 【40†is_char_boundary】(&self, index: 【228†usize】) -> 【232†bool】
+
+Checks that `index`-th byte is the first byte in a UTF-8 code point sequence or the end of the string.
+
+The start and end of the string (when `index == self.len()`) are considered to be boundaries.
+
+Returns `false` if `index` is greater than `self.len()`.
+##### 【252†§】Examples
+
+    `let s = "Löwe 老虎 Léopard";
+    assert!(s.is_char_boundary(0));
+    // start of `老`
+    assert!(s.is_char_boundary(6));
+    assert!(s.is_char_boundary(s.len()));
+
+    // second byte of `ö`
+    assert!(!s.is_char_boundary(2));
+
+    // third byte of `老`
+    assert!(!s.is_char_boundary(8));`
+
+1.91.0 (const: 1.91.0) · 【253†Source】
+#### pub const fn 【32†floor_char_boundary】(&self, index: 【228†usize】) -> 【228†usize】
+
+Finds the closest `x` not exceeding `index` where 【40†`is_char_boundary(x)`】 is `true`.
+This method can help you truncate a string so that it’s still valid UTF-8, but doesn’t exceed a given number of bytes. Note that this is done purely at the character level and can still visually split graphemes, even though the underlying characters aren’t split. For example, the emoji 🧑‍🔬 (scientist) could be split so that the string only includes 🧑 (person) instead.
+##### 【254†§】Examples
+
+    `let s = "❤️🧡💛💚💙💜";
+    assert_eq!(s.len(), 26);
+    assert!(!s.is_char_boundary(13));
+
+    let closest = s.floor_char_boundary(13);
+    assert_eq!(closest, 10);
+    assert_eq!(&s[..closest], "❤️🧡");`
+
+1.91.0 (const: 1.91.0) · 【255†Source】
+#### pub const fn 【19†ceil_char_boundary】(&self, index: 【228†usize】) -> 【228†usize】
+
+Finds the closest `x` not below `index` where 【40†`is_char_boundary(x)`】 is `true`.
+
+If `index` is greater than the length of the string, this returns the length of the string.
+
+This method is the natural complement to 【32†`floor_char_boundary`】. See that method for more details.
+##### 【256†§】Examples
+
+    `let s = "❤️🧡💛💚💙💜";
+    assert_eq!(s.len(), 26);
+    assert!(!s.is_char_boundary(13));
+
+    let closest = s.ceil_char_boundary(13);
+    assert_eq!(closest, 14);
+    assert_eq!(&s[..closest], "❤️🧡💛");`
+
+1.0.0 (const: 1.39.0) · 【257†Source】
+
+#### pub const fn 【13†as_bytes】(&self) -> &[【235†u8】] 【1†ⓘ】
+
+Converts a string slice to a byte slice. To convert the byte slice back into a string slice, use the 【246†`from_utf8`】 function.
+##### 【258†§】Examples
+
+    `let bytes = "bors".as_bytes();
+    assert_eq!(b"bors", bytes);`
+
+1.20.0 (const: 1.83.0) · 【259†Source】
+
+#### pub const unsafe fn 【14†as_bytes_mut】(&mut self) -> &mut [【235†u8】] 【1†ⓘ】
+
+Converts a mutable string slice to a mutable byte slice.
+
+##### 【260†§】Safety
+
+The caller must ensure that the content of the slice is valid UTF-8 before the borrow ends and the underlying `str` is used.
+
+Use of a `str` whose contents are not valid UTF-8 is undefined behavior.
+##### 【261†§】Examples
+
+Basic usage:
+
+    `let mut s = String::from("Hello");
+    let bytes = unsafe { s.as_bytes_mut() };
+
+    assert_eq!(b"Hello", bytes);`
+
+Mutability:
+
+    `let mut s = String::from("🗻∈🌏");
+
+    unsafe {
+        let bytes = s.as_bytes_mut();
+
+        bytes[0] = 0xF0;
+        bytes[1] = 0x9F;
+        bytes[2] = 0x8D;
+        bytes[3] = 0x94;
+    }
+
+    assert_eq!("🍔∈🌏", s);`
+
+1.0.0 (const: 1.32.0) · 【262†Source】
+#### pub const fn 【16†as_ptr】(&self) -> 【263†*const】 【235†u8】
+
+Converts a string slice to a raw pointer.
+
+As string slices are a slice of bytes, the raw pointer points to a 【235†`u8`】. This pointer will be pointing to the first byte of the string slice.
+
+The caller must ensure that the returned pointer is never written to. If you need to mutate the contents of the string slice, use 【15†`as_mut_ptr`】.
+##### 【264†§】Examples
+
+    `let s = "Hello";
+    let ptr = s.as_ptr();`
+
+1.36.0 (const: 1.83.0) · 【265†Source】
+#### pub const fn 【15†as_mut_ptr】(&mut self) -> 【263†*mut】 【235†u8】
+
+Converts a mutable string slice to a raw pointer.
+
+As string slices are a slice of bytes, the raw pointer points to a 【235†`u8`】. This pointer will be pointing to the first byte of the string slice.
+
+It is your responsibility to make sure that the string slice only gets modified in a way that it remains valid UTF-8.
+
+1.20.0 (const: 【266†unstable†github.com】) · 【267†Source】
+#### pub fn 【33†get】<I>(&self, i: I) -> 【268†Option】<&<I as 【269†SliceIndex】<【226†str】>>::【270†Output】>
+
+where I: 【269†SliceIndex】<【226†str】>,
+
+Returns a subslice of `str`.
+
+This is the non-panicking alternative to indexing the `str`. Returns 【271†`None`】 whenever equivalent indexing operation would panic.
+##### 【272†§】Examples
+
+    `let v = String::from("🗻∈🌏");
+
+    assert_eq!(Some("🗻"), v.get(0..4));
+
+    // indices not on UTF-8 sequence boundaries
+    assert!(v.get(1..).is_none());
+    assert!(v.get(..8).is_none());
+
+    // out of bounds
+    assert!(v.get(..42).is_none());`
+
+1.20.0 (const: 【266†unstable†github.com】) · 【273†Source】
+#### pub fn 【34†get_mut】<I>( &mut self, i: I, ) -> 【268†Option】<&mut <I as 【269†SliceIndex】<【226†str】>>::【270†Output】>
+
+where I: 【269†SliceIndex】<【226†str】>,
+
+Returns a mutable subslice of `str`.
+
+This is the non-panicking alternative to indexing the `str`. Returns 【271†`None`】 whenever equivalent indexing operation would panic.
+##### 【274†§】Examples
+
+    `let mut v = String::from("hello");
+    // correct length
+    assert!(v.get_mut(0..5).is_some());
+    // out of bounds
+    assert!(v.get_mut(..42).is_none());
+    assert_eq!(Some("he"), v.get_mut(0..2).map(|v| &*v));
+
+    assert_eq!("hello", v);
+    {
+        let s = v.get_mut(0..2);
+        let s = s.map(|s| {
+            s.make_ascii_uppercase();
+            &*s
+        });
+        assert_eq!(Some("HE"), s);
+    }
+    assert_eq!("HEllo", v);`
+
+1.20.0 · 【275†Source】
+#### pub unsafe fn 【35†get_unchecked】<I>(&self, i: I) -> &<I as 【269†SliceIndex】<【226†str】>>::【270†Output】
+
+where I: 【269†SliceIndex】<【226†str】>,
+
+Returns an unchecked subslice of `str`.
+
+This is the unchecked alternative to indexing the `str`.
+##### 【276†§】Safety
+

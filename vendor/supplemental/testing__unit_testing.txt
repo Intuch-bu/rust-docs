@@ -1,0 +1,232 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# The Rust Reference
+
+【1†[attributes.testing]】
+# 【2†Testing attributes】
+
+The following 【3†attributes】 are used for specifying functions for performing tests. Compiling a crate in “test” mode enables building the test functions along with a test harness for executing the tests. Enabling the test mode also enables the 【4†`test` conditional compilation option】.
+
+【5†[attributes.testing.test]】
+## 【6†The `test` attribute】
+
+【7†[attributes.testing.test.intro]】
+
+The `test` 【3†attribute】 marks a function to be executed as a test.
+
+> Example
+>
+>     `#![allow(unused)]
+>     fn main() {
+>     pub fn add(left: u64, right: u64) -> u64 { left + right }
+>     #[test]
+>     fn it_works() {
+>         let result = add(2, 2);
+>         assert_eq!(result, 4);
+>     }
+>     }`
+
+【8†[attributes.testing.test.syntax]】
+
+The `test` attribute uses the 【9†MetaWord】 syntax.
+【10†[attributes.testing.test.allowed-positions]】
+
+Tests
+
+The `test` attribute may only be applied to 【11†free functions】 that are monomorphic, that take no arguments, and where the return type implements the 【12†`Termination`】 trait.
+
+> Note
+>
+> Some of types that implement the 【12†`Termination`】 trait include:
+>
+>   * `()`
+>   * `Result<T, E> where T: Termination, E: Debug`
+
+【13†[attributes.testing.test.duplicates]】
+
+Only the first use of `test` on a function has effect.
+> Note
+>
+> `rustc` lints against any use following the first. This may become an error in the future.
+
+【14†[attributes.testing.test.stdlib]】
+
+The `test` attribute is exported from the standard library prelude as 【15†`std::prelude::v1::test`】.
+
+【16†[attributes.testing.test.enabled]】
+
+These functions are only compiled when in test mode.
+
+> Note
+>
+> The test mode is enabled by passing the `--test` argument to `rustc` or using `cargo test`.
+
+【17†[attributes.testing.test.success]】
+
+Tests
+The test harness calls the returned value’s 【18†`report`】 method, and classifies the test as passed or failed depending on whether the resulting 【19†`ExitCode`】 represents successful termination. In particular:
+  * Tests that return `()` pass as long as they terminate and do not panic.
+  * Tests that return a `Result<(), E>` pass as long as they return `Ok(())`.
+  * Tests that return `ExitCode::SUCCESS` pass, and tests that return `ExitCode::FAILURE` fail.
+  * Tests that do not terminate neither pass nor fail.
+> Example
+>
+>     `#![allow(unused)]
+>     fn main() {
+>     use std::io;
+>     fn setup_the_thing() -> io::Result<i32> { Ok(1) }
+>     fn do_the_thing(s: &i32) -> io::Result<()> { Ok(()) }
+>     #[test]
+>     fn test_the_thing() -> io::Result<()> {
+>         let state = setup_the_thing()?; // expected to succeed
+>         do_the_thing(&state)?;          // expected to succeed
+>         Ok(())
+>     }
+>     }`
+
+【20†[attributes.testing.ignore]】
+## 【21†The `ignore` attribute】
+
+【22†[attributes.testing.ignore.intro]】
+
+The `ignore` 【3†attribute】 can be used with the 【5†`test` attribute】 to tell the test harness to not execute that function as a test.
+
+> Example
+>
+>     `#![allow(unused)]
+>     fn main() {
+>     #[test]
+>     #[ignore]
+>     fn check_thing() {
+>         // …
+>     }
+>     }`
+
+> Note
+>
+> The `rustc` test harness supports the `--include-ignored` flag to force ignored tests to be run.
+
+【23†[attributes.testing.ignore.syntax]】
+The `ignore` attribute uses the 【9†MetaWord】 and 【24†MetaNameValueStr】 syntaxes.
+
+【25†[attributes.testing.ignore.reason]】
+
+The 【24†MetaNameValueStr】 form of the `ignore` attribute provides a way to specify a reason why the test is ignored.
+
+> Example
+>
+>     `#![allow(unused)]
+>     fn main() {
+>     #[test]
+>     #[ignore = "not yet implemented"]
+>     fn mytest() {
+>         // …
+>     }
+>     }`
+
+【26†[attributes.testing.ignore.allowed-positions]】
+The `ignore` attribute may only be applied to functions annotated with the `test` attribute.
+
+> Note
+>
+> `rustc` ignores use in other positions but lints against it. This may become an error in the future.
+
+【27†[attributes.testing.ignore.duplicates]】
+
+Only the first use of `ignore` on a function has effect.
+
+> Note
+>
+> `rustc` lints against any use following the first. This may become an error in the future.
+
+【28†[attributes.testing.ignore.behavior]】
+Ignored tests are still compiled when in test mode, but they are not executed.
+
+【29†[attributes.testing.should_panic]】
+## 【30†The `should_panic` attribute】
+
+【31†[attributes.testing.should_panic.intro]】
+
+The `should_panic` 【3†attribute】 causes a test to pass only if the 【5†test function】 to which the attribute is applied panics.
+
+> Example
+>
+>     `#![allow(unused)]
+>     fn main() {
+>     #[test]
+>     #[should_panic(expected = "values don't match")]
+>     fn mytest() {
+>         assert_eq!(1, 2, "values don't match");
+>     }
+>     }`
+
+【32†[attributes.testing.should_panic.syntax]】
+
+Tests
+The `should_panic` attribute has these forms:
+
+  * 【9†MetaWord】
+
+> Example
+>
+>     `#![allow(unused)]
+>     fn main() {
+>     #[test]
+>     #[should_panic]
+>     fn mytest() { panic!("error: some message, and more"); }
+>     }`
+
+  * 【24†MetaNameValueStr】 — The given string must appear within the panic message for the test to pass.
+> Example
+>
+>     `#![allow(unused)]
+>     fn main() {
+>     #[test]
+>     #[should_panic = "some message"]
+>     fn mytest() { panic!("error: some message, and more"); }
+>     }`
+
+  * 【33†MetaListNameValueStr】 — As with the 【24†MetaNameValueStr】 syntax, the given string must appear within the panic message.
+
+> Example
+>
+>     `#![allow(unused)]
+>     fn main() {
+>     #[test]
+>     #[should_panic(expected = "some message")]
+>     fn mytest() { panic!("error: some message, and more"); }
+>     }`
+【34†[attributes.testing.should_panic.allowed-positions]】
+
+The `should_panic` attribute may only be applied to functions annotated with the `test` attribute.
+
+> Note
+>
+> `rustc` ignores use in other positions but lints against it. This may become an error in the future.
+
+【35†[attributes.testing.should_panic.duplicates]】
+
+Only the first use of `should_panic` on a function has effect.
+> Note
+>
+> `rustc` lints against any use following the first with a future-compatibility warning. This may become an error in the future.
+
+【36†[attributes.testing.should_panic.expected]】
+
+Tests
+
+When the 【24†MetaNameValueStr】 form or the 【33†MetaListNameValueStr】 form with the `expected` key is used, the given string must appear somewhere within the panic message for the test to pass.
+
+【37†[attributes.testing.should_panic.return]】
+
+The return type of the test function must be `()`.

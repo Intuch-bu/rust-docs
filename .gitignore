@@ -1,0 +1,21 @@
+# Local tools and caches
+.DS_Store
+node_modules/
+.cache/
+coverage/
+target/
+*.log
+
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+.aws/
+
+# Local agent tooling
+.codex/
+.agents/skills/
+skills-lock.json
+
+# Keep dist/: the offline app runs directly from these files.
+# Keep vendor/: source snapshots and licenses are verification evidence.

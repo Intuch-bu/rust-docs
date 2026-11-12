@@ -1,0 +1,19 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+
+# 【1†Modules】
+
+Rust provides a powerful module system that can be used to hierarchically split code in logical units (modules), and manage visibility (public/private) between them.
+
+A module is a collection of items: functions, structs, traits, `impl` blocks, and even other modules.

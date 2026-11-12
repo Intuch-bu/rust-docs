@@ -1,0 +1,63 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+# 【1†Rust by Example】
+
+【2†Rust†www.rust-lang.org】 is a modern systems programming language focusing on safety, speed, and concurrency. It accomplishes these goals by being memory safe without using garbage collection.
+Rust by Example (RBE) is a collection of runnable examples that illustrate various Rust concepts and standard libraries. To get even more out of these examples, don’t forget to 【3†install Rust locally†www.rust-lang.org】 and check out the 【4†official docs】. Additionally for the curious, you can also 【5†check out the source code for this site†github.com】.
+
+Now let’s begin!
+
+  * 【6†Hello World】 - Start with a traditional Hello World program.
+  * 【7†Primitives】 - Learn about signed integers, unsigned integers and other primitives.
+
+  * 【8†Custom Types】 - `struct` and `enum`.
+
+  * 【9†Variable Bindings】 - mutable bindings, scope, shadowing.
+
+  * 【10†Types】 - Learn about changing and defining types.
+
+  * 【11†Conversion】 - Convert between different types, such as strings, integers, and floats.
+
+  * 【12†Expressions】 - Learn about Expressions & how to use them.
+
+  * 【13†Flow of Control】 - `if`/`else`, `for`, and others.
+  * 【14†Functions】 - Learn about Methods, Closures and Higher Order Functions.
+
+  * 【15†Modules】 - Organize code using modules
+
+  * 【16†Crates】 - A crate is a compilation unit in Rust. Learn to create a library.
+
+  * 【17†Cargo】 - Go through some basic features of the official Rust package management tool.
+
+  * 【18†Attributes】 - An attribute is metadata applied to some module, crate or item.
+
+  * 【19†Generics】 - Learn about writing a function or data type which can work for multiple types of arguments.
+  * 【20†Scoping rules】 - Scopes play an important part in ownership, borrowing, and lifetimes.
+
+  * 【21†Traits】 - A trait is a collection of methods defined for an unknown type: `Self`
+
+  * 【22†Macros】 - Macros are a way of writing code that writes other code, which is known as metaprogramming.
+
+  * 【23†Error handling】 - Learn Rust way of handling failures.
+
+  * 【24†Std library types】 - Learn about some custom types provided by `std` library.
+  * 【25†Std misc】 - More custom types for file handling, threads.
+
+  * 【26†Testing】 - All sorts of testing in Rust.
+
+  * 【27†Unsafe Operations】 - Learn about entering a block of unsafe operations.
+
+  * 【28†Compatibility】 - Handling Rust’s evolution and potential compatibility issues.
+
+  * 【29†Meta】 - Documentation, Benchmarking.

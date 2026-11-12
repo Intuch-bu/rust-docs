@@ -1,0 +1,27 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+
+# 【1†Destructuring】
+
+A `match` block can destructure items in a variety of ways.
+
+  * 【2†Destructuring Tuples】
+  * 【3†Destructuring Arrays and Slices】
+  * 【4†Destructuring Enums】
+  * 【5†Destructuring Pointers】
+  * 【6†Destructuring Structures】
+
+### 【7†See also:】
+
+【8†The Rust Reference for Destructuring】

@@ -1,0 +1,1198 @@
+{
+  "retrievedOn": "2026-11-12",
+  "sourceCommit": null,
+  "format": "Text extracted by web tool from cached official documentation; not a raw Git checkout. Cache ages can vary by page. Local hashes identify these saved extracts only, not upstream revisions.",
+  "summary": {
+    "url": "https://raw.githubusercontent.com/rust-lang/rust-by-example/master/src/SUMMARY.md",
+    "path": "vendor/rust-by-example/SUMMARY.md",
+    "sha256": "f8db0dcea819a08b29374edee2fb9c4a5dabb643756d518d0fd91a0efe644b4c"
+  },
+  "license": {
+    "url": "https://raw.githubusercontent.com/rust-lang/rust-by-example/master/LICENSE-MIT",
+    "path": "vendor/rust-by-example/LICENSE-MIT"
+  },
+  "pages": [
+    {
+      "id": "index",
+      "url": "https://doc.rust-lang.org/rust-by-example/index.html",
+      "path": "vendor/rust-by-example/extracted/index.txt",
+      "sha256": "f6f0c015df92fe8a4876899f11108ab11bba4054b046089eba1a44358ce406c5"
+    },
+    {
+      "id": "hello",
+      "url": "https://doc.rust-lang.org/rust-by-example/hello.html",
+      "path": "vendor/rust-by-example/extracted/hello.txt",
+      "sha256": "9d45f1760a4e9b2ce71e76312cf9613dcbbf8831ca40308aca8d80978392cdf2"
+    },
+    {
+      "id": "hello/comment",
+      "url": "https://doc.rust-lang.org/rust-by-example/hello/comment.html",
+      "path": "vendor/rust-by-example/extracted/hello/comment.txt",
+      "sha256": "ee7efb69be8a124725c797f52fde9ed59942e4b1924d0b4412f009e5dacb2d4e"
+    },
+    {
+      "id": "hello/print",
+      "url": "https://doc.rust-lang.org/rust-by-example/hello/print.html",
+      "path": "vendor/rust-by-example/extracted/hello/print.txt",
+      "sha256": "cf394deed459461822efb2b1b20ec34e251c2870f6947e6a0a56cc921d37b367"
+    },
+    {
+      "id": "hello/print/print_debug",
+      "url": "https://doc.rust-lang.org/rust-by-example/hello/print/print_debug.html",
+      "path": "vendor/rust-by-example/extracted/hello/print/print_debug.txt",
+      "sha256": "9726124a7587c119b5af9c4813175ebeaef562daa6a5cdc26b6510cf8d50cb17"
+    },
+    {
+      "id": "hello/print/print_display",
+      "url": "https://doc.rust-lang.org/rust-by-example/hello/print/print_display.html",
+      "path": "vendor/rust-by-example/extracted/hello/print/print_display.txt",
+      "sha256": "826297b89b8fb17629645975b0e1c701565ad4f60ff8eb95ade020f13a55e4a7"
+    },
+    {
+      "id": "hello/print/print_display/testcase_list",
+      "url": "https://doc.rust-lang.org/rust-by-example/hello/print/print_display/testcase_list.html",
+      "path": "vendor/rust-by-example/extracted/hello/print/print_display/testcase_list.txt",
+      "sha256": "7ff44264c91c75af46e3056b8add815578e996cfa403a6bc2c2dc4b1ec7d3f4a"
+    },
+    {
+      "id": "hello/print/fmt",
+      "url": "https://doc.rust-lang.org/rust-by-example/hello/print/fmt.html",
+      "path": "vendor/rust-by-example/extracted/hello/print/fmt.txt",
+      "sha256": "1d017b7bf47e46deb747e1753b2acbc816dc672bbe7c5a15ff9fcad1061f0367"
+    },
+    {
+      "id": "primitives",
+      "url": "https://doc.rust-lang.org/rust-by-example/primitives.html",
+      "path": "vendor/rust-by-example/extracted/primitives.txt",
+      "sha256": "17fe80635819ebf1e0476958a42b4b1d7f5baf8ec2a6d867ccd7b95ee2ad89be"
+    },
+    {
+      "id": "primitives/literals",
+      "url": "https://doc.rust-lang.org/rust-by-example/primitives/literals.html",
+      "path": "vendor/rust-by-example/extracted/primitives/literals.txt",
+      "sha256": "762976cb70afeb20c77e20950f317152b228af68d717ccaf0ac5bbe661738166"
+    },
+    {
+      "id": "primitives/tuples",
+      "url": "https://doc.rust-lang.org/rust-by-example/primitives/tuples.html",
+      "path": "vendor/rust-by-example/extracted/primitives/tuples.txt",
+      "sha256": "ae6794ba9b6bc1831a32c590a1b2e6ac64e97d3d6ee2f1370c48f56d67643f9c"
+    },
+    {
+      "id": "primitives/array",
+      "url": "https://doc.rust-lang.org/rust-by-example/primitives/array.html",
+      "path": "vendor/rust-by-example/extracted/primitives/array.txt",
+      "sha256": "93b0c38b66d699905601c6f516b866b07c9de834ece6fbec1125762826bcfa3c"
+    },
+    {
+      "id": "custom_types",
+      "url": "https://doc.rust-lang.org/rust-by-example/custom_types.html",
+      "path": "vendor/rust-by-example/extracted/custom_types.txt",
+      "sha256": "cf86e4532d4346b4cd8a6a0c2571b186afa3b1c53441d92b617e81d9dfbf4ead"
+    },
+    {
+      "id": "custom_types/structs",
+      "url": "https://doc.rust-lang.org/rust-by-example/custom_types/structs.html",
+      "path": "vendor/rust-by-example/extracted/custom_types/structs.txt",
+      "sha256": "ca97184e695d3d43a478d49e421ac8708bb5b2e55fb992158782aee9902b2637"
+    },
+    {
+      "id": "custom_types/enum",
+      "url": "https://doc.rust-lang.org/rust-by-example/custom_types/enum.html",
+      "path": "vendor/rust-by-example/extracted/custom_types/enum.txt",
+      "sha256": "374be36eddd3204e842203e58237d49d13ebcbce0ba1a1a7a25467ee9a300312"
+    },
+    {
+      "id": "custom_types/enum/enum_use",
+      "url": "https://doc.rust-lang.org/rust-by-example/custom_types/enum/enum_use.html",
+      "path": "vendor/rust-by-example/extracted/custom_types/enum/enum_use.txt",
+      "sha256": "4aecce331e1f46d796485a59a296fcd4e3563afe2e627cdb82f86887b62d18ec"
+    },
+    {
+      "id": "custom_types/enum/c_like",
+      "url": "https://doc.rust-lang.org/rust-by-example/custom_types/enum/c_like.html",
+      "path": "vendor/rust-by-example/extracted/custom_types/enum/c_like.txt",
+      "sha256": "bd8783ed3ed76a0e9409001761c014ea93b8a38de3d6e2b19a6fb92b393fc10d"
+    },
+    {
+      "id": "custom_types/enum/testcase_linked_list",
+      "url": "https://doc.rust-lang.org/rust-by-example/custom_types/enum/testcase_linked_list.html",
+      "path": "vendor/rust-by-example/extracted/custom_types/enum/testcase_linked_list.txt",
+      "sha256": "dbe27e575644b3cf85f56df717ac56b87bf770df670b1f9fb07011be5aae05d0"
+    },
+    {
+      "id": "custom_types/constants",
+      "url": "https://doc.rust-lang.org/rust-by-example/custom_types/constants.html",
+      "path": "vendor/rust-by-example/extracted/custom_types/constants.txt",
+      "sha256": "e14e9fbaeb1bd50dcba43f87f4e5c29b544e879015d34082d4f84aa128017157"
+    },
+    {
+      "id": "variable_bindings",
+      "url": "https://doc.rust-lang.org/rust-by-example/variable_bindings.html",
+      "path": "vendor/rust-by-example/extracted/variable_bindings.txt",
+      "sha256": "98c6969c67625ea2f194476d424beb25dde95fb8888869901747fd8acea84550"
+    },
+    {
+      "id": "variable_bindings/mut",
+      "url": "https://doc.rust-lang.org/rust-by-example/variable_bindings/mut.html",
+      "path": "vendor/rust-by-example/extracted/variable_bindings/mut.txt",
+      "sha256": "8256a215cc5b95d7dd5b4f5ce7c3bf9ec35305aafd55342f4e6d7b6051df9520"
+    },
+    {
+      "id": "variable_bindings/scope",
+      "url": "https://doc.rust-lang.org/rust-by-example/variable_bindings/scope.html",
+      "path": "vendor/rust-by-example/extracted/variable_bindings/scope.txt",
+      "sha256": "fe1fde414e058a4064a03772cc613ef92980e2d50f1f53b5d5a2b447ab440670"
+    },
+    {
+      "id": "variable_bindings/declare",
+      "url": "https://doc.rust-lang.org/rust-by-example/variable_bindings/declare.html",
+      "path": "vendor/rust-by-example/extracted/variable_bindings/declare.txt",
+      "sha256": "19fbca0af10087013aba58c4a52455ef817706952045be54dba5d76268ef8715"
+    },
+    {
+      "id": "variable_bindings/freeze",
+      "url": "https://doc.rust-lang.org/rust-by-example/variable_bindings/freeze.html",
+      "path": "vendor/rust-by-example/extracted/variable_bindings/freeze.txt",
+      "sha256": "914618c34d1b5c413f4ff05067c59ce7a155772c38084488b503e3ed8c542807"
+    },
+    {
+      "id": "types",
+      "url": "https://doc.rust-lang.org/rust-by-example/types.html",
+      "path": "vendor/rust-by-example/extracted/types.txt",
+      "sha256": "34a8ce72024e0aac381c8de63bd755bbbc8329fd6d274a6aff910744a292a92c"
+    },
+    {
+      "id": "types/cast",
+      "url": "https://doc.rust-lang.org/rust-by-example/types/cast.html",
+      "path": "vendor/rust-by-example/extracted/types/cast.txt",
+      "sha256": "35bd80c7506060e0d83c21fe344640be13915e6766fb9ec4810e4899c289ae22"
+    },
+    {
+      "id": "types/literals",
+      "url": "https://doc.rust-lang.org/rust-by-example/types/literals.html",
+      "path": "vendor/rust-by-example/extracted/types/literals.txt",
+      "sha256": "1b2848449e7512b9248a7b938793c2bf197b58d24d8434837e0af3025af69260"
+    },
+    {
+      "id": "types/inference",
+      "url": "https://doc.rust-lang.org/rust-by-example/types/inference.html",
+      "path": "vendor/rust-by-example/extracted/types/inference.txt",
+      "sha256": "28ab5358c653c4bdbc40d8c7dfe462b3d04c385569bf92b7580479f27c002ab9"
+    },
+    {
+      "id": "types/alias",
+      "url": "https://doc.rust-lang.org/rust-by-example/types/alias.html",
+      "path": "vendor/rust-by-example/extracted/types/alias.txt",
+      "sha256": "4ebd3929efc3f402a5ff578c65ca7ef673d3cc55275d1d05df4582264911edd7"
+    },
+    {
+      "id": "conversion",
+      "url": "https://doc.rust-lang.org/rust-by-example/conversion.html",
+      "path": "vendor/rust-by-example/extracted/conversion.txt",
+      "sha256": "b4b52ebb7292bee401d3f31ec927a6b1a45906ecdeecdb1f814dcc7177f339f1"
+    },
+    {
+      "id": "conversion/from_into",
+      "url": "https://doc.rust-lang.org/rust-by-example/conversion/from_into.html",
+      "path": "vendor/rust-by-example/extracted/conversion/from_into.txt",
+      "sha256": "9dd32d46ee395e4aa642f71056fa760bfd87d4e0b39ba7831ae5191c900fb421"
+    },
+    {
+      "id": "conversion/try_from_try_into",
+      "url": "https://doc.rust-lang.org/rust-by-example/conversion/try_from_try_into.html",
+      "path": "vendor/rust-by-example/extracted/conversion/try_from_try_into.txt",
+      "sha256": "5aa421d6054ca296e46fa062a6c8543bdf69a24fb78a9c6021bedb03c954aba5"
+    },
+    {
+      "id": "conversion/string",
+      "url": "https://doc.rust-lang.org/rust-by-example/conversion/string.html",
+      "path": "vendor/rust-by-example/extracted/conversion/string.txt",
+      "sha256": "b4b1b0248a3d906dbfe308252c74985a07d1868ad695c838513d072dace0baa3"
+    },
+    {
+      "id": "expression",
+      "url": "https://doc.rust-lang.org/rust-by-example/expression.html",
+      "path": "vendor/rust-by-example/extracted/expression.txt",
+      "sha256": "d67724939f901b2331c17f24f70714b1c637f979444df27a6638861faca6e0a4"
+    },
+    {
+      "id": "flow_control",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control.html",
+      "path": "vendor/rust-by-example/extracted/flow_control.txt",
+      "sha256": "e005e09412036fb6d576912038f8d553840dc31351d291b098e4454c33d35d83"
+    },
+    {
+      "id": "flow_control/if_else",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/if_else.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/if_else.txt",
+      "sha256": "399b78726f8f804d0f9ea3fe33e17b45b4f9c837e107684d2c314a39589468e2"
+    },
+    {
+      "id": "flow_control/loop",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/loop.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/loop.txt",
+      "sha256": "eaeaefbc90001ddfd0678039ed904e891eceae500a5b131f9210c9dbfae35157"
+    },
+    {
+      "id": "flow_control/loop/nested",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/loop/nested.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/loop/nested.txt",
+      "sha256": "23b9066f56a2cf83336572002162e40c999cd724a2b6241a78f11f1836ff9d63"
+    },
+    {
+      "id": "flow_control/loop/return",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/loop/return.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/loop/return.txt",
+      "sha256": "cf368d24d6dce70128ac37f434b8d4010870e82ad45f817f43bf36cde3b88fc0"
+    },
+    {
+      "id": "flow_control/while",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/while.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/while.txt",
+      "sha256": "100b086c0909861918bfe79cc58ad47a243285418d03dabf48d1106249c0296a"
+    },
+    {
+      "id": "flow_control/for",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/for.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/for.txt",
+      "sha256": "8b40bca5835c38eed1d7b6ce822da85eaecb1d6c89064388044d02b07d246935"
+    },
+    {
+      "id": "flow_control/match",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/match.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/match.txt",
+      "sha256": "a7c1e914c52c090413cb945447797f1c892d29475f6f69780e0706c2d924166f"
+    },
+    {
+      "id": "flow_control/match/destructuring",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/match/destructuring.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/match/destructuring.txt",
+      "sha256": "8ec35ca5ec9e8572c03aefd1182b8cf6da0aa8fef35fc16c719cd24a129d7fb0"
+    },
+    {
+      "id": "flow_control/match/destructuring/destructure_tuple",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/match/destructuring/destructure_tuple.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/match/destructuring/destructure_tuple.txt",
+      "sha256": "1d402ec0b53dbe41dcad1ad5b1c476de5f0fe4281a739a819980fd0307a76036"
+    },
+    {
+      "id": "flow_control/match/destructuring/destructure_slice",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/match/destructuring/destructure_slice.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/match/destructuring/destructure_slice.txt",
+      "sha256": "e61ffe15769eb958a48561dcf247b6976be7035331969b41c974d150e2af7275"
+    },
+    {
+      "id": "flow_control/match/destructuring/destructure_enum",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/match/destructuring/destructure_enum.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/match/destructuring/destructure_enum.txt",
+      "sha256": "f5f27a7a2e13094a0b7257ee0c10918ddb503b408a83bc150d65f61959648d04"
+    },
+    {
+      "id": "flow_control/match/destructuring/destructure_pointers",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/match/destructuring/destructure_pointers.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/match/destructuring/destructure_pointers.txt",
+      "sha256": "3836c82ae46fb7143e2358ca67a9744df814b6aa692ac8446f85dea84a584768"
+    },
+    {
+      "id": "flow_control/match/destructuring/destructure_structures",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/match/destructuring/destructure_structures.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/match/destructuring/destructure_structures.txt",
+      "sha256": "0b7fe08c1d4e6855c802762b494cba6d09bdee7796b5f6e5ba4a14424577e569"
+    },
+    {
+      "id": "flow_control/match/guard",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/match/guard.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/match/guard.txt",
+      "sha256": "e59626f7068ee7cbb46c81d63a88c92180997e376846b9a76357c6f87554befa"
+    },
+    {
+      "id": "flow_control/match/binding",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/match/binding.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/match/binding.txt",
+      "sha256": "4ce014680af5c6b4eeee97bc0a2885e80402137c6276a4583fbc195f7dfed94a"
+    },
+    {
+      "id": "flow_control/if_let",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/if_let.txt",
+      "sha256": "45a3045fadecc3282d7e6a8a57ec475107a9cfdc0fb2108470d92fdef355f16e"
+    },
+    {
+      "id": "flow_control/let_else",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/let_else.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/let_else.txt",
+      "sha256": "ac97f7d47cec8d7b10d9bacd53e32f25c486dc50f4811d695a661fce35fd7252"
+    },
+    {
+      "id": "flow_control/while_let",
+      "url": "https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html",
+      "path": "vendor/rust-by-example/extracted/flow_control/while_let.txt",
+      "sha256": "5ae7dfdefd50325b9af61371bf85b84cb62c250ba47da1a43ec3f136a9bf6af6"
+    },
+    {
+      "id": "fn",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn.html",
+      "path": "vendor/rust-by-example/extracted/fn.txt",
+      "sha256": "08a28e51ec11d3926531b699200fd4fe9f6d3acfdb97a2b0dbf49d8a70e87f3b"
+    },
+    {
+      "id": "fn/methods",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/methods.html",
+      "path": "vendor/rust-by-example/extracted/fn/methods.txt",
+      "sha256": "5e77bedeefc1a572bdb16231a73d638747b6014757920b842673d88aada928e6"
+    },
+    {
+      "id": "fn/closures",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/closures.html",
+      "path": "vendor/rust-by-example/extracted/fn/closures.txt",
+      "sha256": "906e3055165e0dbf891cf69865dd16676aa2d5bdf396a697a92a5327e2fefe8c"
+    },
+    {
+      "id": "fn/closures/capture",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/closures/capture.html",
+      "path": "vendor/rust-by-example/extracted/fn/closures/capture.txt",
+      "sha256": "8743b3f8433568c858551e0d67c82a0e717d0f2b96e6eb9055997f01f3fd90c9"
+    },
+    {
+      "id": "fn/closures/input_parameters",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/closures/input_parameters.html",
+      "path": "vendor/rust-by-example/extracted/fn/closures/input_parameters.txt",
+      "sha256": "3874bd7ed3631c2c3c454a9a809dcdb599164fab2597628dd2db396d1d2767a4"
+    },
+    {
+      "id": "fn/closures/anonymity",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/closures/anonymity.html",
+      "path": "vendor/rust-by-example/extracted/fn/closures/anonymity.txt",
+      "sha256": "50e4817176c979c1cdd5a06093f596525f1ebc08aec5f18b7daaa5cc8a6cce6e"
+    },
+    {
+      "id": "fn/closures/input_functions",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/closures/input_functions.html",
+      "path": "vendor/rust-by-example/extracted/fn/closures/input_functions.txt",
+      "sha256": "e0a868dc0c342c86d057c8c01960f308cba1f9d551d03aec046433cb2fde587a"
+    },
+    {
+      "id": "fn/closures/output_parameters",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/closures/output_parameters.html",
+      "path": "vendor/rust-by-example/extracted/fn/closures/output_parameters.txt",
+      "sha256": "15310ad3183fc93ae151e330e0c5917614b3b5bba2da9504b2c4efe3bce454bb"
+    },
+    {
+      "id": "fn/closures/closure_examples",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/closures/closure_examples.html",
+      "path": "vendor/rust-by-example/extracted/fn/closures/closure_examples.txt",
+      "sha256": "5be0cc09d0f6fd2faeb3389bc78977b7f4fe9ac3c58828dcd5085ce386d8bb55"
+    },
+    {
+      "id": "fn/closures/closure_examples/iter_any",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/closures/closure_examples/iter_any.html",
+      "path": "vendor/rust-by-example/extracted/fn/closures/closure_examples/iter_any.txt",
+      "sha256": "60b2295900ee03f13f85cfd69326055b78d8bcecf161d40f4fa04a063a4d88ac"
+    },
+    {
+      "id": "fn/closures/closure_examples/iter_find",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/closures/closure_examples/iter_find.html",
+      "path": "vendor/rust-by-example/extracted/fn/closures/closure_examples/iter_find.txt",
+      "sha256": "932f4bafe07e209d7e7cde0e413aad87e33143071e2f7cb3fda032e73b51f3b3"
+    },
+    {
+      "id": "fn/hof",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/hof.html",
+      "path": "vendor/rust-by-example/extracted/fn/hof.txt",
+      "sha256": "b2b319c079965b994d5d96170854800d391eae352fca30115373de301039ebd9"
+    },
+    {
+      "id": "fn/diverging",
+      "url": "https://doc.rust-lang.org/rust-by-example/fn/diverging.html",
+      "path": "vendor/rust-by-example/extracted/fn/diverging.txt",
+      "sha256": "2f867ef3757a9ea0f27ba70db7275f21bf4cd24b9c87e7e1a244c25f3f505209"
+    },
+    {
+      "id": "mod",
+      "url": "https://doc.rust-lang.org/rust-by-example/mod.html",
+      "path": "vendor/rust-by-example/extracted/mod.txt",
+      "sha256": "96ebc035a791e54cac2a4151123865cf98367c847eb8b5206c26203f1740ca0c"
+    },
+    {
+      "id": "mod/visibility",
+      "url": "https://doc.rust-lang.org/rust-by-example/mod/visibility.html",
+      "path": "vendor/rust-by-example/extracted/mod/visibility.txt",
+      "sha256": "311a46e13ce3cbfbc3de189c4fc084e99e058536483ba212954f80f1658a78e2"
+    },
+    {
+      "id": "mod/struct_visibility",
+      "url": "https://doc.rust-lang.org/rust-by-example/mod/struct_visibility.html",
+      "path": "vendor/rust-by-example/extracted/mod/struct_visibility.txt",
+      "sha256": "576cd3b64c0738ba081ea6c63bd2e9337e8503908d6e320e0a276b010de860b7"
+    },
+    {
+      "id": "mod/use",
+      "url": "https://doc.rust-lang.org/rust-by-example/mod/use.html",
+      "path": "vendor/rust-by-example/extracted/mod/use.txt",
+      "sha256": "ed5e75c7fd1c5045209214a75e4c5de0937c7f7a53d00c9f53a72890d08c4fed"
+    },
+    {
+      "id": "mod/super",
+      "url": "https://doc.rust-lang.org/rust-by-example/mod/super.html",
+      "path": "vendor/rust-by-example/extracted/mod/super.txt",
+      "sha256": "aaab2bc00fa58e1502df2406d3691d3a06e4d057d89ed9f61bd5fd943cc1c76e"
+    },
+    {
+      "id": "mod/split",
+      "url": "https://doc.rust-lang.org/rust-by-example/mod/split.html",
+      "path": "vendor/rust-by-example/extracted/mod/split.txt",
+      "sha256": "9c072f5e403cb0fc4171e9d96ccc45ccff6705f61d38b0d3614687512952f7c6"
+    },
+    {
+      "id": "crates",
+      "url": "https://doc.rust-lang.org/rust-by-example/crates.html",
+      "path": "vendor/rust-by-example/extracted/crates.txt",
+      "sha256": "6db07f3aad81d707cccf80c71b7ff29d213557633ebad59d49f3cf1ba32feeb6"
+    },
+    {
+      "id": "crates/lib",
+      "url": "https://doc.rust-lang.org/rust-by-example/crates/lib.html",
+      "path": "vendor/rust-by-example/extracted/crates/lib.txt",
+      "sha256": "97077c1619d4926eb1ac17606ada632234f9e0727381ff60622f2d3a2d5afc5c"
+    },
+    {
+      "id": "crates/using_lib",
+      "url": "https://doc.rust-lang.org/rust-by-example/crates/using_lib.html",
+      "path": "vendor/rust-by-example/extracted/crates/using_lib.txt",
+      "sha256": "b93586996ed88891f248561be57ea4e07598098847d428d09dcdba4315f02c90"
+    },
+    {
+      "id": "cargo",
+      "url": "https://doc.rust-lang.org/rust-by-example/cargo.html",
+      "path": "vendor/rust-by-example/extracted/cargo.txt",
+      "sha256": "23a945b5f809ae97bc7ea61dbbc78a3df9acf5be9e2978de5a74bcf3fbb8b8a5"
+    },
+    {
+      "id": "cargo/deps",
+      "url": "https://doc.rust-lang.org/rust-by-example/cargo/deps.html",
+      "path": "vendor/rust-by-example/extracted/cargo/deps.txt",
+      "sha256": "3b124e7444cf3c9583453e09c3462f1444d9b3edfdda8a6a2362275213a7d3ea"
+    },
+    {
+      "id": "cargo/conventions",
+      "url": "https://doc.rust-lang.org/rust-by-example/cargo/conventions.html",
+      "path": "vendor/rust-by-example/extracted/cargo/conventions.txt",
+      "sha256": "03d68ef8443b6793ce451fb4e198a9f4e66059078ead66d4ce2f235e02749a2b"
+    },
+    {
+      "id": "cargo/test",
+      "url": "https://doc.rust-lang.org/rust-by-example/cargo/test.html",
+      "path": "vendor/rust-by-example/extracted/cargo/test.txt",
+      "sha256": "2714d3cf1c23f5478091b521a8fa58c6b7896f404b832ab443aa1105fcf55263"
+    },
+    {
+      "id": "cargo/build_scripts",
+      "url": "https://doc.rust-lang.org/rust-by-example/cargo/build_scripts.html",
+      "path": "vendor/rust-by-example/extracted/cargo/build_scripts.txt",
+      "sha256": "b4d7f38423206a19bf295255f2df3b229c571c5fc62e1f0ae28107870ccecd60"
+    },
+    {
+      "id": "attribute",
+      "url": "https://doc.rust-lang.org/rust-by-example/attribute.html",
+      "path": "vendor/rust-by-example/extracted/attribute.txt",
+      "sha256": "2d03a91f46e9bc8896b803e826c0913107b36338c5f1b03fffe6e9c4af9b87b3"
+    },
+    {
+      "id": "attribute/unused",
+      "url": "https://doc.rust-lang.org/rust-by-example/attribute/unused.html",
+      "path": "vendor/rust-by-example/extracted/attribute/unused.txt",
+      "sha256": "fc76858b37a920c577b0467b587c7ad2c4487ee6921680b649c3d190ad501b5f"
+    },
+    {
+      "id": "attribute/crate",
+      "url": "https://doc.rust-lang.org/rust-by-example/attribute/crate.html",
+      "path": "vendor/rust-by-example/extracted/attribute/crate.txt",
+      "sha256": "ac6b289f639ae414234c74c0a35e239b727d8e322bba89122f617be5917014a7"
+    },
+    {
+      "id": "attribute/cfg",
+      "url": "https://doc.rust-lang.org/rust-by-example/attribute/cfg.html",
+      "path": "vendor/rust-by-example/extracted/attribute/cfg.txt",
+      "sha256": "4fe9cf01052c8da9caaa4fa4adf47981cd14c63f549becabf339359396592fa4"
+    },
+    {
+      "id": "attribute/cfg/custom",
+      "url": "https://doc.rust-lang.org/rust-by-example/attribute/cfg/custom.html",
+      "path": "vendor/rust-by-example/extracted/attribute/cfg/custom.txt",
+      "sha256": "853201fa5b7de7395f1f136f1916ea71cf8374e70cd3bf2fb3d139aa7ff68090"
+    },
+    {
+      "id": "generics",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics.html",
+      "path": "vendor/rust-by-example/extracted/generics.txt",
+      "sha256": "f02f20723514bed8156badf358bce42af5059d24c57526e95bda62045c85bb9f"
+    },
+    {
+      "id": "generics/gen_fn",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/gen_fn.html",
+      "path": "vendor/rust-by-example/extracted/generics/gen_fn.txt",
+      "sha256": "720512072acc6dd9ad7c9af3cd1308575c494c64235414e7dfa209c13bc9331c"
+    },
+    {
+      "id": "generics/impl",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/impl.html",
+      "path": "vendor/rust-by-example/extracted/generics/impl.txt",
+      "sha256": "d9d9f8604d9a90654aef70f77cda8e60bb30104049bb5b211fe6279a79d00d15"
+    },
+    {
+      "id": "generics/gen_trait",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/gen_trait.html",
+      "path": "vendor/rust-by-example/extracted/generics/gen_trait.txt",
+      "sha256": "af6ce213ef8da4f93eef83b6545724ea8d726c53ead2d7716610393ea3224c54"
+    },
+    {
+      "id": "generics/bounds",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/bounds.html",
+      "path": "vendor/rust-by-example/extracted/generics/bounds.txt",
+      "sha256": "e4af62d8fea6188e97b39900e0cfe7f6c05f699f9768152ddeabac2516188852"
+    },
+    {
+      "id": "generics/bounds/testcase_empty",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/bounds/testcase_empty.html",
+      "path": "vendor/rust-by-example/extracted/generics/bounds/testcase_empty.txt",
+      "sha256": "229e9713374f97bb428c811328bf0d9532a8d7a09f95e3172518ebf06853e0ae"
+    },
+    {
+      "id": "generics/multi_bounds",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/multi_bounds.html",
+      "path": "vendor/rust-by-example/extracted/generics/multi_bounds.txt",
+      "sha256": "2c29af2fd2b6f666f2f4cff262ff4ee68cf5eb0173b899dcdc26b5ceb988f791"
+    },
+    {
+      "id": "generics/where",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/where.html",
+      "path": "vendor/rust-by-example/extracted/generics/where.txt",
+      "sha256": "c1030f89e95d062cbcf1e1b2f11c91a4ffaf4f1726d6b6356f8d2bc56f95314d"
+    },
+    {
+      "id": "generics/new_types",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/new_types.html",
+      "path": "vendor/rust-by-example/extracted/generics/new_types.txt",
+      "sha256": "fc28def780b12977e43616a00c18afb601dd8e033a8d6a5762138d04dc24f4ac"
+    },
+    {
+      "id": "generics/assoc_items",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/assoc_items.html",
+      "path": "vendor/rust-by-example/extracted/generics/assoc_items.txt",
+      "sha256": "b41ffc062b626757135dd4a0831039885810ec2c5d8fcc18a1bd19755a3dcacf"
+    },
+    {
+      "id": "generics/assoc_items/the_problem",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/assoc_items/the_problem.html",
+      "path": "vendor/rust-by-example/extracted/generics/assoc_items/the_problem.txt",
+      "sha256": "ae5d7e4cab7dc0885c339de0a5b228998bc2b8339c72c6c12fac8e71640bbbe7"
+    },
+    {
+      "id": "generics/assoc_items/types",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/assoc_items/types.html",
+      "path": "vendor/rust-by-example/extracted/generics/assoc_items/types.txt",
+      "sha256": "f4db091e09788ddba4cf41d664b7938f7aeea544ea021a6700aba3467251b291"
+    },
+    {
+      "id": "generics/phantom",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/phantom.html",
+      "path": "vendor/rust-by-example/extracted/generics/phantom.txt",
+      "sha256": "e4a27ba065f29d85ce46246ffb64bb7d452c6c0996ada34fed456550b7320930"
+    },
+    {
+      "id": "generics/phantom/testcase_units",
+      "url": "https://doc.rust-lang.org/rust-by-example/generics/phantom/testcase_units.html",
+      "path": "vendor/rust-by-example/extracted/generics/phantom/testcase_units.txt",
+      "sha256": "cfc4f7a891e56e7ffe08a5cc350f96073040115082f5a0a644c183e6bbc82563"
+    },
+    {
+      "id": "scope",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope.html",
+      "path": "vendor/rust-by-example/extracted/scope.txt",
+      "sha256": "2ec98f83514f05a6f8fe9f13eba579c6ecf3eec9e709e83ab5765ac3315c2429"
+    },
+    {
+      "id": "scope/raii",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/raii.html",
+      "path": "vendor/rust-by-example/extracted/scope/raii.txt",
+      "sha256": "0dd81cfbe38a61ffffd0cc442680daaa724f3b2128822914033ef50b80a2fd4d"
+    },
+    {
+      "id": "scope/move",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/move.html",
+      "path": "vendor/rust-by-example/extracted/scope/move.txt",
+      "sha256": "1515687e2ff94368ecdea3d00ea7fee884354c14e16250254443746b31290c47"
+    },
+    {
+      "id": "scope/move/mut",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/move/mut.html",
+      "path": "vendor/rust-by-example/extracted/scope/move/mut.txt",
+      "sha256": "f3f900096efe665a2b3499c8cb45f70ea9e928c4dbe1e786eadd6f0beff49396"
+    },
+    {
+      "id": "scope/move/partial_move",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/move/partial_move.html",
+      "path": "vendor/rust-by-example/extracted/scope/move/partial_move.txt",
+      "sha256": "8add48c8e714ad696cc6f7999e40dae8f58a9dd385f8480b6893719fe6db11ed"
+    },
+    {
+      "id": "scope/borrow",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/borrow.html",
+      "path": "vendor/rust-by-example/extracted/scope/borrow.txt",
+      "sha256": "0217e7029b9803da1a535846d8d4a391b5b7b9eb6e98a60f4c5fbe959f1cc2a5"
+    },
+    {
+      "id": "scope/borrow/mut",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/borrow/mut.html",
+      "path": "vendor/rust-by-example/extracted/scope/borrow/mut.txt",
+      "sha256": "aa5d16e7c369b63be2be21ec9698273768a84246edea9dbd920fc8927dfbc91f"
+    },
+    {
+      "id": "scope/borrow/alias",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/borrow/alias.html",
+      "path": "vendor/rust-by-example/extracted/scope/borrow/alias.txt",
+      "sha256": "e70e71b2a522c94837c86a741df014ba758e38f294491f2cbd14a4723bced0d8"
+    },
+    {
+      "id": "scope/borrow/ref",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/borrow/ref.html",
+      "path": "vendor/rust-by-example/extracted/scope/borrow/ref.txt",
+      "sha256": "de10362cce33f50500e0cee9b6edda09c5eb8fc882b7551a68eb8ca227ad75a7"
+    },
+    {
+      "id": "scope/lifetime",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/lifetime.html",
+      "path": "vendor/rust-by-example/extracted/scope/lifetime.txt",
+      "sha256": "586fd87b189942316599171583ee4ee43c413e8f3c2da75cc912fa6986849fb2"
+    },
+    {
+      "id": "scope/lifetime/explicit",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/lifetime/explicit.html",
+      "path": "vendor/rust-by-example/extracted/scope/lifetime/explicit.txt",
+      "sha256": "e68ffa8d762b24c01619ee9596c966d9f12e02f11f4e8c4f3827ffc72d2cc185"
+    },
+    {
+      "id": "scope/lifetime/fn",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/lifetime/fn.html",
+      "path": "vendor/rust-by-example/extracted/scope/lifetime/fn.txt",
+      "sha256": "c1f59dfda6921bfe59cc78a4a7ede8e10864ff7cb360984cacaf19789354edd6"
+    },
+    {
+      "id": "scope/lifetime/methods",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/lifetime/methods.html",
+      "path": "vendor/rust-by-example/extracted/scope/lifetime/methods.txt",
+      "sha256": "f5a8eb1884e736300d5c6fe3b6aa4347f4a11d19adf3b3ae6ca52943e9c6bb14"
+    },
+    {
+      "id": "scope/lifetime/struct",
+      "url": "https://doc.rust-lang.org/stable/rust-by-example/scope/lifetime/struct.html",
+      "path": "vendor/rust-by-example/extracted/scope/lifetime/struct.txt",
+      "sha256": "83eba576ce66c1e3031fc1d2758e0755a34fa389f8c56911ad4972892e2a4c2d"
+    },
+    {
+      "id": "scope/lifetime/trait",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/lifetime/trait.html",
+      "path": "vendor/rust-by-example/extracted/scope/lifetime/trait.txt",
+      "sha256": "f8bcd0d02356ffd19120fa8a15a5c5cdfd37fa88bca6efc3fbe005f662376b39"
+    },
+    {
+      "id": "scope/lifetime/lifetime_bounds",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/lifetime/lifetime_bounds.html",
+      "path": "vendor/rust-by-example/extracted/scope/lifetime/lifetime_bounds.txt",
+      "sha256": "f657b1a21c8ecee897ae276fc9e5491a662632469eb090644df4b06fdee40877"
+    },
+    {
+      "id": "scope/lifetime/lifetime_coercion",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/lifetime/lifetime_coercion.html",
+      "path": "vendor/rust-by-example/extracted/scope/lifetime/lifetime_coercion.txt",
+      "sha256": "5f66e30429ecac4c3c97a9f0d0c191ed6999ea48b65b56e03958c99776e3b917"
+    },
+    {
+      "id": "scope/lifetime/static_lifetime",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/lifetime/static_lifetime.html",
+      "path": "vendor/rust-by-example/extracted/scope/lifetime/static_lifetime.txt",
+      "sha256": "bf5f3ff54086877bb30bc8d944bfa01daf91db4d5e525aab44ebb893a8dfa280"
+    },
+    {
+      "id": "scope/lifetime/elision",
+      "url": "https://doc.rust-lang.org/rust-by-example/scope/lifetime/elision.html",
+      "path": "vendor/rust-by-example/extracted/scope/lifetime/elision.txt",
+      "sha256": "fb115b80ed6dc38fe820df0c471306262b16c00be8da4e2ef07cf623d07d45bf"
+    },
+    {
+      "id": "trait",
+      "url": "https://doc.rust-lang.org/rust-by-example/trait.html",
+      "path": "vendor/rust-by-example/extracted/trait.txt",
+      "sha256": "c8548f96bca154839c2e51569407bfb07c8b1e6195724f5699486cb4b7e3dac2"
+    },
+    {
+      "id": "trait/derive",
+      "url": "https://doc.rust-lang.org/rust-by-example/trait/derive.html",
+      "path": "vendor/rust-by-example/extracted/trait/derive.txt",
+      "sha256": "07d5f520b49f4c0b4d376ba25d320e378894ddbcc4a5d2d82ce7cac44035c496"
+    },
+    {
+      "id": "trait/dyn",
+      "url": "https://doc.rust-lang.org/rust-by-example/trait/dyn.html",
+      "path": "vendor/rust-by-example/extracted/trait/dyn.txt",
+      "sha256": "f8dc9ef2694e60eebe799d4c0a6c7a79349a5e534d0ca6d7267bd1ed23cb8e3d"
+    },
+    {
+      "id": "trait/ops",
+      "url": "https://doc.rust-lang.org/rust-by-example/trait/ops.html",
+      "path": "vendor/rust-by-example/extracted/trait/ops.txt",
+      "sha256": "3010f32c83baa1c9b1639fa576bfc1adf5bb2bc1d85f8571dc6ccf106b9d1332"
+    },
+    {
+      "id": "trait/drop",
+      "url": "https://doc.rust-lang.org/rust-by-example/trait/drop.html",
+      "path": "vendor/rust-by-example/extracted/trait/drop.txt",
+      "sha256": "fba47ac652360e10a85c19d1b7d294f9a8201cdebf58ad7516f98bf818c00ced"
+    },
+    {
+      "id": "trait/iter",
+      "url": "https://doc.rust-lang.org/rust-by-example/trait/iter.html",
+      "path": "vendor/rust-by-example/extracted/trait/iter.txt",
+      "sha256": "e379605ed0fe06fd75f628e5826457769ae37d63703bfc904d464e07d9ab62a9"
+    },
+    {
+      "id": "trait/impl_trait",
+      "url": "https://doc.rust-lang.org/rust-by-example/trait/impl_trait.html",
+      "path": "vendor/rust-by-example/extracted/trait/impl_trait.txt",
+      "sha256": "7cda72955d20edd49432b5b0f9a06d7f039137b9e69c8a18d071f415b5d16c06"
+    },
+    {
+      "id": "trait/clone",
+      "url": "https://doc.rust-lang.org/rust-by-example/trait/clone.html",
+      "path": "vendor/rust-by-example/extracted/trait/clone.txt",
+      "sha256": "9b16342c75554ce693a8b71326d8cd3b4f09de1ac90cd6e4263353eaa82e697b"
+    },
+    {
+      "id": "trait/supertraits",
+      "url": "https://doc.rust-lang.org/rust-by-example/trait/supertraits.html",
+      "path": "vendor/rust-by-example/extracted/trait/supertraits.txt",
+      "sha256": "49b078229541583427b57dceaaca3641a3e420f104996c8c678e2fe299413576"
+    },
+    {
+      "id": "trait/disambiguating",
+      "url": "https://doc.rust-lang.org/rust-by-example/trait/disambiguating.html",
+      "path": "vendor/rust-by-example/extracted/trait/disambiguating.txt",
+      "sha256": "d852a7749d585b0efbfebd018438ce27c843ebc51547104178fbd53a21221a55"
+    },
+    {
+      "id": "macros",
+      "url": "https://doc.rust-lang.org/rust-by-example/macros.html",
+      "path": "vendor/rust-by-example/extracted/macros.txt",
+      "sha256": "3856e114ca9176a49ce381d1930d83a0ad48f9a064ad41e9f12460067dceb5d7"
+    },
+    {
+      "id": "macros/syntax",
+      "url": "https://doc.rust-lang.org/rust-by-example/macros/syntax.html",
+      "path": "vendor/rust-by-example/extracted/macros/syntax.txt",
+      "sha256": "bdcbb8aa22f53094dba0513ad32756925110ee75229dd2040759474468424e18"
+    },
+    {
+      "id": "macros/designators",
+      "url": "https://doc.rust-lang.org/rust-by-example/macros/designators.html",
+      "path": "vendor/rust-by-example/extracted/macros/designators.txt",
+      "sha256": "2a19e2258fed5caf90b3fb8b2e33d57b8ce69de493db4a9e2b50a8a30a11f0f3"
+    },
+    {
+      "id": "macros/overload",
+      "url": "https://doc.rust-lang.org/rust-by-example/macros/overload.html",
+      "path": "vendor/rust-by-example/extracted/macros/overload.txt",
+      "sha256": "9a8155697dd06414b41cced7a26856a60c3f17e6d3d579a1e8806374a2e600df"
+    },
+    {
+      "id": "macros/repeat",
+      "url": "https://doc.rust-lang.org/rust-by-example/macros/repeat.html",
+      "path": "vendor/rust-by-example/extracted/macros/repeat.txt",
+      "sha256": "b065a4538cf4e071e4f64fe7493d71d781b415b9518b5420c2fae94371b1b7c7"
+    },
+    {
+      "id": "macros/dry",
+      "url": "https://doc.rust-lang.org/rust-by-example/macros/dry.html",
+      "path": "vendor/rust-by-example/extracted/macros/dry.txt",
+      "sha256": "1ee21173a1645528bdc3ea459d2db10dcfee71a4e9ea5ab777881c48c9607b62"
+    },
+    {
+      "id": "macros/dsl",
+      "url": "https://doc.rust-lang.org/rust-by-example/macros/dsl.html",
+      "path": "vendor/rust-by-example/extracted/macros/dsl.txt",
+      "sha256": "1768cc71beaff76831dfe1f2ae94bd9f94654f8e116a9785ca37cc2e88ee768e"
+    },
+    {
+      "id": "macros/variadics",
+      "url": "https://doc.rust-lang.org/rust-by-example/macros/variadics.html",
+      "path": "vendor/rust-by-example/extracted/macros/variadics.txt",
+      "sha256": "4365a230535481aebd053a7795b07fb9ec7440f50790c28463150a62903408e3"
+    },
+    {
+      "id": "error",
+      "url": "https://doc.rust-lang.org/rust-by-example/error.html",
+      "path": "vendor/rust-by-example/extracted/error.txt",
+      "sha256": "062fd4a2e68155e4d484269383879fced385140957816f904fb93bed24e91de6"
+    },
+    {
+      "id": "error/panic",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/panic.html",
+      "path": "vendor/rust-by-example/extracted/error/panic.txt",
+      "sha256": "36e08350a152fcdf5ee5c4448f07c1fd78b833d15feffd179a76989f4a26421b"
+    },
+    {
+      "id": "error/abort_unwind",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/abort_unwind.html",
+      "path": "vendor/rust-by-example/extracted/error/abort_unwind.txt",
+      "sha256": "90ec5e921ad4a4c189ecc17dd61984d92de09eee4ff12d6c4b723eeca42bffe3"
+    },
+    {
+      "id": "error/option_unwrap",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/option_unwrap.html",
+      "path": "vendor/rust-by-example/extracted/error/option_unwrap.txt",
+      "sha256": "2eac0dc9cff1b55c3f03150b740db87fe4ddb7eddb611e55633c172bfee534d8"
+    },
+    {
+      "id": "error/option_unwrap/question_mark",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/option_unwrap/question_mark.html",
+      "path": "vendor/rust-by-example/extracted/error/option_unwrap/question_mark.txt",
+      "sha256": "cab089be5b64ebbd8759dd7c314f2a4a8295119352d74964971715133f2a502a"
+    },
+    {
+      "id": "error/option_unwrap/map",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/option_unwrap/map.html",
+      "path": "vendor/rust-by-example/extracted/error/option_unwrap/map.txt",
+      "sha256": "7379adb825b34fa91f361072c0789873773a027fbb81cd457b7df404dbba75a2"
+    },
+    {
+      "id": "error/option_unwrap/and_then",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/option_unwrap/and_then.html",
+      "path": "vendor/rust-by-example/extracted/error/option_unwrap/and_then.txt",
+      "sha256": "808f46a0c43cb111455a1cb3973c40ee7043941d3c56fb1066bca2b80a5dc5e4"
+    },
+    {
+      "id": "error/option_unwrap/defaults",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/option_unwrap/defaults.html",
+      "path": "vendor/rust-by-example/extracted/error/option_unwrap/defaults.txt",
+      "sha256": "ed84a098896f0fc03b00974c37111a09aafb816919b7899a9fc845e2f76e13f9"
+    },
+    {
+      "id": "error/result",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/result.html",
+      "path": "vendor/rust-by-example/extracted/error/result.txt",
+      "sha256": "427b8cd45ebc2fe0749e9c2698a198b9cebd0200882bf5e8560c3d9b7b3128be"
+    },
+    {
+      "id": "error/result/result_map",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/result/result_map.html",
+      "path": "vendor/rust-by-example/extracted/error/result/result_map.txt",
+      "sha256": "c7d7bc95290b672793e684671d7c096bcaa2b7cc6241adf9bc09a433cdf38d9c"
+    },
+    {
+      "id": "error/result/result_alias",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/result/result_alias.html",
+      "path": "vendor/rust-by-example/extracted/error/result/result_alias.txt",
+      "sha256": "dd3c088b3313503671d6da1e2dc6b6a6ee90d88598d2616d4fcb228bb6e5c3ee"
+    },
+    {
+      "id": "error/result/early_returns",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/result/early_returns.html",
+      "path": "vendor/rust-by-example/extracted/error/result/early_returns.txt",
+      "sha256": "55be750a1d90f0b6552c5d08c35ad98bc5cfa1376ed35443f55e70642a8c8788"
+    },
+    {
+      "id": "error/result/enter_question_mark",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/result/enter_question_mark.html",
+      "path": "vendor/rust-by-example/extracted/error/result/enter_question_mark.txt",
+      "sha256": "29333b531d75b346cd8ab902ae11761a498a0078a5f0d29b5709eaafe04f6968"
+    },
+    {
+      "id": "error/multiple_error_types",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/multiple_error_types.html",
+      "path": "vendor/rust-by-example/extracted/error/multiple_error_types.txt",
+      "sha256": "a27bfc92eba8f94e88c3c994ba9e0f2e5b63d8d93862668a93e6932e9296b700"
+    },
+    {
+      "id": "error/multiple_error_types/option_result",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/multiple_error_types/option_result.html",
+      "path": "vendor/rust-by-example/extracted/error/multiple_error_types/option_result.txt",
+      "sha256": "2d0f74930f30ef8113941ad7f342ce3a2487440a3b3bb9082fc3ca99f7615280"
+    },
+    {
+      "id": "error/multiple_error_types/define_error_type",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/multiple_error_types/define_error_type.html",
+      "path": "vendor/rust-by-example/extracted/error/multiple_error_types/define_error_type.txt",
+      "sha256": "7e9e8da6ecc048625098ae99140024fa68f695e9984bcb6251f389dbfb4c56ab"
+    },
+    {
+      "id": "error/multiple_error_types/boxing_errors",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/multiple_error_types/boxing_errors.html",
+      "path": "vendor/rust-by-example/extracted/error/multiple_error_types/boxing_errors.txt",
+      "sha256": "4351b6403e8965aab943fae1127e33d327978d88aaf90ad363fb8de8a5b5c6db"
+    },
+    {
+      "id": "error/multiple_error_types/reenter_question_mark",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/multiple_error_types/reenter_question_mark.html",
+      "path": "vendor/rust-by-example/extracted/error/multiple_error_types/reenter_question_mark.txt",
+      "sha256": "c9976bfe1d0724cade8ef238747f79d6d476423c4570b8f013abd6ff0ff0e142"
+    },
+    {
+      "id": "error/multiple_error_types/wrap_error",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/multiple_error_types/wrap_error.html",
+      "path": "vendor/rust-by-example/extracted/error/multiple_error_types/wrap_error.txt",
+      "sha256": "84796154883fa34a2957a2dccbbe06b776ddc28f164c366c3cca1c0adc3db55d"
+    },
+    {
+      "id": "error/iter_result",
+      "url": "https://doc.rust-lang.org/rust-by-example/error/iter_result.html",
+      "path": "vendor/rust-by-example/extracted/error/iter_result.txt",
+      "sha256": "a35e13d8ac67aed252f78f4ee5042b254f539f24df6a6dc8d4d5ab839ceb3a0c"
+    },
+    {
+      "id": "std",
+      "url": "https://doc.rust-lang.org/rust-by-example/std.html",
+      "path": "vendor/rust-by-example/extracted/std.txt",
+      "sha256": "e73b7c6720074187289060e4e663b6de20c42ac659859801f236e5704d7c2580"
+    },
+    {
+      "id": "std/box",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/box.html",
+      "path": "vendor/rust-by-example/extracted/std/box.txt",
+      "sha256": "590841c0ba8b67963518b0a142827d3e6f92a3278bb4e7938a70ed25a876c5ed"
+    },
+    {
+      "id": "std/vec",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/vec.html",
+      "path": "vendor/rust-by-example/extracted/std/vec.txt",
+      "sha256": "a9087b5f7b69f35315143fda4aa358470558e9ceec9c20f0b820b7d8d3a02571"
+    },
+    {
+      "id": "std/str",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/str.html",
+      "path": "vendor/rust-by-example/extracted/std/str.txt",
+      "sha256": "f7bf161546b8ddbf68ee843b45f3b21bc81af9d397f8b8592899f739345c29bf"
+    },
+    {
+      "id": "std/option",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/option.html",
+      "path": "vendor/rust-by-example/extracted/std/option.txt",
+      "sha256": "0a21687130911d544973f698bc573cd0990950cdcc6179503ff3dd811a8ad283"
+    },
+    {
+      "id": "std/result",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/result.html",
+      "path": "vendor/rust-by-example/extracted/std/result.txt",
+      "sha256": "fd226bd5a258bd02fc70651113814d9fc07a9e5e63093374d6dc5f3cbdaea4bb"
+    },
+    {
+      "id": "std/result/question_mark",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html",
+      "path": "vendor/rust-by-example/extracted/std/result/question_mark.txt",
+      "sha256": "5f6ae77fca506f16157ac47b60b7dd911f12b66e3d3e5fe78e7224f4c621d1ba"
+    },
+    {
+      "id": "std/panic",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/panic.html",
+      "path": "vendor/rust-by-example/extracted/std/panic.txt",
+      "sha256": "deb1f5b963424655eb4f81de8d271c203b9081645227e662634ac9f960647d00"
+    },
+    {
+      "id": "std/hash",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/hash.html",
+      "path": "vendor/rust-by-example/extracted/std/hash.txt",
+      "sha256": "9b4a6b068b020bf2d6e20ea886671abc7f641d284414bf9dc7cb8b3bd1955502"
+    },
+    {
+      "id": "std/hash/alt_key_types",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/hash/alt_key_types.html",
+      "path": "vendor/rust-by-example/extracted/std/hash/alt_key_types.txt",
+      "sha256": "1746e56f92e9ede6c1841ffc4a563ee510808036f0f14ed52d8eef5c8d93e127"
+    },
+    {
+      "id": "std/hash/hashset",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/hash/hashset.html",
+      "path": "vendor/rust-by-example/extracted/std/hash/hashset.txt",
+      "sha256": "63391a1326bdb1d3ec3f434bee3ef909343189244db96b48677782cf8521bf17"
+    },
+    {
+      "id": "std/rc",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/rc.html",
+      "path": "vendor/rust-by-example/extracted/std/rc.txt",
+      "sha256": "dc8165eae66da10137fb335691a2d5836503d2cde8bbcb25b3f54027213695de"
+    },
+    {
+      "id": "std/arc",
+      "url": "https://doc.rust-lang.org/rust-by-example/std/arc.html",
+      "path": "vendor/rust-by-example/extracted/std/arc.txt",
+      "sha256": "3c9500240a24c882475f064341d3ea12f3faf96adb60f42a0969e7cc256a003a"
+    },
+    {
+      "id": "std_misc",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc.html",
+      "path": "vendor/rust-by-example/extracted/std_misc.txt",
+      "sha256": "a4ae8417dbd84c85dc61e782ff143bb5e146c2739df07eba7f464b566a7deaad"
+    },
+    {
+      "id": "std_misc/threads",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/threads.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/threads.txt",
+      "sha256": "79a80f5ce4be625e22d48261326be91ad1096e92d574eae2260bcb8549c0c558"
+    },
+    {
+      "id": "std_misc/threads/testcase_mapreduce",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/threads/testcase_mapreduce.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/threads/testcase_mapreduce.txt",
+      "sha256": "6db6b967ee52d7bbccde151ffe39b11585f37dd7fe298ff2f0608c39b45aea08"
+    },
+    {
+      "id": "std_misc/channels",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/channels.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/channels.txt",
+      "sha256": "4d87b51c27314161fa912c856e641c8caf7cd88aedd3488abc37119d9e6ed1be"
+    },
+    {
+      "id": "std_misc/path",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/path.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/path.txt",
+      "sha256": "1b0b34e3babdaea0b0cdfc17ddcbd81fadc13fa67a490a2fcb38fc95dac697ad"
+    },
+    {
+      "id": "std_misc/file",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/file.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/file.txt",
+      "sha256": "03d2b35df54fe99a0933f5eef4143329f7a4dbe973491db082eda06ffeb36beb"
+    },
+    {
+      "id": "std_misc/file/open",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/file/open.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/file/open.txt",
+      "sha256": "802c954e159ad32ddc1b8a25fb68e962ebd040f03ad84719e04d0c2071f6b56b"
+    },
+    {
+      "id": "std_misc/file/create",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/file/create.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/file/create.txt",
+      "sha256": "1a33790f2f849f39fc5d8fcdbc9ce6b1b49c00349a23fa52869f914a773c0751"
+    },
+    {
+      "id": "std_misc/file/read_lines",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/file/read_lines.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/file/read_lines.txt",
+      "sha256": "7b19daa7b21251156bfcd8a7931453e993869a43f9e680500bcd67ae1bfa5008"
+    },
+    {
+      "id": "std_misc/process",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/process.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/process.txt",
+      "sha256": "b52973a215d5086031f36cf43b01f9a1cc0ee15cb37e48f3b0bc4115b23b9c54"
+    },
+    {
+      "id": "std_misc/process/pipe",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/process/pipe.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/process/pipe.txt",
+      "sha256": "828a88d2ec323ba49c79c08d4f2e3c58d0513321db0512bd419f2de8f8ab69ab"
+    },
+    {
+      "id": "std_misc/process/wait",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/process/wait.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/process/wait.txt",
+      "sha256": "31f240bb45517403dc56daba234bfeb9541ba014202493515a38b639fe674428"
+    },
+    {
+      "id": "std_misc/fs",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/fs.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/fs.txt",
+      "sha256": "7f306850b86e784367eab689d10681b067136e716a02eb2c96a45a0cbb8a0c50"
+    },
+    {
+      "id": "std_misc/arg",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/arg.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/arg.txt",
+      "sha256": "63142c444c4c72f9465aae2278afcc5c1f4aef9d26c8b6b4534cd266b56594c0"
+    },
+    {
+      "id": "std_misc/arg/matching",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/arg/matching.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/arg/matching.txt",
+      "sha256": "b6d945a71a80ac4e3a57006e62ac29d49517385e061a818bb8c9f337d2a1bf66"
+    },
+    {
+      "id": "std_misc/ffi",
+      "url": "https://doc.rust-lang.org/rust-by-example/std_misc/ffi.html",
+      "path": "vendor/rust-by-example/extracted/std_misc/ffi.txt",
+      "sha256": "76dd0bb119bb2358620fdb8e59d6d3c9bb03dc95d00445afc8888889740e669c"
+    },
+    {
+      "id": "testing",
+      "url": "https://doc.rust-lang.org/rust-by-example/testing.html",
+      "path": "vendor/rust-by-example/extracted/testing.txt",
+      "sha256": "ed48fc16e66876452fa8981f7d704a4f00070a095cf987a20fd7bed083f449a7"
+    },
+    {
+      "id": "testing/unit_testing",
+      "url": "https://doc.rust-lang.org/rust-by-example/testing/unit_testing.html",
+      "path": "vendor/rust-by-example/extracted/testing/unit_testing.txt",
+      "sha256": "39b4479ac522a2673dc4066e0ee0528fbe19a14c2f800cf28c2609d44ab554e2"
+    },
+    {
+      "id": "testing/doc_testing",
+      "url": "https://doc.rust-lang.org/rust-by-example/testing/doc_testing.html",
+      "path": "vendor/rust-by-example/extracted/testing/doc_testing.txt",
+      "sha256": "09f57177ec6e2c724d8421f2aa195d2713cbd16e9b361b51ac53891fd6e5f54f"
+    },
+    {
+      "id": "testing/integration_testing",
+      "url": "https://doc.rust-lang.org/rust-by-example/testing/integration_testing.html",
+      "path": "vendor/rust-by-example/extracted/testing/integration_testing.txt",
+      "sha256": "b24bbf8878cf90cf629d2db49504fa8d49b6ad57d49ea45c77441bcf994dca03"
+    },
+    {
+      "id": "testing/dev_dependencies",
+      "url": "https://doc.rust-lang.org/rust-by-example/testing/dev_dependencies.html",
+      "path": "vendor/rust-by-example/extracted/testing/dev_dependencies.txt",
+      "sha256": "e9961f37d40e12a29976c5eb78092b8d44ba19890103eb88d497bd56c9a23781"
+    },
+    {
+      "id": "unsafe",
+      "url": "https://doc.rust-lang.org/rust-by-example/unsafe.html",
+      "path": "vendor/rust-by-example/extracted/unsafe.txt",
+      "sha256": "f527be59308ba55651ce5f818c57d82071f51df4f63ebad59e9dd26d972ab510"
+    },
+    {
+      "id": "unsafe/asm",
+      "url": "https://doc.rust-lang.org/rust-by-example/unsafe/asm.html",
+      "path": "vendor/rust-by-example/extracted/unsafe/asm.txt",
+      "sha256": "4047e22b7c4284fa9f1e4cab40bf2f63c02617d40e058f139534efd9526e0fff"
+    },
+    {
+      "id": "compatibility",
+      "url": "https://doc.rust-lang.org/rust-by-example/compatibility.html",
+      "path": "vendor/rust-by-example/extracted/compatibility.txt",
+      "sha256": "236b3386d052bd9c95df7e7ba5be9d6d2925c25133ef3b2e8fe87bad2264f9fa"
+    },
+    {
+      "id": "compatibility/raw_identifiers",
+      "url": "https://doc.rust-lang.org/rust-by-example/compatibility/raw_identifiers.html",
+      "path": "vendor/rust-by-example/extracted/compatibility/raw_identifiers.txt",
+      "sha256": "3c24e4e51879b3ab16beca0f4d528f330b8563ec45fe16e1093d498bc7ae730a"
+    },
+    {
+      "id": "meta",
+      "url": "https://doc.rust-lang.org/rust-by-example/meta.html",
+      "path": "vendor/rust-by-example/extracted/meta.txt",
+      "sha256": "41da802217ff38221a5c58ac4d5f8434a8a7af1c10462e4feae7114505e9d236"
+    },
+    {
+      "id": "meta/doc",
+      "url": "https://doc.rust-lang.org/rust-by-example/meta/doc.html",
+      "path": "vendor/rust-by-example/extracted/meta/doc.txt",
+      "sha256": "f63150c3a2c8e59c17ea261012bbc3c5abccc6c4e6b51c8c211224a0e2d1c865"
+    },
+    {
+      "id": "meta/playground",
+      "url": "https://doc.rust-lang.org/rust-by-example/meta/playground.html",
+      "path": "vendor/rust-by-example/extracted/meta/playground.txt",
+      "sha256": "e0b5458e615efe59a6e429bcf752dc9f5debcbd22ff55f41ddd2e075bdde2453"
+    }
+  ]
+}

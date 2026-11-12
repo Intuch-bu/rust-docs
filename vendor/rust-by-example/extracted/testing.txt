@@ -1,0 +1,31 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+# 【1†Testing】
+
+Rust is a programming language that cares a lot about correctness and it includes support for writing software tests within the language itself.
+
+Testing comes in three styles:
+
+  * 【2†Unit】 testing.
+  * 【3†Doc】 testing.
+  * 【4†Integration】 testing.
+
+Also Rust has support for specifying additional dependencies for tests:
+
+  * 【5†Dev-dependencies】
+
+## 【6†See Also】
+
+  * 【7†The Book】 chapter on testing
+  * 【8†API Guidelines†rust-lang-nursery.github.io】 on doc-testing

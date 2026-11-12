@@ -1,0 +1,32 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+# 【1†Mutability】
+
+Variable bindings are immutable by default, but this can be overridden using the `mut` modifier.
+
+    `fn main() {
+        let _immutable_binding = 1;
+        let mut mutable_binding = 1;
+
+        println!("Before mutation: {}", mutable_binding);
+
+        // Ok
+        mutable_binding += 1;
+
+        println!("After mutation: {}", mutable_binding);
+
+        // Error! Cannot assign a new value to an immutable variable
+        _immutable_binding += 1;
+    }`
+The compiler will throw a detailed diagnostic about mutability errors.

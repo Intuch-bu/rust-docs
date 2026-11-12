@@ -1,0 +1,642 @@
+【0†Skip to main content】
+
+## 【1†VecDeque】
+
+## 【2†std】1.99.1
+
+(58cf8f9c3 2026-10-13)
+
+## 【1†VecDeque】
+
+### 【3†Associated Functions】
+
+  * 【4†new】
+  * 【5†with_capacity】
+  * 【6†try_with_capacity】
+  * 【7†new_in】
+  * 【8†with_capacity_in】
+### 【3†Methods】
+  * 【9†allocator】
+  * 【10†append】
+  * 【11†as_mut_slices】
+  * 【12†as_slices】
+  * 【13†back】
+  * 【14†back_mut】
+  * 【15†binary_search】
+  * 【16†binary_search_by】
+  * 【17†binary_search_by_key】
+  * 【18†capacity】
+  * 【19†clear】
+  * 【20†contains】
+  * 【21†drain】
+  * 【22†extend_from_within】
+  * 【23†extend_front】
+  * 【24†extract_if】
+  * 【25†front】
+  * 【26†front_mut】
+  * 【27†get】
+  * 【28†get_mut】
+  * 【29†insert】
+  * 【30†insert_mut】
+  * 【31†is_empty】
+  * 【32†iter】
+  * 【33†iter_mut】
+  * 【34†len】
+  * 【35†make_contiguous】
+  * 【36†partition_point】
+  * 【37†pop_back】
+  * 【38†pop_back_if】
+  * 【39†pop_front】
+  * 【40†pop_front_if】
+  * 【41†prepend】
+  * 【42†prepend_from_within】
+  * 【43†push_back】
+  * 【44†push_back_mut】
+  * 【45†push_front】
+  * 【46†push_front_mut】
+  * 【47†range】
+  * 【48†range_mut】
+  * 【49†remove】
+  * 【50†reserve】
+  * 【51†reserve_exact】
+  * 【52†resize】
+  * 【53†resize_with】
+  * 【54†retain】
+  * 【55†retain_back】
+  * 【56†retain_mut】
+  * 【57†rotate_left】
+  * 【58†rotate_right】
+  * 【59†shrink_to】
+  * 【60†shrink_to_fit】
+  * 【61†splice】
+  * 【62†split_off】
+  * 【63†swap】
+  * 【64†swap_remove_back】
+  * 【65†swap_remove_front】
+  * 【66†truncate】
+  * 【67†truncate_to_range】
+  * 【68†try_reserve】
+  * 【69†try_reserve_exact】
+### 【70†Trait Implementations】
+  * 【71†BufRead】
+  * 【72†Clone】
+  * 【73†Debug】
+  * 【74†Default】
+  * 【75†Drop】
+  * 【76†Eq】
+  * 【77†Extend<&'a T>】
+  * 【78†Extend<T>】
+  * 【79†From<Vec<T, A>>】
+  * 【80†From<VecDeque<T, A>>】
+  * 【81†From<[T; N]>】
+  * 【82†FromIterator<T>】
+  * 【83†Hash】
+  * 【84†Index<usize>】
+  * 【85†IndexMut<usize>】
+  * 【86†IntoIterator】
+  * 【87†IntoIterator】
+  * 【88†IntoIterator】
+  * 【89†Ord】
+  * 【90†PartialEq】
+  * 【91†PartialEq<&[U; N]>】
+  * 【92†PartialEq<&[U]>】
+  * 【93†PartialEq<&mut [U; N]>】
+  * 【94†PartialEq<&mut [U]>】
+  * 【95†PartialEq<Vec<U, A>>】
+  * 【96†PartialEq<[U; N]>】
+  * 【97†PartialOrd】
+  * 【98†Read】
+  * 【99†Write】
+### 【100†Auto Trait Implementations】
+
+  * 【101†Freeze】
+  * 【102†RefUnwindSafe】
+  * 【103†Send】
+  * 【104†Sync】
+  * 【105†Unpin】
+  * 【106†UnsafeUnpin】
+  * 【107†UnwindSafe】
+
+### 【108†Blanket Implementations】
+
+  * 【109†Any】
+  * 【110†Borrow<T>】
+  * 【111†BorrowMut<T>】
+  * 【112†CloneToUninit】
+  * 【113†From<T>】
+  * 【114†Into<U>】
+  * 【115†ToOwned】
+  * 【116†TryFrom<U>】
+  * 【117†TryInto<U>】
+
+## 【118†In std::collections】
+# Struct VecDeque [Button: Copy item path]
+
+【119†Read】【120†Write】
+
+1.0.0 · 【121†Source】
+
+    `pub struct VecDeque<T, A = 【122†Global】>
+
+    where
+        A: 【123†Allocator】,
+
+    { /* private fields */ }`
+
+Expand description
+
+A double-ended queue implemented with a growable ring buffer.
+The “default” usage of this type as a queue is to use 【43†`push_back`】 to add to the queue, and 【39†`pop_front`】 to remove from the queue. 【124†`extend`】 and 【10†`append`】 push onto the back in this manner, and iterating over `VecDeque` goes front to back.
+
+A `VecDeque` with a known list of items can be initialized from an array:
+
+    `use std::collections::VecDeque;
+
+    let deq = VecDeque::from([-1, 0, 1]);`
+Since `VecDeque` is a ring buffer, its elements are not necessarily contiguous in memory. If you want to access the elements as a single slice, such as for efficient sorting, you can use 【35†`make_contiguous`】. It rotates the `VecDeque` so that its elements do not wrap, and returns a mutable slice to the now-contiguous element sequence.
+## Implementations【3†§】
+
+【125†Source】【126†§】
+
+### impl<T, A> 【127†VecDeque】<T, A>
+
+where A: 【123†Allocator】,
+
+【128†Source】
+#### pub fn 【24†extract_if】<F, R>( &mut self, range: R, filter: F, ) -> 【129†ExtractIf】<'_, T, F, A> 【1†ⓘ】
+
+where F: 【130†FnMut】(【131†&mut T】) -> 【132†bool】, R: 【133†RangeBounds】<【134†usize】>,
+
+🔬This is a nightly-only experimental API. (`vec_deque_extract_if` 【135†#147750†github.com】)
+
+Creates an iterator which uses a closure to determine if an element in the range should be removed.
+If the closure returns `true`, the element is removed from the deque and yielded. If the closure returns `false`, or panics, the element remains in the deque and will not be yielded.
+
+Only elements that fall in the provided range are considered for extraction, but any elements after the range will still have to be moved if any element has been extracted.
+If the returned `ExtractIf` is not exhausted, e.g. because it is dropped without iterating or the iteration short-circuits, then the remaining elements will be retained. Use `extract_if().for_each(drop)` if you do not need the returned iterator, or 【56†`retain_mut`】 with a negated predicate if you also do not need to restrict the range.
+Using this method is equivalent to the following code:
+
+    `#![feature(vec_deque_extract_if)]
+    let mut i = range.start;
+    let end_items = deq.len() - range.end;
+
+    while i < deq.len() - end_items {
+        if some_predicate(&mut deq[i]) {
+            let val = deq.remove(i).unwrap();
+            // your code here
+        } else {
+            i += 1;
+        }
+    }
+    `
+But `extract_if` is easier to use. `extract_if` is also more efficient, because it can backshift the elements of the array in bulk.
+
+The iterator also lets you mutate the value of each element in the closure, regardless of whether you choose to keep or remove it.
+##### 【136†§】Panics
+
+If `range` is out of bounds.
+##### 【137†§】Examples
+
+Splitting a deque into even and odd values, reusing the original deque:
+
+    `#![feature(vec_deque_extract_if)]
+    use std::collections::VecDeque;
+
+    let mut numbers = VecDeque::from([1, 2, 3, 4, 5, 6, 8, 9, 11, 13, 14, 15]);
+
+    let evens = numbers.extract_if(.., |x| *x % 2 == 0).collect::<VecDeque<_>>();
+    let odds = numbers;
+
+    assert_eq!(evens, VecDeque::from([2, 4, 6, 8, 14]));
+    assert_eq!(odds, VecDeque::from([1, 3, 5, 9, 11, 13, 15]));`
+Using the range argument to only process a part of the deque:
+
+    `#![feature(vec_deque_extract_if)]
+    use std::collections::VecDeque;
+
+    let mut items = VecDeque::from([0, 0, 0, 0, 0, 0, 0, 1, 2, 1, 2, 1, 2]);
+    let ones = items.extract_if(7.., |x| *x == 1).collect::<VecDeque<_>>();
+    assert_eq!(items, VecDeque::from([0, 0, 0, 0, 0, 0, 0, 2, 2, 2]));
+    assert_eq!(ones.len(), 3);`
+
+【138†Source】【139†§】
+### impl<T> 【127†VecDeque】<T>
+
+1.0.0 (const: 1.68.0) · 【140†Source】
+
+#### pub const fn 【4†new】() -> 【127†VecDeque】<T>
+
+Creates an empty deque.
+
+##### 【141†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let deque: VecDeque<u32> = VecDeque::new();`
+
+1.0.0 · 【142†Source】
+
+#### pub fn 【5†with_capacity】(capacity: 【134†usize】) -> 【127†VecDeque】<T>
+
+Creates an empty deque with space for at least `capacity` elements.
+##### 【143†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let deque: VecDeque<i32> = VecDeque::with_capacity(10);`
+
+【144†Source】
+
+#### pub fn 【6†try_with_capacity】( capacity: 【134†usize】, ) -> 【145†Result】<【127†VecDeque】<T>, 【146†TryReserveError】>
+
+🔬This is a nightly-only experimental API. (`try_with_capacity` 【147†#91913†github.com】)
+
+Creates an empty deque with space for at least `capacity` elements.
+##### 【148†§】Errors
+
+Returns an error if the capacity exceeds `isize::MAX` bytes, or if the allocator reports allocation failure.
+
+##### 【149†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let deque: VecDeque<u32> = VecDeque::try_with_capacity(10)?;`
+
+【150†Source】【151†§】
+
+### impl<T, A> 【127†VecDeque】<T, A>
+
+where A: 【123†Allocator】,
+
+【152†Source】
+#### pub const fn 【7†new_in】(alloc: A) -> 【127†VecDeque】<T, A>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【153†#32838†github.com】)
+
+Creates an empty deque.
+
+##### 【154†§】Examples
+
+    `
+    use std::collections::VecDeque;
+    use std::alloc::Global;
+
+    let deque: VecDeque<i32> = VecDeque::new_in(Global);`
+
+【155†Source】
+#### pub fn 【8†with_capacity_in】(capacity: 【134†usize】, alloc: A) -> 【127†VecDeque】<T, A>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【153†#32838†github.com】)
+
+Creates an empty deque with space for at least `capacity` elements.
+
+##### 【156†§】Examples
+
+    `
+    use std::collections::VecDeque;
+    use std::alloc::Global;
+
+    let deque: VecDeque<i32> = VecDeque::with_capacity_in(10, Global);`
+
+1.0.0 · 【157†Source】
+#### pub fn 【27†get】(&self, index: 【134†usize】) -> 【158†Option】<【131†&T】>
+
+Provides a reference to the element at the given index.
+
+Element at index 0 is the front of the queue.
+
+##### 【159†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf = VecDeque::new();
+    buf.push_back(3);
+    buf.push_back(4);
+    buf.push_back(5);
+    buf.push_back(6);
+    assert_eq!(buf.get(1), Some(&4));`
+
+1.0.0 · 【160†Source】
+#### pub fn 【28†get_mut】(&mut self, index: 【134†usize】) -> 【158†Option】<【131†&mut T】>
+
+Provides a mutable reference to the element at the given index.
+
+Element at index 0 is the front of the queue.
+##### 【161†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf = VecDeque::new();
+    buf.push_back(3);
+    buf.push_back(4);
+    buf.push_back(5);
+    buf.push_back(6);
+    assert_eq!(buf[1], 4);
+    if let Some(elem) = buf.get_mut(1) {
+        *elem = 7;
+    }
+    assert_eq!(buf[1], 7);`
+
+1.0.0 · 【162†Source】
+#### pub fn 【63†swap】(&mut self, i: 【134†usize】, j: 【134†usize】)
+
+Swaps elements at indices `i` and `j`.
+
+`i` and `j` may be equal.
+
+Element at index 0 is the front of the queue.
+
+##### 【163†§】Panics
+
+Panics if either index is out of bounds.
+##### 【164†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf = VecDeque::new();
+    buf.push_back(3);
+    buf.push_back(4);
+    buf.push_back(5);
+    assert_eq!(buf, [3, 4, 5]);
+    buf.swap(0, 2);
+    assert_eq!(buf, [5, 4, 3]);`
+
+1.0.0 · 【165†Source】
+
+#### pub fn 【18†capacity】(&self) -> 【134†usize】
+
+Returns the number of elements the deque can hold without reallocating.
+##### 【166†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let buf: VecDeque<i32> = VecDeque::with_capacity(10);
+    assert!(buf.capacity() >= 10);`
+
+1.0.0 · 【167†Source】
+#### pub fn 【51†reserve_exact】(&mut self, additional: 【134†usize】)
+
+Reserves the minimum capacity for at least `additional` more elements to be inserted in the given deque. Does nothing if the capacity is already sufficient.
+
+Note that the allocator may give the collection more space than it requests. Therefore capacity can not be relied upon to be precisely minimal. Prefer 【50†`reserve`】 if future insertions are expected.
+
+##### 【168†§】Panics
+
+Panics if the new capacity overflows `usize`.
+##### 【169†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf: VecDeque<i32> = [1].into();
+    buf.reserve_exact(10);
+    assert!(buf.capacity() >= 11);`
+
+1.0.0 · 【170†Source】
+
+#### pub fn 【50†reserve】(&mut self, additional: 【134†usize】)
+
+Reserves capacity for at least `additional` more elements to be inserted in the given deque. The collection may reserve more space to speculatively avoid frequent reallocations.
+
+##### 【171†§】Panics
+
+Panics if the new capacity overflows `usize`.
+##### 【172†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf: VecDeque<i32> = [1].into();
+    buf.reserve(10);
+    assert!(buf.capacity() >= 11);`
+
+1.57.0 · 【173†Source】
+#### pub fn 【69†try_reserve_exact】( &mut self, additional: 【134†usize】, ) -> 【145†Result】<【174†()】, 【146†TryReserveError】>
+
+Tries to reserve the minimum capacity for at least `additional` more elements to be inserted in the given deque. After calling `try_reserve_exact`, capacity will be greater than or equal to `self.len() + additional` if it returns `Ok(())`. Does nothing if the capacity is already sufficient.
+Note that the allocator may give the collection more space than it requests. Therefore, capacity can not be relied upon to be precisely minimal. Prefer 【68†`try_reserve`】 if future insertions are expected.
+##### 【175†§】Errors
+
+If the capacity overflows `usize`, or the allocator reports a failure, then an error is returned.
+##### 【176†§】Examples
+
+    `use std::collections::TryReserveError;
+    use std::collections::VecDeque;
+
+    fn process_data(data: &[u32]) -> Result<VecDeque<u32>, TryReserveError> {
+        let mut output = VecDeque::new();
+
+        // Pre-reserve the memory, exiting if we can't
+        output.try_reserve_exact(data.len())?;
+
+        // Now we know this can't OOM(Out-Of-Memory) in the middle of our complex work
+        output.extend(data.iter().map(|&val| {
+            val * 2 + 5 // very complicated
+        }));
+
+        Ok(output)
+    }`
+1.57.0 · 【177†Source】
+#### pub fn 【68†try_reserve】(&mut self, additional: 【134†usize】) -> 【145†Result】<【174†()】, 【146†TryReserveError】>
+Tries to reserve capacity for at least `additional` more elements to be inserted in the given deque. The collection may reserve more space to speculatively avoid frequent reallocations. After calling `try_reserve`, capacity will be greater than or equal to `self.len() + additional` if it returns `Ok(())`. Does nothing if capacity is already sufficient. This method preserves the contents even if an error occurs.
+##### 【178†§】Errors
+
+If the capacity overflows `usize`, or the allocator reports a failure, then an error is returned.
+##### 【179†§】Examples
+
+    `use std::collections::TryReserveError;
+    use std::collections::VecDeque;
+
+    fn process_data(data: &[u32]) -> Result<VecDeque<u32>, TryReserveError> {
+        let mut output = VecDeque::new();
+
+        // Pre-reserve the memory, exiting if we can't
+        output.try_reserve(data.len())?;
+
+        // Now we know this can't OOM in the middle of our complex work
+        output.extend(data.iter().map(|&val| {
+            val * 2 + 5 // very complicated
+        }));
+
+        Ok(output)
+    }`
+1.5.0 · 【180†Source】
+#### pub fn 【60†shrink_to_fit】(&mut self)
+
+Shrinks the capacity of the deque as much as possible.
+
+It will drop down as close as possible to the length but the allocator may still inform the deque that there is space for a few more elements.
+
+##### 【181†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf = VecDeque::with_capacity(15);
+    buf.extend(0..4);
+    assert_eq!(buf.capacity(), 15);
+    buf.shrink_to_fit();
+    assert!(buf.capacity() >= 4);`
+
+1.56.0 · 【182†Source】
+#### pub fn 【59†shrink_to】(&mut self, min_capacity: 【134†usize】)
+
+Shrinks the capacity of the deque with a lower bound.
+
+The capacity will remain at least as large as both the length and the supplied value.
+
+If the current capacity is less than the lower limit, this is a no-op.
+##### 【183†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf = VecDeque::with_capacity(15);
+    buf.extend(0..4);
+    assert_eq!(buf.capacity(), 15);
+    buf.shrink_to(6);
+    assert!(buf.capacity() >= 6);
+    buf.shrink_to(0);
+    assert!(buf.capacity() >= 4);`
+
+1.16.0 · 【184†Source】
+#### pub fn 【66†truncate】(&mut self, len: 【134†usize】)
+
+Shortens the deque, keeping the first `len` elements and dropping the rest.
+
+If `len` is greater or equal to the deque’s current length, this has no effect.
+
+##### 【185†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf = VecDeque::new();
+    buf.push_back(5);
+    buf.push_back(10);
+    buf.push_back(15);
+    assert_eq!(buf, [5, 10, 15]);
+    buf.truncate(1);
+    assert_eq!(buf, [5]);`
+
+1.99.0 · 【186†Source】
+#### pub fn 【55†retain_back】(&mut self, len: 【134†usize】)
+
+Shortens the deque, keeping the last `len` elements and dropping the rest.
+
+If `len` is greater or equal to the deque’s current length, this has no effect.
+##### 【187†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf = VecDeque::new();
+    buf.push_front(5);
+    buf.push_front(10);
+    buf.push_front(15);
+    assert_eq!(buf, [15, 10, 5]);
+    assert_eq!(buf.as_slices(), (&[15, 10, 5][..], &[][..]));
+    buf.retain_back(1);
+    assert_eq!(buf.as_slices(), (&[5][..], &[][..]));`
+
+【188†Source】
+#### pub fn 【67†truncate_to_range】<R>(&mut self, range: R)
+
+where R: 【133†RangeBounds】<【134†usize】>,
+
+🔬This is a nightly-only experimental API. (`vec_deque_retain_range` 【189†#156215†github.com】)
+
+Shortens the deque to the elements within `range`, dropping the rest.
+
+##### 【190†§】Panics
+
+Panics if the starting point is greater than the end point or if the end point is greater than the length of the deque.
+##### 【191†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf: VecDeque<_> = (0..6).collect();
+    buf.truncate_to_range(2..5);
+    assert_eq!(buf, [2, 3, 4]);`
+
+【192†Source】
+
+#### pub fn 【9†allocator】(&self) -> 【131†&A】
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【153†#32838†github.com】)
+
+Returns a reference to the underlying allocator.
+
+1.0.0 · 【193†Source】
+
+#### pub fn 【32†iter】(&self) -> 【194†Iter】<'_, T> 【1†ⓘ】
+
+Returns a front-to-back iterator.
+##### 【195†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf = VecDeque::new();
+    buf.push_back(5);
+    buf.push_back(3);
+    buf.push_back(4);
+    let b: &[_] = &[&5, &3, &4];
+    let c: Vec<&i32> = buf.iter().collect();
+    assert_eq!(&c[..], b);`
+
+1.0.0 · 【196†Source】
+
+#### pub fn 【33†iter_mut】(&mut self) -> 【197†IterMut】<'_, T> 【1†ⓘ】
+
+Returns a front-to-back iterator that returns mutable references.
+##### 【198†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut buf = VecDeque::new();
+    buf.push_back(5);
+    buf.push_back(3);
+    buf.push_back(4);
+    for num in buf.iter_mut() {
+        *num = *num - 2;
+    }
+    let b: &[_] = &[&mut 3, &mut 1, &mut 2];
+    assert_eq!(&buf.iter_mut().collect::<Vec<&mut i32>>()[..], b);`
+
+1.5.0 · 【199†Source】
+#### pub fn 【12†as_slices】(&self) -> (&【200†[T]】, &【200†[T]】)
+
+Returns a pair of slices which contain, in order, the contents of the deque.
+
+If 【35†`make_contiguous`】 was previously called, all elements of the deque will be in the first slice and the second slice will be empty. Otherwise, the exact split point depends on implementation details and is not guaranteed.
+##### 【201†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut deque = VecDeque::new();
+
+    deque.push_back(0);
+    deque.push_back(1);
+    deque.push_back(2);
+
+    let expected = [0, 1, 2];
+    let (front, back) = deque.as_slices();
+    assert_eq!(&expected[..front.len()], front);
+    assert_eq!(&expected[front.len()..], back);
+
+    deque.push_front(10);
+    deque.push_front(9);
+
+    let expected = [9, 10, 0, 1, 2];
+    let (front, back) = deque.as_slices();
+    assert_eq!(&expected[..front.len()], front);
+    assert_eq!(&expected[front.len()..], back);`
+1.5.0 · 【202†Source】
+#### pub fn 【11†as_mut_slices】(&mut self) -> (&mut 【200†[T]】, &mut 【200†[T]】)
+
+Returns a pair of slices which contain, in order, the contents of the deque.
+
+If 【35†`make_contiguous`】 was previously called, all elements of the deque will be in the first slice and the second slice will be empty. Otherwise, the exact split point depends on implementation details and is not guaranteed.
+##### 【203†§】Examples
+
+    `use std::collections::VecDeque;
+
+    let mut deque = VecDeque::new();
+
+    deque.push_back(0);
+    deque.push_back(1);
+

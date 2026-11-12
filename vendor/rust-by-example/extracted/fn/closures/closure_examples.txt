@@ -1,0 +1,17 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+
+# 【1†Examples in `std`】
+
+This section contains a few examples of using closures from the `std` library.

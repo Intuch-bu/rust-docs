@@ -1,0 +1,22 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+
+# 【1†Types】
+
+Rust provides several mechanisms to change or define the type of primitive and user defined types. The following sections cover:
+
+  * 【2†Casting】 between primitive types
+  * Specifying the desired type of 【3†literals】
+  * Using 【4†type inference】
+  * 【5†Aliasing】 types

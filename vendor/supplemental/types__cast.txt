@@ -1,0 +1,539 @@
+【0†Skip to main content】
+
+## 【1†TryFrom】
+
+## 【2†std】1.99.1
+
+(58cf8f9c3 2026-10-13)
+
+## 【1†TryFrom】
+
+### 【1†Sections】
+
+  * 【3†Generic Implementations】
+  * 【4†Examples】
+
+### 【5†Required Associated Types】
+
+  * 【6†Error】
+
+### 【7†Required Methods】
+
+  * 【8†try_from】
+
+### 【9†Dyn Compatibility】
+
+### 【10†Implementors】
+
+## 【11†In std::convert】
+# Trait TryFrom [Button: Copy item path]
+
+1.34.0 (const: 【12†unstable†github.com】) · 【13†Source】
+
+    `pub trait TryFrom<T>: 【14†Sized】 {
+        type 【6†Error】;
+
+        // Required method
+        fn 【8†try_from】(value: T) -> 【15†Result】<Self, Self::【6†Error】>;
+    }`
+
+Expand description
+
+Simple and safe type conversions that may fail in a controlled way under some circumstances. It is the reciprocal of 【16†`TryInto`】.
+This is useful when you are doing a type conversion that may trivially succeed but may also need special handling. For example, there is no way to convert an 【17†`i64`】 into an 【18†`i32`】 using the 【19†`From`】 trait, because an 【17†`i64`】 may contain a value that an 【18†`i32`】 cannot represent and so the conversion would lose data. This might be handled by truncating the 【17†`i64`】 to an 【18†`i32`】 or by simply returning 【20†`i32::MAX`】, or by some other method.
+The 【19†`From`】 trait is intended for perfect conversions, so the `TryFrom` trait informs the programmer when a type conversion could go bad and lets them decide how to handle it.
+## 【3†§】Generic Implementations
+
+  * `TryFrom<T> for U` implies 【16†`TryInto`】`<U> for T`
+  * 【8†`try_from`】 is reflexive, which means that `TryFrom<T> for T` is implemented and cannot fail – the associated `Error` type for calling `T::try_from()` on a value of type `T` is 【21†`Infallible`】. When the 【22†`!`】 type is stabilized 【21†`Infallible`】 and 【22†`!`】 will be equivalent.
+Prefer using 【16†`TryInto`】 over 【23†`TryFrom`】 when specifying trait bounds on a generic function to ensure that types that only implement 【16†`TryInto`】 can be used as well.
+`TryFrom<T>` can be implemented as follows:
+
+    `struct GreaterThanZero(i32);
+
+    impl TryFrom<i32> for GreaterThanZero {
+        type Error = &'static str;
+
+        fn try_from(value: i32) -> Result<Self, Self::Error> {
+            if value <= 0 {
+                Err("GreaterThanZero only accepts values greater than zero!")
+            } else {
+                Ok(GreaterThanZero(value))
+            }
+        }
+    }`
+## 【4†§】Examples
+As described, 【18†`i32`】 implements `TryFrom<`【17†`i64`】`>`:
+
+    `let big_number = 1_000_000_000_000i64;
+    // Silently truncates `big_number`, requires detecting
+    // and handling the truncation after the fact.
+    let smaller_number = big_number as i32;
+    assert_eq!(smaller_number, -727379968);
+
+    // Returns an error because `big_number` is too big to
+    // fit in an `i32`.
+    let try_smaller_number = i32::try_from(big_number);
+    assert!(try_smaller_number.is_err());
+    // Returns `Ok(3)`.
+    let try_successful_smaller_number = i32::try_from(3);
+    assert!(try_successful_smaller_number.is_ok());`
+## Required Associated Types【5†§】
+
+1.34.0 (const: 【12†unstable†github.com】) · 【24†Source】
+
+#### type 【6†Error】
+
+The type returned in the event of a conversion error.
+
+## Required Methods【7†§】
+
+1.34.0 (const: 【12†unstable†github.com】) · 【25†Source】
+
+#### fn 【8†try_from】(value: T) -> 【15†Result】<Self, Self::【6†Error】>
+
+Performs the conversion.
+
+## Dyn Compatibility【9†§】
+
+This trait is not 【26†dyn compatible】.
+
+In older versions of Rust, dyn compatibility was called "object safety".
+## Implementors【10†§】
+
+【27†Source】【28†§】
+
+### impl 【23†TryFrom】<【29†ByteString】> for 【30†String】
+
+【31†Source】【32†§】
+
+#### type 【6†Error】 = 【33†FromUtf8Error】
+
+1.85.0 · 【34†Source】【35†§】
+
+### impl 【23†TryFrom】<【36†CString】> for 【30†String】
+
+【37†Source】【38†§】
+
+#### type 【6†Error】 = 【39†IntoStringError】
+
+1.63.0 · 【40†Source】【41†§】
+
+### impl 【23†TryFrom】<【42†HandleOrInvalid】> for 【43†OwnedHandle】
+
+Available on Windows only.
+
+【44†Source】【45†§】
+#### type 【6†Error】 = 【46†InvalidHandleError】
+
+1.63.0 · 【47†Source】【48†§】
+
+### impl 【23†TryFrom】<【49†HandleOrNull】> for 【43†OwnedHandle】
+
+Available on Windows only.
+
+【50†Source】【51†§】
+
+#### type 【6†Error】 = 【52†NullHandleError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【53†Source】【54†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【56†i8】>> for 【55†NonZero】<【57†u8】>
+
+【53†Source】【58†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【53†Source】【60†§】
+### impl 【23†TryFrom】<【55†NonZero】<【56†i8】>> for 【55†NonZero】<【61†u16】>
+
+【53†Source】【62†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【53†Source】【63†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【56†i8】>> for 【55†NonZero】<【64†u32】>
+
+【53†Source】【65†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【53†Source】【66†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【56†i8】>> for 【55†NonZero】<【67†u64】>
+
+【53†Source】【68†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【53†Source】【69†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【56†i8】>> for 【55†NonZero】<【70†u128】>
+
+【53†Source】【71†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【53†Source】【72†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【56†i8】>> for 【55†NonZero】<【73†usize】>
+
+【53†Source】【74†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【75†Source】【76†§】
+### impl 【23†TryFrom】<【55†NonZero】<【77†i16】>> for 【55†NonZero】<【56†i8】>
+
+【75†Source】【78†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【79†Source】【80†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【77†i16】>> for 【55†NonZero】<【57†u8】>
+
+【79†Source】【81†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【79†Source】【82†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【77†i16】>> for 【55†NonZero】<【61†u16】>
+
+【79†Source】【83†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【79†Source】【84†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【77†i16】>> for 【55†NonZero】<【64†u32】>
+
+【79†Source】【85†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【79†Source】【86†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【77†i16】>> for 【55†NonZero】<【67†u64】>
+
+【79†Source】【87†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【79†Source】【88†§】
+### impl 【23†TryFrom】<【55†NonZero】<【77†i16】>> for 【55†NonZero】<【70†u128】>
+
+【79†Source】【89†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【79†Source】【90†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【77†i16】>> for 【55†NonZero】<【73†usize】>
+
+【79†Source】【91†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【92†Source】【93†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【18†i32】>> for 【55†NonZero】<【56†i8】>
+
+【92†Source】【94†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【92†Source】【95†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【18†i32】>> for 【55†NonZero】<【77†i16】>
+
+【92†Source】【96†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【92†Source】【97†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【18†i32】>> for 【55†NonZero】<【98†isize】>
+
+【92†Source】【99†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【100†Source】【101†§】
+### impl 【23†TryFrom】<【55†NonZero】<【18†i32】>> for 【55†NonZero】<【57†u8】>
+
+【100†Source】【102†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【100†Source】【103†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【18†i32】>> for 【55†NonZero】<【61†u16】>
+
+【100†Source】【104†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【100†Source】【105†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【18†i32】>> for 【55†NonZero】<【64†u32】>
+
+【100†Source】【106†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【100†Source】【107†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【18†i32】>> for 【55†NonZero】<【67†u64】>
+
+【100†Source】【108†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【100†Source】【109†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【18†i32】>> for 【55†NonZero】<【70†u128】>
+
+【100†Source】【110†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【100†Source】【111†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【18†i32】>> for 【55†NonZero】<【73†usize】>
+
+【100†Source】【112†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【113†Source】【114†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【17†i64】>> for 【55†NonZero】<【56†i8】>
+
+【113†Source】【115†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【113†Source】【116†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【17†i64】>> for 【55†NonZero】<【77†i16】>
+
+【113†Source】【117†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【113†Source】【118†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【17†i64】>> for 【55†NonZero】<【18†i32】>
+
+【113†Source】【119†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【113†Source】【120†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【17†i64】>> for 【55†NonZero】<【98†isize】>
+
+【113†Source】【121†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【122†Source】【123†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【17†i64】>> for 【55†NonZero】<【57†u8】>
+
+【122†Source】【124†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【122†Source】【125†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【17†i64】>> for 【55†NonZero】<【61†u16】>
+
+【122†Source】【126†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【122†Source】【127†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【17†i64】>> for 【55†NonZero】<【64†u32】>
+
+【122†Source】【128†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【122†Source】【129†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【17†i64】>> for 【55†NonZero】<【67†u64】>
+
+【122†Source】【130†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【122†Source】【131†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【17†i64】>> for 【55†NonZero】<【70†u128】>
+
+【122†Source】【132†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【122†Source】【133†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【17†i64】>> for 【55†NonZero】<【73†usize】>
+
+【122†Source】【134†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【135†Source】【136†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【56†i8】>
+
+【135†Source】【138†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【135†Source】【139†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【77†i16】>
+
+【135†Source】【140†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【135†Source】【141†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【18†i32】>
+
+【135†Source】【142†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【135†Source】【143†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【17†i64】>
+
+【135†Source】【144†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【135†Source】【145†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【98†isize】>
+
+【135†Source】【146†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【147†Source】【148†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【57†u8】>
+
+【147†Source】【149†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【147†Source】【150†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【61†u16】>
+
+【147†Source】【151†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【147†Source】【152†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【64†u32】>
+
+【147†Source】【153†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【147†Source】【154†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【67†u64】>
+
+【147†Source】【155†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【147†Source】【156†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【70†u128】>
+
+【147†Source】【157†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【147†Source】【158†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【137†i128】>> for 【55†NonZero】<【73†usize】>
+
+【147†Source】【159†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【160†Source】【161†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【98†isize】>> for 【55†NonZero】<【56†i8】>
+
+【160†Source】【162†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【160†Source】【163†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【98†isize】>> for 【55†NonZero】<【77†i16】>
+
+【160†Source】【164†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【160†Source】【165†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【98†isize】>> for 【55†NonZero】<【18†i32】>
+
+【160†Source】【166†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【160†Source】【167†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【98†isize】>> for 【55†NonZero】<【17†i64】>
+
+【160†Source】【168†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【160†Source】【169†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【98†isize】>> for 【55†NonZero】<【137†i128】>
+
+【160†Source】【170†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【171†Source】【172†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【98†isize】>> for 【55†NonZero】<【57†u8】>
+
+【171†Source】【173†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【171†Source】【174†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【98†isize】>> for 【55†NonZero】<【61†u16】>
+
+【171†Source】【175†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【171†Source】【176†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【98†isize】>> for 【55†NonZero】<【64†u32】>
+
+【171†Source】【177†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【171†Source】【178†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【98†isize】>> for 【55†NonZero】<【67†u64】>
+
+【171†Source】【179†§】
+
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【171†Source】【180†§】
+
+### impl 【23†TryFrom】<【55†NonZero】<【98†isize】>> for 【55†NonZero】<【70†u128】>
+
+【171†Source】【181†§】
+#### type 【6†Error】 = 【59†TryFromIntError】
+
+1.49.0 (const: 【12†unstable†github.com】) · 【171†Source】【182†§】
+

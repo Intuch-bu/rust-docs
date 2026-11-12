@@ -1,0 +1,27 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+
+# 【1†Std misc】
+
+Many other types are provided by the std library to support things such as:
+
+  * Threads
+  * Channels
+  * File I/O
+
+These expand beyond what the 【2†primitives】 provide.
+
+### 【3†See also:】
+
+【2†primitives】 and 【4†the std library】

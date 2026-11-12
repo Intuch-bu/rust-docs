@@ -1,0 +1,21 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+
+# 【1†Syntax】
+
+In following subsections, we will show how to define macros in Rust. There are three basic ideas:
+
+  * 【2†Patterns and Designators】
+  * 【3†Overloading】
+  * 【4†Repetition】

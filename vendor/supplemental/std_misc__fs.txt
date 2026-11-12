@@ -1,0 +1,500 @@
+【0†Skip to main content】
+
+## 【1†OpenOptions】
+
+## 【2†std】1.99.1
+
+(58cf8f9c3 2026-10-13)
+
+## 【1†OpenOptions】
+
+### 【1†Sections】
+
+  * 【3†Examples】
+
+### 【4†Associated Functions】
+
+  * 【5†new】
+
+### 【4†Methods】
+
+  * 【6†append】
+  * 【7†create】
+  * 【8†create_new】
+  * 【9†open】
+  * 【10†read】
+  * 【11†truncate】
+  * 【12†write】
+
+### 【13†Trait Implementations】
+
+  * 【14†Clone】
+  * 【15†Debug】
+  * 【16†OpenOptionsExt】
+  * 【17†OpenOptionsExt】
+  * 【18†OpenOptionsExt】
+  * 【19†OpenOptionsExt2】
+### 【20†Auto Trait Implementations】
+
+  * 【21†Freeze】
+  * 【22†RefUnwindSafe】
+  * 【23†Send】
+  * 【24†Sync】
+  * 【25†Unpin】
+  * 【26†UnsafeUnpin】
+  * 【27†UnwindSafe】
+
+### 【28†Blanket Implementations】
+
+  * 【29†Any】
+  * 【30†Borrow<T>】
+  * 【31†BorrowMut<T>】
+  * 【32†CloneToUninit】
+  * 【33†From<T>】
+  * 【34†Into<U>】
+  * 【35†ToOwned】
+  * 【36†TryFrom<U>】
+  * 【37†TryInto<U>】
+
+## 【38†In std::fs】
+# Struct OpenOptions [Button: Copy item path]
+
+1.0.0 · 【39†Source】
+
+    `pub struct OpenOptions(/* private fields */);`
+
+Expand description
+
+Options and flags which can be used to configure how a file is opened.
+
+This builder exposes the ability to configure how a 【40†`File`】 is opened and what operations are permitted on the open file. The 【41†`File::open`】 and 【42†`File::create`】 methods are aliases for commonly used options using this builder.
+Generally speaking, when using `OpenOptions`, you’ll first call 【5†`OpenOptions::new`】, then chain calls to methods to set each option, then call 【9†`OpenOptions::open`】, passing the path of the file you’re trying to open. This will give you a 【43†`io::Result`】 with a 【40†`File`】 inside that you can further operate on.
+## 【3†§】Examples
+
+Opening a file to read:
+
+    `use std::fs::OpenOptions;
+
+    let file = OpenOptions::new().read(true).open("foo.txt");`
+
+Opening a file for both reading and writing, as well as creating it if it doesn’t exist:
+
+    `use std::fs::OpenOptions;
+
+    let file = OpenOptions::new()
+                .read(true)
+                .write(true)
+                .create(true)
+                .open("foo.txt");`
+
+## Implementations【4†§】
+
+【44†Source】【45†§】
+### impl 【46†OpenOptions】
+
+1.0.0 · 【47†Source】
+
+#### pub fn 【5†new】() -> Self
+
+Creates a blank new set of options ready for configuration.
+
+All options are initially set to `false`.
+
+##### 【48†§】Examples
+
+    `use std::fs::OpenOptions;
+
+    let mut options = OpenOptions::new();
+    let file = options.read(true).open("foo.txt");`
+
+1.0.0 · 【49†Source】
+#### pub fn 【10†read】(&mut self, read: 【50†bool】) -> &mut Self
+
+Sets the option for read access.
+
+This option, when true, will indicate that the file should be `read`-able if opened.
+
+##### 【51†§】Examples
+
+    `use std::fs::OpenOptions;
+
+    let file = OpenOptions::new().read(true).open("foo.txt");`
+
+1.0.0 · 【52†Source】
+#### pub fn 【12†write】(&mut self, write: 【50†bool】) -> &mut Self
+
+Sets the option for write access.
+
+This option, when true, will indicate that the file should be `write`-able if opened.
+
+If the file already exists, any write calls on it will overwrite its contents, without truncating it.
+
+##### 【53†§】Examples
+
+    `use std::fs::OpenOptions;
+
+    let file = OpenOptions::new().write(true).open("foo.txt");`
+
+1.0.0 · 【54†Source】
+#### pub fn 【6†append】(&mut self, append: 【50†bool】) -> &mut Self
+
+Sets the option for the append mode.
+
+This option, when true, means that writes will append to a file instead of overwriting previous contents. Note that setting `.write(true).append(true)` has the same effect as setting only `.append(true)`.
+Append mode guarantees that writes will be positioned at the current end of file, even when there are other processes or threads appending to the same file. This is unlike `【55†seek】(【56†SeekFrom】::【57†End】(0))` followed by `write()`, which has a race between seeking and writing during which another writer can write, with our `write()` overwriting their data.
+Keep in mind that this does not necessarily guarantee that data appended by different processes or threads does not interleave. The amount of data accepted a single `write()` call depends on the operating system and file system. A successful `write()` is allowed to write only part of the given data, so even if you’re careful to provide the whole message in a single call to `write()`, there is no guarantee that it will be written out in full.
+If you rely on the filesystem accepting the message in a single write, make sure that all data that belongs together is written in one operation. This can be done by concatenating strings before passing them to 【58†`write()`】.
+If a file is opened with both read and append access, beware that after opening, and after every write, the position for reading may be set at the end of the file. So, before writing, save the current position (using `【55†Seek】::【59†stream_position】`), and restore it before the next read.
+###### 【60†§】Note
+
+This function doesn’t create the file if it doesn’t exist. Use the 【7†`OpenOptions::create`】 method to do so.
+
+##### 【61†§】Examples
+
+    `use std::fs::OpenOptions;
+
+    let file = OpenOptions::new().append(true).open("foo.txt");`
+
+1.0.0 · 【62†Source】
+#### pub fn 【11†truncate】(&mut self, truncate: 【50†bool】) -> &mut Self
+
+Sets the option for truncating a previous file.
+
+If a file is successfully opened with this option set to true, it will truncate the file to 0 length if it already exists.
+
+The file must be opened with write access for truncate to work.
+
+##### 【63†§】Examples
+
+    `use std::fs::OpenOptions;
+
+    let file = OpenOptions::new().write(true).truncate(true).open("foo.txt");`
+
+1.0.0 · 【64†Source】
+#### pub fn 【7†create】(&mut self, create: 【50†bool】) -> &mut Self
+
+Sets the option to create a new file, or open it if it already exists.
+
+In order for the file to be created, 【12†`OpenOptions::write`】 or 【6†`OpenOptions::append`】 access must be used.
+
+See also 【65†`std::fs::write()`】 for a simple function to create a file with some given data.
+
+##### 【66†§】Errors
+
+If `.create(true)` is set without `.write(true)` or `.append(true)`, calling 【9†`open`】 will fail with 【67†`InvalidInput`】 error.
+##### 【68†§】Examples
+
+    `use std::fs::OpenOptions;
+
+    let file = OpenOptions::new().write(true).create(true).open("foo.txt");`
+
+1.9.0 · 【69†Source】
+#### pub fn 【8†create_new】(&mut self, create_new: 【50†bool】) -> &mut Self
+
+Sets the option to create a new file, failing if it already exists.
+No file is allowed to exist at the target location, also no (dangling) symlink. In this way, if the call succeeds, the file returned is guaranteed to be new. If a file exists at the target location, creating a new file will fail with 【70†`AlreadyExists`】 or another error based on the situation. See 【9†`OpenOptions::open`】 for a non-exhaustive list of likely errors.
+This option is useful because it is atomic. Otherwise between checking whether a file exists and creating a new one, the file may have been created by another process (a 【71†TOCTOU】 race condition / attack).
+
+If `.create_new(true)` is set, 【7†`.create()`】 and 【11†`.truncate()`】 are ignored.
+
+The file must be opened with write or append access in order to create a new file.
+##### 【72†§】Examples
+
+    `use std::fs::OpenOptions;
+
+    let file = OpenOptions::new().write(true)
+                                 .create_new(true)
+                                 .open("foo.txt");`
+
+1.0.0 · 【73†Source】
+
+#### pub fn 【9†open】<P: 【74†AsRef】<【75†Path】>>(&self, path: P) -> 【43†Result】<【40†File】>
+
+Opens a file at `path` with the options specified by `self`.
+##### 【76†§】Errors
+
+This function will return an error under a number of different circumstances. Some of these error conditions are listed here, together with their 【77†`io::ErrorKind`】. The mapping to 【77†`io::ErrorKind`】s is not part of the compatibility contract of the function.
+  * 【78†`NotFound`】: The specified file does not exist and neither `create` or `create_new` is set.
+  * 【78†`NotFound`】: One of the directory components of the file path does not exist.
+  * 【79†`PermissionDenied`】: The user lacks permission to get the specified access rights for the file.
+  * 【79†`PermissionDenied`】: The user lacks permission to open one of the directory components of the specified path.
+  * 【70†`AlreadyExists`】: `create_new` was specified and the file already exists.
+  * 【67†`InvalidInput`】: Invalid combinations of open options (truncate without write access, create without write or append access, no access mode set, etc.).
+The following errors don’t match any existing 【77†`io::ErrorKind`】 at the moment:
+
+  * One of the directory components of the specified file path was not, in fact, a directory.
+  * Filesystem-level errors: full disk, write permission requested on a read-only file system, exceeded disk quota, too many open files, too long filename, too many symbolic links in the specified path (Unix-like systems only), etc.
+##### 【80†§】Examples
+
+    `use std::fs::OpenOptions;
+
+    let file = OpenOptions::new().read(true).open("foo.txt");`
+
+## Trait Implementations【13†§】
+
+1.0.0 · 【81†Source】【14†§】
+
+### impl 【82†Clone】 for 【46†OpenOptions】
+
+【81†Source】【83†§】
+
+#### fn 【84†clone】(&self) -> 【46†OpenOptions】
+
+Returns a duplicate of the value. 【84†Read more】
+
+1.0.0 (const: 【85†unstable†github.com】) · 【86†Source】【87†§】
+#### fn 【88†clone_from】(&mut self, source: &Self)
+
+Performs copy-assignment from `source`. 【88†Read more】
+
+1.0.0 · 【81†Source】【15†§】
+
+### impl 【89†Debug】 for 【46†OpenOptions】
+
+【81†Source】【90†§】
+
+#### fn 【91†fmt】(&self, f: &mut 【92†Formatter】<'_>) -> 【93†Result】
+
+Formats the value using the given formatter. 【91†Read more】
+
+1.1.0 · 【94†Source】【16†§】
+
+### impl 【95†OpenOptionsExt】 for 【46†OpenOptions】
+
+Available on Unix only.
+
+【96†Source】【97†§】
+#### fn 【98†mode】(&mut self, mode: 【99†u32】) -> &mut 【46†OpenOptions】
+
+Sets the mode bits that a new file will be created with. 【98†Read more】
+
+【100†Source】【101†§】
+
+#### fn 【102†custom_flags】(&mut self, flags: 【103†i32】) -> &mut 【46†OpenOptions】
+
+Pass custom flags to the `flags` argument of `open`. 【102†Read more】
+
+【104†Source】【17†§】
+
+### impl 【105†OpenOptionsExt】 for 【46†OpenOptions】
+
+Available on WASI only.
+
+【106†Source】【107†§】
+#### fn 【108†custom_flags】(&mut self, flags: 【103†i32】) -> &mut 【46†OpenOptions】
+
+🔬This is a nightly-only experimental API. (`wasi_ext` 【109†#71213†github.com】)
+
+Pass custom flags to the `flags` argument of `open`.
+
+1.10.0 · 【110†Source】【18†§】
+
+### impl 【111†OpenOptionsExt】 for 【46†OpenOptions】
+
+Available on Windows only.
+
+【112†Source】【113†§】
+#### fn 【114†access_mode】(&mut self, access: 【99†u32】) -> &mut 【46†OpenOptions】
+
+Overrides the `dwDesiredAccess` argument to the call to 【115†`CreateFile`†docs.microsoft.com】 with the specified value. 【114†Read more】
+
+【116†Source】【117†§】
+
+#### fn 【118†share_mode】(&mut self, share: 【99†u32】) -> &mut 【46†OpenOptions】
+
+Overrides the `dwShareMode` argument to the call to 【115†`CreateFile`†docs.microsoft.com】 with the specified value. 【118†Read more】
+
+【119†Source】【120†§】
+#### fn 【121†custom_flags】(&mut self, flags: 【99†u32】) -> &mut 【46†OpenOptions】
+
+Sets extra flags for the `dwFileFlags` argument to the call to 【122†`CreateFile2`†docs.microsoft.com】 to the specified value (or combines it with `attributes` and `security_qos_flags` to set the `dwFlagsAndAttributes` for 【115†`CreateFile`†docs.microsoft.com】). 【121†Read more】
+
+【123†Source】【124†§】
+#### fn 【125†attributes】(&mut self, attributes: 【99†u32】) -> &mut 【46†OpenOptions】
+
+Sets the `dwFileAttributes` argument to the call to 【122†`CreateFile2`†docs.microsoft.com】 to the specified value (or combines it with `custom_flags` and `security_qos_flags` to set the `dwFlagsAndAttributes` for 【115†`CreateFile`†docs.microsoft.com】). 【125†Read more】
+
+【126†Source】【127†§】
+#### fn 【128†security_qos_flags】(&mut self, flags: 【99†u32】) -> &mut 【46†OpenOptions】
+
+Sets the `dwSecurityQosFlags` argument to the call to 【122†`CreateFile2`†docs.microsoft.com】 to the specified value (or combines it with `custom_flags` and `attributes` to set the `dwFlagsAndAttributes` for 【115†`CreateFile`†docs.microsoft.com】). 【128†Read more】
+
+【129†Source】【19†§】
+
+### impl 【130†OpenOptionsExt2】 for 【46†OpenOptions】
+
+Available on Windows only.
+
+【131†Source】【132†§】
+#### fn 【133†freeze_last_access_time】(&mut self, freeze: 【50†bool】) -> &mut Self
+
+🔬This is a nightly-only experimental API. (`windows_freeze_file_times` 【134†#149715†github.com】)
+
+If set to `true`, prevent the “last access time” of the file from being changed. 【133†Read more】
+
+【135†Source】【136†§】
+#### fn 【137†freeze_last_write_time】(&mut self, freeze: 【50†bool】) -> &mut Self
+
+🔬This is a nightly-only experimental API. (`windows_freeze_file_times` 【134†#149715†github.com】)
+
+If set to `true`, prevent the “last write time” of the file from being changed. 【137†Read more】
+
+## Auto Trait Implementations【20†§】
+
+【21†§】
+
+### impl 【138†Freeze】 for 【46†OpenOptions】
+
+【22†§】
+
+### impl 【139†RefUnwindSafe】 for 【46†OpenOptions】
+
+【23†§】
+
+### impl 【140†Send】 for 【46†OpenOptions】
+
+【24†§】
+### impl 【141†Sync】 for 【46†OpenOptions】
+
+【25†§】
+
+### impl 【142†Unpin】 for 【46†OpenOptions】
+
+【26†§】
+
+### impl 【143†UnsafeUnpin】 for 【46†OpenOptions】
+
+【27†§】
+
+### impl 【144†UnwindSafe】 for 【46†OpenOptions】
+
+## Blanket Implementations【28†§】
+
+【145†Source】【29†§】
+
+### impl<T> 【146†Any】 for T
+
+where T: 'static + ?【147†Sized】,
+
+【148†Source】【149†§】
+
+#### fn 【150†type_id】(&self) -> 【151†TypeId】
+
+Gets the `TypeId` of `self`. 【150†Read more】
+
+【152†Source】【30†§】
+### impl<T> 【153†Borrow】<T> for T
+
+where T: ?【147†Sized】,
+
+【154†Source】【155†§】
+
+#### fn 【156†borrow】(&self) -> 【157†&T】
+
+Immutably borrows from an owned value. 【156†Read more】
+
+【158†Source】【31†§】
+
+### impl<T> 【159†BorrowMut】<T> for T
+
+where T: ?【147†Sized】,
+
+【160†Source】【161†§】
+
+#### fn 【162†borrow_mut】(&mut self) -> 【157†&mut T】
+
+Mutably borrows from an owned value. 【162†Read more】
+
+【163†Source】【32†§】
+
+### impl<T> 【164†CloneToUninit】 for T
+
+where T: 【82†Clone】,
+
+【165†Source】【166†§】
+#### unsafe fn 【167†clone_to_uninit】(&self, dest: 【168†*mut】 【169†u8】)
+
+🔬This is a nightly-only experimental API. (`clone_to_uninit` 【170†#126799†github.com】)
+
+Performs copy-assignment from `self` to `dest`. 【167†Read more】
+
+【171†Source】【33†§】
+
+### impl<T> 【172†From】<T> for T
+
+【173†Source】【174†§】
+
+#### fn 【175†from】(t: T) -> T
+
+Returns the argument unchanged.
+
+【176†Source】【34†§】
+
+### impl<T, U> 【177†Into】<U> for T
+
+where U: 【172†From】<T>,
+
+【178†Source】【179†§】
+#### fn 【180†into】(self) -> U
+
+Calls `U::from(self)`.
+
+That is, this conversion is whatever the implementation of `【172†From】<T> for U` chooses to do.
+
+【181†Source】【35†§】
+
+### impl<T> 【182†ToOwned】 for T
+
+where T: 【82†Clone】,
+
+【183†Source】【184†§】
+
+#### type 【185†Owned】 = T
+
+The resulting type after obtaining ownership.
+
+【186†Source】【187†§】
+
+#### fn 【188†to_owned】(&self) -> T
+
+Creates owned data from borrowed data, usually by cloning. 【188†Read more】
+
+【189†Source】【190†§】
+#### fn 【191†clone_into】(&self, target: 【157†&mut T】)
+
+Uses borrowed data to replace owned data, usually by cloning. 【191†Read more】
+
+【192†Source】【36†§】
+
+### impl<T, U> 【193†TryFrom】<U> for T
+
+where U: 【177†Into】<T>,
+
+【194†Source】【195†§】
+
+#### type 【196†Error】 = 【197†Infallible】
+
+The type returned in the event of a conversion error.
+
+【198†Source】【199†§】
+
+#### fn 【200†try_from】(value: U) -> 【201†Result】<T, <T as 【193†TryFrom】<U>>::【196†Error】>
+
+Performs the conversion.
+
+【202†Source】【37†§】
+### impl<T, U> 【203†TryInto】<U> for T
+
+where U: 【193†TryFrom】<T>,
+
+【204†Source】【205†§】
+
+#### type 【206†Error】 = <U as 【193†TryFrom】<T>>::【196†Error】
+
+The type returned in the event of a conversion error.
+
+【207†Source】【208†§】
+
+#### fn 【209†try_into】(self) -> 【201†Result】<U, <U as 【193†TryFrom】<T>>::【196†Error】>
+
+Performs the conversion.

@@ -1,0 +1,26 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+# 【1†Std library types】
+
+The `std` library provides many custom types which expands drastically on the `primitives`. Some of these include:
+
+  * growable `String`s like: `"hello world"`
+  * growable vectors: `[1, 2, 3]`
+  * optional types: `Option<i32>`
+  * error handling types: `Result<i32, i32>`
+  * heap allocated pointers: `Box<i32>`
+
+### 【2†See also:】
+
+【3†primitives】 and 【4†the std library】

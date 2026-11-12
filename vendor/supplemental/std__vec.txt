@@ -1,0 +1,531 @@
+【0†Skip to main content】
+
+## 【1†Vec】
+
+## 【2†std】1.99.1
+
+(58cf8f9c3 2026-10-13)
+
+## 【1†Vec】
+
+### 【1†Sections】
+
+  * 【3†Examples】
+  * 【4†Indexing】
+  * 【5†Slicing】
+  * 【6†Capacity and reallocation】
+  * 【7†Guarantees】
+
+### 【8†Associated Functions】
+
+  * 【9†new】
+  * 【10†with_capacity】
+  * 【11†try_with_capacity】
+  * 【12†from_raw_parts】
+  * 【13†from_parts】
+  * 【14†from_fn】
+  * 【15†with_capacity_in】
+  * 【16†new_in】
+  * 【17†try_with_capacity_in】
+  * 【18†from_raw_parts_in】
+  * 【19†from_parts_in】
+### 【8†Methods】
+  * 【20†allocator】
+  * 【21†append】
+  * 【22†as_mut_ptr】
+  * 【23†as_mut_slice】
+  * 【24†as_non_null】
+  * 【25†as_ptr】
+  * 【26†as_slice】
+  * 【27†capacity】
+  * 【28†clear】
+  * 【29†const_make_global】
+  * 【30†dedup】
+  * 【31†dedup_by】
+  * 【32†dedup_by_key】
+  * 【33†drain】
+  * 【34†extend_from_slice】
+  * 【35†extend_from_within】
+  * 【36†extract_if】
+  * 【37†insert】
+  * 【38†insert_mut】
+  * 【39†into_array】
+  * 【40†into_boxed_slice】
+  * 【41†into_chunks】
+  * 【42†into_flattened】
+  * 【43†into_parts】
+  * 【44†into_parts_with_alloc】
+  * 【45†into_raw_parts】
+  * 【46†into_raw_parts_with_alloc】
+  * 【47†is_empty】
+  * 【48†leak】
+  * 【49†len】
+  * 【50†peek_mut】
+  * 【51†pop】
+  * 【52†pop_if】
+  * 【53†push】
+  * 【54†push_mut】
+  * 【55†push_within_capacity】
+  * 【56†recycle】
+  * 【57†remove】
+  * 【58†reserve】
+  * 【59†reserve_exact】
+  * 【60†resize】
+  * 【61†resize_with】
+  * 【62†retain】
+  * 【63†retain_mut】
+  * 【64†set_len】
+  * 【65†shrink_to】
+  * 【66†shrink_to_fit】
+  * 【67†spare_capacity_mut】
+  * 【68†splice】
+  * 【69†split_at_spare_mut】
+  * 【70†split_off】
+  * 【71†swap_remove】
+  * 【72†truncate】
+  * 【73†try_remove】
+  * 【74†try_reserve】
+  * 【75†try_reserve_exact】
+  * 【76†try_shrink_to】
+  * 【77†try_shrink_to_fit】
+### 【78†Methods from Deref<Target=[T]>】
+  * 【79†align_to】
+  * 【80†align_to_mut】
+  * 【81†array_windows】
+  * 【82†as_array】
+  * 【83†as_chunks】
+  * 【84†as_chunks_mut】
+  * 【85†as_chunks_unchecked】
+  * 【86†as_chunks_unchecked_mut】
+  * 【87†as_mut_array】
+  * 【88†as_mut_ptr】
+  * 【89†as_mut_ptr_range】
+  * 【90†as_mut_slice】
+  * 【91†as_ptr】
+  * 【92†as_ptr_range】
+  * 【93†as_rchunks】
+  * 【94†as_rchunks_mut】
+  * 【95†as_simd】
+  * 【96†as_simd_mut】
+  * 【97†as_slice】
+  * 【98†binary_search】
+  * 【99†binary_search_by】
+  * 【100†binary_search_by_key】
+  * 【101†chunk_by】
+  * 【102†chunk_by_mut】
+  * 【103†chunks】
+  * 【104†chunks_exact】
+  * 【105†chunks_exact_mut】
+  * 【106†chunks_mut】
+  * 【107†clone_from_slice】
+  * 【108†concat】
+  * 【109†connect】
+  * 【110†contains】
+  * 【111†copy_from_slice】
+  * 【112†copy_within】
+  * 【113†element_offset】
+  * 【114†ends_with】
+  * 【115†fill】
+  * 【116†fill_with】
+  * 【117†first】
+  * 【118†first_chunk】
+  * 【119†first_chunk_mut】
+  * 【120†first_mut】
+  * 【121†get】
+  * 【122†get_disjoint_mut】
+  * 【123†get_disjoint_unchecked_mut】
+  * 【124†get_mut】
+  * 【125†get_unchecked】
+  * 【126†get_unchecked_mut】
+  * 【127†is_empty】
+  * 【128†is_sorted】
+  * 【129†is_sorted_by】
+  * 【130†is_sorted_by_key】
+  * 【131†iter】
+  * 【132†iter_mut】
+  * 【133†join】
+  * 【134†last】
+  * 【135†last_chunk】
+  * 【136†last_chunk_mut】
+  * 【137†last_mut】
+  * 【138†len】
+  * 【139†partial_sort_unstable】
+  * 【140†partial_sort_unstable_by】
+  * 【141†partial_sort_unstable_by_key】
+  * 【142†partition_dedup】
+  * 【143†partition_dedup_by】
+  * 【144†partition_dedup_by_key】
+  * 【145†partition_point】
+  * 【146†rchunks】
+  * 【147†rchunks_exact】
+  * 【148†rchunks_exact_mut】
+  * 【149†rchunks_mut】
+  * 【150†repeat】
+  * 【151†reverse】
+  * 【152†rotate_left】
+  * 【153†rotate_right】
+  * 【154†rsplit】
+  * 【155†rsplit_mut】
+  * 【156†rsplit_once】
+  * 【157†rsplitn】
+  * 【158†rsplitn_mut】
+  * 【159†select_nth_unstable】
+  * 【160†select_nth_unstable_by】
+  * 【161†select_nth_unstable_by_key】
+  * 【162†shift_left】
+  * 【163†shift_right】
+  * 【164†sort】
+  * 【165†sort_by】
+  * 【166†sort_by_cached_key】
+  * 【167†sort_by_key】
+  * 【168†sort_unstable】
+  * 【169†sort_unstable_by】
+  * 【170†sort_unstable_by_key】
+  * 【171†split】
+  * 【172†split_at】
+  * 【173†split_at_checked】
+  * 【174†split_at_mut】
+  * 【175†split_at_mut_checked】
+  * 【176†split_at_mut_unchecked】
+  * 【177†split_at_unchecked】
+  * 【178†split_first】
+  * 【179†split_first_chunk】
+  * 【180†split_first_chunk_mut】
+  * 【181†split_first_mut】
+  * 【182†split_inclusive】
+  * 【183†split_inclusive_mut】
+  * 【184†split_last】
+  * 【185†split_last_chunk】
+  * 【186†split_last_chunk_mut】
+  * 【187†split_last_mut】
+  * 【188†split_mut】
+  * 【189†split_off】
+  * 【190†split_off_first】
+  * 【191†split_off_first_mut】
+  * 【192†split_off_last】
+  * 【193†split_off_last_mut】
+  * 【194†split_off_mut】
+  * 【195†split_once】
+  * 【196†splitn】
+  * 【197†splitn_mut】
+  * 【198†starts_with】
+  * 【199†strip_circumfix】
+  * 【200†strip_prefix】
+  * 【201†strip_suffix】
+  * 【202†subslice_range】
+  * 【203†swap】
+  * 【204†swap_unchecked】
+  * 【205†swap_with_slice】
+  * 【206†to_vec】
+  * 【207†to_vec_in】
+  * 【208†trim_prefix】
+  * 【209†trim_suffix】
+  * 【210†windows】
+### 【211†Trait Implementations】
+  * 【212†AsMut<Vec<T, A>>】
+  * 【213†AsMut<[T]>】
+  * 【214†AsRef<Vec<T, A>>】
+  * 【215†AsRef<[T]>】
+  * 【216†Borrow<[T]>】
+  * 【217†BorrowMut<[T]>】
+  * 【218†Clone】
+  * 【219†Debug】
+  * 【220†Default】
+  * 【221†Deref】
+  * 【222†DerefMut】
+  * 【223†DerefPure】
+  * 【224†Drop】
+  * 【225†Eq】
+  * 【226†Extend<&'a T>】
+  * 【227†Extend<T>】
+  * 【228†From<&'a Vec<T>>】
+  * 【229†From<&[T; N]>】
+  * 【230†From<&[T]>】
+  * 【231†From<&mut [T; N]>】
+  * 【232†From<&mut [T]>】
+  * 【233†From<&str>】
+  * 【234†From<BinaryHeap<T, A>>】
+  * 【235†From<Box<[T], A>>】
+  * 【236†From<ByteString>】
+  * 【237†From<CString>】
+  * 【238†From<Cow<'a, [T]>>】
+  * 【239†From<String>】
+  * 【240†From<Vec<NonZero<u8>>>】
+  * 【241†From<Vec<T, A>>】
+  * 【242†From<Vec<T, A>>】
+  * 【243†From<Vec<T, A>>】
+  * 【244†From<Vec<T, A>>】
+  * 【245†From<Vec<T, A>>】
+  * 【246†From<Vec<T>>】
+  * 【247†From<VecDeque<T, A>>】
+  * 【248†From<[T; N]>】
+  * 【249†FromIterator<T>】
+  * 【250†Hash】
+  * 【251†Index<I>】
+  * 【252†IndexMut<I>】
+  * 【253†IntoIterator】
+  * 【254†IntoIterator】
+  * 【255†IntoIterator】
+  * 【256†Ord】
+  * 【257†PartialEq<&[U; N]>】
+  * 【258†PartialEq<&[U]>】
+  * 【259†PartialEq<&mut [U]>】
+  * 【260†PartialEq<ByteStr>】
+  * 【261†PartialEq<ByteString>】
+  * 【262†PartialEq<Vec<U, A2>>】
+  * 【263†PartialEq<Vec<U, A>>】
+  * 【264†PartialEq<Vec<U, A>>】
+  * 【265†PartialEq<Vec<U, A>>】
+  * 【266†PartialEq<Vec<U, A>>】
+  * 【267†PartialEq<Vec<U, A>>】
+  * 【268†PartialEq<Vec<u8>>】
+  * 【269†PartialEq<Vec<u8>>】
+  * 【270†PartialEq<[U; N]>】
+  * 【271†PartialEq<[U]>】
+  * 【272†PartialOrd<Vec<T, A2>>】
+  * 【273†TryFrom<Vec<T, A>>】
+  * 【274†TryFrom<Vec<T>>】
+  * 【275†TryFrom<Vec<u8>>】
+  * 【276†Write】
+### 【277†Auto Trait Implementations】
+
+  * 【278†Freeze】
+  * 【279†RefUnwindSafe】
+  * 【280†Send】
+  * 【281†Sync】
+  * 【282†Unpin】
+  * 【283†UnsafeUnpin】
+  * 【284†UnwindSafe】
+
+### 【285†Blanket Implementations】
+
+  * 【286†Any】
+  * 【287†Borrow<T>】
+  * 【288†BorrowMut<T>】
+  * 【289†CloneToUninit】
+  * 【290†From<T>】
+  * 【291†Into<U>】
+  * 【292†Receiver】
+  * 【293†ToOwned】
+  * 【294†TryFrom<U>】
+  * 【295†TryInto<U>】
+
+## 【296†In std::vec】
+# Struct Vec [Button: Copy item path]
+
+【297†Write】
+
+1.0.0 · 【298†Source】
+
+    `pub struct Vec<T, A = 【299†Global】>
+
+    where
+        A: 【300†Allocator】,
+
+    { /* private fields */ }`
+
+Expand description
+
+A contiguous growable array type, written as `Vec<T>`, short for ‘vector’.
+## 【3†§】Examples
+
+    `let mut vec = Vec::new();
+    vec.push(1);
+    vec.push(2);
+
+    assert_eq!(vec.len(), 2);
+    assert_eq!(vec[0], 1);
+
+    assert_eq!(vec.pop(), Some(2));
+    assert_eq!(vec.len(), 1);
+
+    vec[0] = 7;
+    assert_eq!(vec[0], 7);
+
+    vec.extend([1, 2, 3]);
+
+    for x in &vec {
+        println!("{x}");
+    }
+    assert_eq!(vec, [7, 1, 2, 3]);`
+The 【301†`vec!`】 macro is provided for convenient initialization:
+
+    `let mut vec1 = vec![1, 2, 3];
+    vec1.push(4);
+    let vec2 = Vec::from([1, 2, 3, 4]);
+    assert_eq!(vec1, vec2);`
+It can also initialize each element of a `Vec<T>` with a given value. This may be more efficient than performing allocation and initialization in separate steps, especially when initializing a vector of zeros:
+
+    `let vec = vec![0; 5];
+    assert_eq!(vec, [0, 0, 0, 0, 0]);
+
+    // The following is equivalent, but potentially slower:
+    let mut vec = Vec::with_capacity(5);
+    vec.resize(5, 0);
+    assert_eq!(vec, [0, 0, 0, 0, 0]);`
+
+For more information, see 【6†Capacity and Reallocation】.
+Use a `Vec<T>` as an efficient stack:
+
+    `let mut stack = Vec::new();
+
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+
+    while let Some(top) = stack.pop() {
+        // Prints 3, 2, 1
+        println!("{top}");
+    }`
+## 【4†§】Indexing
+
+The `Vec` type allows access to values by index, because it implements the 【302†`Index`】 trait. An example will be more explicit:
+
+    `let v = vec![0, 2, 4, 6];
+    println!("{}", v[1]); // it will display '2'`
+
+However be careful: if you try to access an index which isn’t in the `Vec`, your software will panic! You cannot do this:
+
+【1†ⓘ】
+
+    `let v = vec![0, 2, 4, 6];
+    println!("{}", v[6]); // it will panic!`
+Use 【303†`get`】 and 【304†`get_mut`】 if you want to check whether the index is in the `Vec`.
+## 【5†§】Slicing
+
+A `Vec` can be mutable. On the other hand, slices are read-only objects. To get a 【305†slice】, use 【306†`&`】. Example:
+
+    `fn read_slice(slice: &[usize]) {
+        // ...
+    }
+
+    let v = vec![0, 1];
+    read_slice(&v);
+
+    // ... and that's all!
+    // you can also do it like this:
+    let u: &[usize] = &v;
+    // or like this:
+    let u: &[_] = &v;`
+In Rust, it’s more common to pass slices as arguments rather than vectors when you just want to provide read access. The same goes for 【307†`String`】 and 【308†`&str`】.
+## 【6†§】Capacity and reallocation
+
+The capacity of a vector is the amount of space allocated for any future elements that will be added onto the vector. This is not to be confused with the length of a vector, which specifies the number of actual elements within the vector. If a vector’s length exceeds its capacity, its capacity will automatically be increased, but its elements will have to be reallocated.
+For example, a vector with capacity 10 and length 0 would be an empty vector with space for 10 more elements. Pushing 10 or fewer elements onto the vector will not change its capacity or cause reallocation to occur. However, if the vector’s length is increased to 11, it will have to reallocate, which can be slow. For this reason, it is recommended to use 【10†`Vec::with_capacity`】 whenever possible to specify how big the vector is expected to get.
+## 【7†§】Guarantees
+
+Due to its incredibly fundamental nature, `Vec` makes a lot of guarantees about its design. This ensures that it’s as low-overhead as possible in the general case, and can be correctly manipulated in primitive ways by unsafe code. Note that these guarantees refer to an unqualified `Vec<T>`. If additional type parameters are added (e.g., to support custom allocators), overriding their defaults may change the behavior.
+Most fundamentally, `Vec` is and always will be a (pointer, capacity, length) triplet. No more, no less. The order of these fields is completely unspecified, and you should use the appropriate methods to modify these. The pointer will never be null, so this type is null-pointer-optimized.
+However, the pointer might not actually point to allocated memory. In particular, if you construct a `Vec` with capacity 0 via 【9†`Vec::new`】, 【301†`vec![]`】, 【10†`Vec::with_capacity(0)`】, or by calling 【66†`shrink_to_fit`】 on an empty Vec, it will not allocate memory. Similarly, if you store zero-sized types inside a `Vec`, it will not allocate space for them. Note that in this case the `Vec` might not report a 【27†`capacity`】 of 0.
+`Vec` will allocate if and only if `【309†size_of::<T>】() * 【27†capacity】() > 0`. In general, `Vec`’s allocation details are very subtle — if you intend to allocate memory using a `Vec` and use it for something else (either to pass to unsafe code, or to build your own memory-backed collection), be sure to deallocate this memory by using `from_raw_parts` to recover the `Vec` and then dropping it.
+If a `Vec` has allocated memory, then the memory it points to is on the heap (as defined by the allocator Rust is configured to use by default), and its pointer points to 【49†`len`】 initialized, contiguous elements in order (what you would see if you coerced it to a slice), followed by `【27†capacity】 - 【49†len】` logically uninitialized, contiguous elements.
+A vector containing the elements `'a'` and `'b'` with capacity 4 can be visualized as below. The top part is the `Vec` struct, it contains a pointer to the head of the allocation in the heap, length and capacity. The bottom part is the allocation on the heap, a contiguous memory block.
+
+    `            ptr      len  capacity
+           +--------+--------+--------+
+           | 0x0123 |      2 |      4 |
+           +--------+--------+--------+
+                |
+                v
+    Heap   +--------+--------+--------+--------+
+           |    'a' |    'b' | uninit | uninit |
+           +--------+--------+--------+--------+`
+  * uninit represents memory that is not initialized, see 【310†`MaybeUninit`】.
+  * Note: the ABI is not stable and `Vec` makes no guarantees about its memory layout (including the order of fields).
+
+`Vec` will never perform a “small optimization” where elements are actually stored on the stack for two reasons:
+  * It would make it more difficult for unsafe code to correctly manipulate a `Vec`. The contents of a `Vec` wouldn’t have a stable address if it were only moved, and it would be more difficult to determine if a `Vec` had actually allocated memory.
+
+  * It would penalize the general case, incurring an additional branch on every access.
+`Vec` will never automatically shrink itself, even if completely empty. This ensures no unnecessary allocations or deallocations occur. Emptying a `Vec` and then filling it back up to the same 【49†`len`】 should incur no calls to the allocator. If you wish to free up unused memory, use 【66†`shrink_to_fit`】 or 【65†`shrink_to`】.
+【53†`push`】 and 【37†`insert`】 will never (re)allocate if the reported capacity is sufficient. 【53†`push`】 and 【37†`insert`】 will (re)allocate if `【49†len】 == 【27†capacity】`. That is, the reported capacity is completely accurate, and can be relied on. It can even be used to manually free the memory allocated by a `Vec` if desired. Bulk insertion methods may reallocate, even when not necessary.
+`Vec` does not guarantee any particular growth strategy when reallocating when full, nor when 【58†`reserve`】 is called. The current strategy is basic and it may prove desirable to use a non-constant growth factor. Whatever strategy is used will of course guarantee O(1) amortized 【53†`push`】.
+It is guaranteed, in order to respect the intentions of the programmer, that all of `vec![e_1, e_2, ..., e_n]`, `vec![x; n]`, and 【10†`Vec::with_capacity(n)`】 produce a `Vec` that requests an allocation of the exact size needed for precisely `n` elements from the allocator, and no other size (such as, for example: a size rounded up to the nearest power of 2). The allocator will return an allocation that is at least as large as requested, but it may be larger.
+It is guaranteed that the 【27†`Vec::capacity`】 method returns a value that is at least the requested capacity and not more than the allocated capacity.
+The method 【66†`Vec::shrink_to_fit`】 will attempt to discard excess capacity an allocator has given to a `Vec`. If `【49†len】 == 【27†capacity】`, then a `Vec<T>` can be converted to and from a 【311†`Box<[T]>`】 without reallocating or moving the elements. `Vec` exploits this fact as much as reasonable when implementing common conversions such as 【40†`into_boxed_slice`】.
+`Vec` will not specifically overwrite any data that is removed from it, but also won’t specifically preserve it. Its uninitialized memory is scratch space that it may use however it wants. It will generally just do whatever is most efficient or otherwise easy to implement. Do not rely on removed data to be erased for security purposes. Even if you drop a `Vec`, its buffer may simply be reused by another allocation.
+Even if you zero a `Vec`’s memory first, that might not actually happen because the optimizer does not consider this a side-effect that must be preserved. There is one case which we will not break, however: using `unsafe` code to write to the excess capacity, and then increasing the length to match, is always valid.
+Currently, `Vec` does not guarantee the order in which elements are dropped. The order has changed in the past and may change again.
+## Implementations【8†§】
+
+【312†Source】【313†§】
+
+### impl<T> 【314†Vec】<T>
+
+1.0.0 (const: 1.39.0) · 【315†Source】
+
+#### pub const fn 【9†new】() -> 【314†Vec】<T>
+
+Constructs a new, empty `Vec<T>`.
+
+The vector will not allocate until elements are pushed onto it.
+
+##### 【316†§】Examples
+
+    `let mut vec: Vec<i32> = Vec::new();`
+
+1.0.0 (const: 【317†unstable†github.com】) · 【318†Source】
+#### pub fn 【10†with_capacity】(capacity: 【319†usize】) -> 【314†Vec】<T>
+
+Constructs a new, empty `Vec<T>` with at least the specified capacity.
+
+The vector will be able to hold at least `capacity` elements without reallocating. This method is allowed to allocate for more elements than `capacity`. If `capacity` is zero, the vector will not allocate.
+It is important to note that although the returned vector has the minimum capacity specified, the vector will have a zero length. For an explanation of the difference between length and capacity, see 【6†Capacity and reallocation】.
+
+If it is important to know the exact allocated capacity of a `Vec`, always use the 【27†`capacity`】 method after construction.
+
+For `Vec<T>` where `T` is a zero-sized type, there will be no allocation and the capacity will always be `usize::MAX`.
+##### 【320†§】Panics
+
+Panics if the new capacity exceeds `isize::MAX` bytes.
+##### 【321†§】Examples
+
+    `let mut vec = Vec::with_capacity(10);
+
+    // The vector contains no items, even though it has capacity for more
+    assert_eq!(vec.len(), 0);
+    assert!(vec.capacity() >= 10);
+
+    // These are all done without reallocating...
+    for i in 0..10 {
+        vec.push(i);
+    }
+    assert_eq!(vec.len(), 10);
+    assert!(vec.capacity() >= 10);
+
+    // ...but this may make the vector reallocate
+    vec.push(11);
+    assert_eq!(vec.len(), 11);
+    assert!(vec.capacity() >= 11);
+
+    // A vector of a zero-sized type will always over-allocate, since no
+    // allocation is necessary
+    let vec_units = Vec::<()>::with_capacity(10);
+    assert_eq!(vec_units.capacity(), usize::MAX);`
+【322†Source】
+#### pub fn 【11†try_with_capacity】(capacity: 【319†usize】) -> 【323†Result】<【314†Vec】<T>, 【324†TryReserveError】>
+
+🔬This is a nightly-only experimental API. (`try_with_capacity` 【325†#91913†github.com】)
+
+Constructs a new, empty `Vec<T>` with at least the specified capacity.
+
+The vector will be able to hold at least `capacity` elements without reallocating. This method is allowed to allocate for more elements than `capacity`. If `capacity` is zero, the vector will not allocate.
+##### 【326†§】Errors
+
+Returns an error if the capacity exceeds `isize::MAX` bytes, or if the allocator reports allocation failure.
+
+1.0.0 (const: 【317†unstable†github.com】) · 【327†Source】
+
+#### pub unsafe fn 【12†from_raw_parts】( ptr: 【328†*mut T】, length: 【319†usize】, capacity: 【319†usize】, ) -> 【314†Vec】<T>
+
+Creates a `Vec<T>` directly from a pointer, a length, and a capacity.
+##### 【329†§】Safety
+
+This is highly unsafe, due to the number of invariants that aren’t checked:
+  * If `T` is not a zero-sized type and the capacity is nonzero, `ptr` must have been allocated using the global allocator, such as via the 【330†`alloc::alloc`】 function. If `T` is a zero-sized type or the capacity is zero, `ptr` need only be non-null and aligned.
+  * `T` needs to have the same alignment as what `ptr` was allocated with, if the pointer is required to be allocated. (`T` having a less strict alignment is not sufficient, the alignment really needs to be equal to satisfy the 【331†`dealloc`】 requirement that memory must be allocated and deallocated with the same layout.)
+  * The size of `T` times the `capacity` (i.e. the allocated size in bytes), if nonzero, needs to be the same size as the pointer was allocated with. (Because similar to alignment, 【331†`dealloc`】 must be called with the same layout `size`.)
+  * `length` needs to be less than or equal to `capacity`.
+  * The first `length` values must be properly initialized values of type `T`.
+  * `capacity` needs to be the capacity that the pointer was allocated with, if the pointer is required to be allocated.
+  * The allocated size in bytes must be no larger than `isize::MAX`. See the safety documentation of 【332†`pointer::offset`】.

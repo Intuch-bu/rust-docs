@@ -1,0 +1,37 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+# 【1†while】
+
+The `while` keyword can be used to run a loop while a condition is true.
+Let’s write the infamous 【2†FizzBuzz†en.wikipedia.org】 using a `while` loop.
+
+    `fn main() {
+        // A counter variable
+        let mut n = 1;
+
+        // Loop while `n` is less than 101
+        while n < 101 {
+            if n % 15 == 0 {
+                println!("fizzbuzz");
+            } else if n % 3 == 0 {
+                println!("fizz");
+            } else if n % 5 == 0 {
+                println!("buzz");
+            } else {
+                println!("{}", n);
+            }
+            // Increment counter
+            n += 1;
+        }
+    }`

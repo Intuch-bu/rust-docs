@@ -1,0 +1,22 @@
+## Keyboard shortcuts
+
+Press `←` or `→` to navigate between chapters
+
+Press `S` or `/` to search in the book
+
+Press `?` to show this help
+
+Press `Esc` to hide this help
+
+【0†iframe】
+
+# Rust By Example
+# 【1†Associated items】
+
+“Associated Items” refers to a set of rules pertaining to 【2†`item`】s of various types. It is an extension to `trait` generics, and allows `trait`s to internally define new items.
+
+One such item is called an associated type, providing simpler usage patterns when the `trait` is generic over its container type.
+
+### 【3†See also:】
+
+【4†RFC†github.com】

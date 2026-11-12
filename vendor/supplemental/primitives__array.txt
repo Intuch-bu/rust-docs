@@ -1,0 +1,612 @@
+【0†Skip to main content】
+
+## 【1†slice】
+
+## 【2†std】1.99.1
+
+(58cf8f9c3 2026-10-13)
+
+## 【1†slice】
+
+### 【1†Sections】
+
+  * 【3†Trait Implementations】
+  * 【4†Iteration】
+
+### 【5†Associated Functions】
+
+  * 【6†new_uninit_slice】
+  * 【7†new_zeroed_slice】
+  * 【8†try_new_uninit_slice】
+  * 【9†try_new_zeroed_slice】
+  * 【10†new_uninit_slice_in】
+  * 【11†new_zeroed_slice_in】
+  * 【12†try_new_uninit_slice_in】
+  * 【13†try_new_zeroed_slice_in】
+### 【5†Methods】
+  * 【14†align_to】
+  * 【15†align_to_mut】
+  * 【16†align_to_uninit_mut】
+  * 【17†array_windows】
+  * 【18†as_array】
+  * 【19†as_ascii】
+  * 【20†as_ascii_unchecked】
+  * 【21†as_bytes】
+  * 【22†as_bytes】
+  * 【23†as_bytes_mut】
+  * 【24†as_chunks】
+  * 【25†as_chunks_mut】
+  * 【26†as_chunks_unchecked】
+  * 【27†as_chunks_unchecked_mut】
+  * 【28†as_flattened】
+  * 【29†as_flattened_mut】
+  * 【30†as_mut_array】
+  * 【31†as_mut_ptr】
+  * 【32†as_mut_ptr_range】
+  * 【33†as_mut_slice】
+  * 【34†as_ptr】
+  * 【35†as_ptr_range】
+  * 【36†as_rchunks】
+  * 【37†as_rchunks_mut】
+  * 【38†as_simd】
+  * 【39†as_simd_mut】
+  * 【40†as_slice】
+  * 【41†as_str】
+  * 【42†assume_init】
+  * 【43†assume_init_drop】
+  * 【44†assume_init_mut】
+  * 【45†assume_init_ref】
+  * 【46†binary_search】
+  * 【47†binary_search_by】
+  * 【48†binary_search_by_key】
+  * 【49†chunk_by】
+  * 【50†chunk_by_mut】
+  * 【51†chunks】
+  * 【52†chunks_exact】
+  * 【53†chunks_exact_mut】
+  * 【54†chunks_mut】
+  * 【55†clone_from_slice】
+  * 【56†concat】
+  * 【57†connect】
+  * 【58†contains】
+  * 【59†copy_from_slice】
+  * 【60†copy_within】
+  * 【61†element_offset】
+  * 【62†ends_with】
+  * 【63†eq_ignore_ascii_case】
+  * 【64†escape_ascii】
+  * 【65†fill】
+  * 【66†fill_with】
+  * 【67†first】
+  * 【68†first_chunk】
+  * 【69†first_chunk_mut】
+  * 【70†first_mut】
+  * 【71†get】
+  * 【72†get_disjoint_mut】
+  * 【73†get_disjoint_unchecked_mut】
+  * 【74†get_mut】
+  * 【75†get_unchecked】
+  * 【76†get_unchecked_mut】
+  * 【77†into_array】
+  * 【78†into_vec】
+  * 【79†is_ascii】
+  * 【80†is_empty】
+  * 【81†is_sorted】
+  * 【82†is_sorted_by】
+  * 【83†is_sorted_by_key】
+  * 【84†iter】
+  * 【85†iter_mut】
+  * 【86†join】
+  * 【87†last】
+  * 【88†last_chunk】
+  * 【89†last_chunk_mut】
+  * 【90†last_mut】
+  * 【91†len】
+  * 【92†make_ascii_lowercase】
+  * 【93†make_ascii_uppercase】
+  * 【94†partial_sort_unstable】
+  * 【95†partial_sort_unstable_by】
+  * 【96†partial_sort_unstable_by_key】
+  * 【97†partition_dedup】
+  * 【98†partition_dedup_by】
+  * 【99†partition_dedup_by_key】
+  * 【100†partition_point】
+  * 【101†rchunks】
+  * 【102†rchunks_exact】
+  * 【103†rchunks_exact_mut】
+  * 【104†rchunks_mut】
+  * 【105†repeat】
+  * 【106†reverse】
+  * 【107†rotate_left】
+  * 【108†rotate_right】
+  * 【109†rsplit】
+  * 【110†rsplit_mut】
+  * 【111†rsplit_once】
+  * 【112†rsplitn】
+  * 【113†rsplitn_mut】
+  * 【114†select_nth_unstable】
+  * 【115†select_nth_unstable_by】
+  * 【116†select_nth_unstable_by_key】
+  * 【117†shift_left】
+  * 【118†shift_right】
+  * 【119†sort】
+  * 【120†sort_by】
+  * 【121†sort_by_cached_key】
+  * 【122†sort_by_key】
+  * 【123†sort_floats】
+  * 【124†sort_floats】
+  * 【125†sort_unstable】
+  * 【126†sort_unstable_by】
+  * 【127†sort_unstable_by_key】
+  * 【128†split】
+  * 【129†split_at】
+  * 【130†split_at_checked】
+  * 【131†split_at_mut】
+  * 【132†split_at_mut_checked】
+  * 【133†split_at_mut_unchecked】
+  * 【134†split_at_unchecked】
+  * 【135†split_first】
+  * 【136†split_first_chunk】
+  * 【137†split_first_chunk_mut】
+  * 【138†split_first_mut】
+  * 【139†split_inclusive】
+  * 【140†split_inclusive_mut】
+  * 【141†split_last】
+  * 【142†split_last_chunk】
+  * 【143†split_last_chunk_mut】
+  * 【144†split_last_mut】
+  * 【145†split_mut】
+  * 【146†split_off】
+  * 【147†split_off_first】
+  * 【148†split_off_first_mut】
+  * 【149†split_off_last】
+  * 【150†split_off_last_mut】
+  * 【151†split_off_mut】
+  * 【152†split_once】
+  * 【153†splitn】
+  * 【154†splitn_mut】
+  * 【155†starts_with】
+  * 【156†strip_circumfix】
+  * 【157†strip_prefix】
+  * 【158†strip_suffix】
+  * 【159†subslice_range】
+  * 【160†swap】
+  * 【161†swap_unchecked】
+  * 【162†swap_with_slice】
+  * 【163†to_ascii_lowercase】
+  * 【164†to_ascii_uppercase】
+  * 【165†to_vec】
+  * 【166†to_vec_in】
+  * 【167†trim_ascii】
+  * 【168†trim_ascii_end】
+  * 【169†trim_ascii_start】
+  * 【170†trim_prefix】
+  * 【171†trim_suffix】
+  * 【172†utf8_chunks】
+  * 【173†windows】
+  * 【174†write_clone_of_slice】
+  * 【175†write_copy_of_slice】
+  * 【176†write_default】
+  * 【177†write_filled】
+  * 【178†write_iter】
+  * 【179†write_with】
+### 【180†Trait Implementations】
+  * 【181†!Iterator】
+  * 【182†!Iterator】
+  * 【183†!Iterator】
+  * 【184†!Iterator】
+  * 【185†AsMut<[MaybeUninit<T>]>】
+  * 【186†AsMut<[T]>】
+  * 【187†AsMut<[T]>】
+  * 【188†AsMut<[T]>】
+  * 【189†AsMut<[T]>】
+  * 【190†AsMut<[u8]>】
+  * 【191†AsMut<[u8]>】
+  * 【192†AsRef<[Cell<T>]>】
+  * 【193†AsRef<[Cell<T>]>】
+  * 【194†AsRef<[MaybeUninit<T>]>】
+  * 【195†AsRef<[T]>】
+  * 【196†AsRef<[T]>】
+  * 【197†AsRef<[T]>】
+  * 【198†AsRef<[T]>】
+  * 【199†AsRef<[T]>】
+  * 【200†AsRef<[T]>】
+  * 【201†AsRef<[T]>】
+  * 【202†AsRef<[T]>】
+  * 【203†AsRef<[u8]>】
+  * 【204†AsRef<[u8]>】
+  * 【205†AsRef<[u8]>】
+  * 【206†AsRef<[u8]>】
+  * 【207†AsRef<[u8]>】
+  * 【208†AsciiExt】
+  * 【209†Borrow<[T]>】
+  * 【210†Borrow<[T]>】
+  * 【211†Borrow<[u8]>】
+  * 【212†Borrow<[u8]>】
+  * 【213†BorrowMut<[T]>】
+  * 【214†BorrowMut<[T]>】
+  * 【215†BorrowMut<[u8]>】
+  * 【216†BorrowMut<[u8]>】
+  * 【217†BufRead】
+  * 【218†Clone】
+  * 【219†CloneToUninit】
+  * 【220†Concat<T>】
+  * 【221†Concat<str>】
+  * 【222†ConstParamTy_】
+  * 【223†Debug】
+  * 【224†Default】
+  * 【225†Default】
+  * 【226†Default】
+  * 【227†Eq】
+  * 【228†From<&'a [T]>】
+  * 【229†From<&'data mut [MaybeUninit<T>]>】
+  * 【230†From<&'data mut [T]>】
+  * 【231†From<&[T]>】
+  * 【232†From<&[T]>】
+  * 【233†From<&[T]>】
+  * 【234†From<&[T]>】
+  * 【235†From<&mut [T]>】
+  * 【236†From<&mut [T]>】
+  * 【237†From<&mut [T]>】
+  * 【238†From<&mut [T]>】
+  * 【239†From<Box<ByteStr>>】
+  * 【240†From<Box<[T], A>>】
+  * 【241†From<Box<[u8]>>】
+  * 【242†From<Box<str, A>>】
+  * 【243†From<Cow<'_, [T]>>】
+  * 【244†From<Vec<T, A>>】
+  * 【245†From<[T; N]>】
+  * 【246†FromIterator<&'a [u8]>】
+  * 【247†FromIterator<I>】
+  * 【248†Hash】
+  * 【249†Index<I>】
+  * 【250†IndexMut<I>】
+  * 【251†IntoIterator】
+  * 【252†IntoIterator】
+  * 【253†IntoIterator】
+  * 【254†IntoIterator】
+  * 【255†IntoIterator】
+  * 【256†Join<&OsStr>】
+  * 【257†Join<&T>】
+  * 【258†Join<&[T]>】
+  * 【259†Join<&str>】
+  * 【260†Ord】
+  * 【261†PartialEq<&[U]>】
+  * 【262†PartialEq<&[U]>】
+  * 【263†PartialEq<&[U]>】
+  * 【264†PartialEq<&[U]>】
+  * 【265†PartialEq<&[u8]>】
+  * 【266†PartialEq<&[u8]>】
+  * 【267†PartialEq<&mut [U]>】
+  * 【268†PartialEq<&mut [U]>】
+  * 【269†PartialEq<&mut [U]>】
+  * 【270†PartialEq<&mut [U]>】
+  * 【271†PartialEq<ByteStr>】
+  * 【272†PartialEq<ByteStr>】
+  * 【273†PartialEq<ByteString>】
+  * 【274†PartialEq<ByteString>】
+  * 【275†PartialEq<Vec<U, A>>】
+  * 【276†PartialEq<Vec<U, A>>】
+  * 【277†PartialEq<Vec<U, A>>】
+  * 【278†PartialEq<[U; N]>】
+  * 【279†PartialEq<[U; N]>】
+  * 【280†PartialEq<[U; N]>】
+  * 【281†PartialEq<[U]>】
+  * 【282†PartialEq<[U]>】
+  * 【283†PartialEq<[U]>】
+  * 【284†PartialEq<[u8]>】
+  * 【285†PartialEq<[u8]>】
+  * 【286†PartialOrd】
+  * 【287†Pattern】
+  * 【288†Read】
+  * 【289†SliceIndex<[T]>】
+  * 【290†SliceIndex<[T]>】
+  * 【291†SliceIndex<[T]>】
+  * 【292†SliceIndex<[T]>】
+  * 【293†SliceIndex<[T]>】
+  * 【294†SliceIndex<[T]>】
+  * 【295†SliceIndex<[T]>】
+  * 【296†SliceIndex<[T]>】
+  * 【297†SliceIndex<[T]>】
+  * 【298†SliceIndex<[T]>】
+  * 【299†SliceIndex<[T]>】
+  * 【300†SliceIndex<[T]>】
+  * 【301†SliceIndex<[T]>】
+  * 【302†SliceIndex<[T]>】
+  * 【303†SliceIndex<[T]>】
+  * 【304†SliceIndex<[T]>】
+  * 【305†SliceIndex<[T]>】
+  * 【306†SliceIndex<[T]>】
+  * 【307†SliceIndex<[T]>】
+  * 【308†SliceIndex<[T]>】
+  * 【309†SliceIndex<[T]>】
+  * 【310†SliceIndex<[T]>】
+  * 【311†SliceIndex<[T]>】
+  * 【312†SliceIndex<[T]>】
+  * 【313†StructuralPartialEq】
+  * 【314†ToOwned】
+  * 【315†ToSocketAddrs】
+  * 【316†TryFrom<&'a [T]>】
+  * 【317†TryFrom<&'a mut [T]>】
+  * 【318†TryFrom<&[T]>】
+  * 【319†TryFrom<&[T]>】
+  * 【320†TryFrom<&mut [T]>】
+  * 【321†TryFrom<&mut [T]>】
+  * 【322†TryFrom<Box<[T]>>】
+  * 【323†Write】
+### 【324†Auto Trait Implementations】
+
+  * 【325†!Sized】
+  * 【326†Freeze】
+  * 【327†RefUnwindSafe】
+  * 【328†Send】
+  * 【329†Sync】
+  * 【330†Unpin】
+  * 【331†UnsafeUnpin】
+  * 【332†UnwindSafe】
+
+### 【333†Blanket Implementations】
+
+  * 【334†Any】
+  * 【335†Borrow<T>】
+  * 【336†BorrowMut<T>】
+
+## 【2†In crate std】
+# Primitive Type slice [Button: Copy item path]
+
+【337†Read】【338†Write】
+
+1.0.0
+
+Expand description
+
+A dynamically-sized view into a contiguous sequence, `[T]`.
+
+Contiguous here means that elements are laid out so that every element is the same distance from its neighbors.
+
+【339†See also the `std::slice` module】.
+Slices are a view into a block of memory represented as a pointer and a length.
+
+    `// slicing a Vec
+    let vec = vec![1, 2, 3];
+    let int_slice = &vec[..];
+    // coercing an array to a slice
+    let str_slice: &[&str] = &["one", "two", "three"];`
+Slices are either mutable or shared. The shared slice type is `&[T]`, while the mutable slice type is `&mut [T]`, where `T` represents the element type. For example, you can mutate the block of memory that a mutable slice points to:
+
+    `let mut x = [1, 2, 3];
+    let x = &mut x[..]; // Take a full slice of `x`.
+    x[1] = 7;
+    assert_eq!(x, &[1, 7, 3]);`
+It is possible to slice empty subranges of slices by using empty ranges (including `slice.len()..slice.len()`):
+
+    `let x = [1, 2, 3];
+    let empty = &x[0..0];   // subslice before the first element
+    assert_eq!(empty, &[]);
+    let empty = &x[..0];    // same as &x[0..0]
+    assert_eq!(empty, &[]);
+    let empty = &x[1..1];   // empty subslice in the middle
+    assert_eq!(empty, &[]);
+    let empty = &x[3..3];   // subslice after the last element
+    assert_eq!(empty, &[]);
+    let empty = &x[3..];    // same as &x[3..3]
+    assert_eq!(empty, &[]);`
+It is not allowed to use subranges that start with lower bound bigger than `slice.len()`:
+
+【1†ⓘ】
+
+    `let x = vec![1, 2, 3];
+    let _ = &x[4..4];`
+As slices store the length of the sequence they refer to, they have twice the size of pointers to 【340†`Sized`】 types. Also see the reference on 【341†dynamically sized types】.
+
+    `let pointer_size = size_of::<&u8>();
+    assert_eq!(2 * pointer_size, size_of::<&[u8]>());
+    assert_eq!(2 * pointer_size, size_of::<*const [u8]>());
+    assert_eq!(2 * pointer_size, size_of::<Box<[u8]>>());
+    assert_eq!(2 * pointer_size, size_of::<Rc<[u8]>>());`
+### 【3†§】Trait Implementations
+
+Some traits are implemented for slices if the element type implements that trait. This includes 【342†`Eq`】, 【343†`Hash`】 and 【344†`Ord`】.
+### 【4†§】Iteration
+
+The slices implement `IntoIterator`. The iterator yields references to the slice elements.
+
+    `let numbers: &[i32] = &[0, 1, 2];
+    for n in numbers {
+        println!("{n} is a number!");
+    }`
+
+The mutable slice yields mutable references to the elements:
+
+    `let mut scores: &mut [i32] = &mut [7, 8, 9];
+    for score in scores {
+        *score += 1;
+    }`
+This iterator yields mutable references to the slice’s elements, so while the element type of the slice is `i32`, the element type of the iterator is `&mut i32`.
+
+  * 【84†`.iter`】 and 【85†`.iter_mut`】 are the explicit methods to return the default iterators.
+  * Further methods that return iterators are 【128†`.split`】, 【153†`.splitn`】, 【51†`.chunks`】, 【173†`.windows`】 and more.
+## Implementations【5†§】
+
+【345†Source】【346†§】
+
+### impl<T> 【347†Box】<【348†[T]】>
+
+1.82.0 · 【349†Source】
+
+#### pub fn 【6†new_uninit_slice】(len: 【350†usize】) -> 【347†Box】<[【351†MaybeUninit】<T>]>
+
+Constructs a new boxed slice with uninitialized contents.
+##### 【352†§】Examples
+
+    `let mut values = Box::<[u32]>::new_uninit_slice(3);
+    // Deferred initialization:
+    values[0].write(1);
+    values[1].write(2);
+    values[2].write(3);
+    let values = unsafe { values.assume_init() };
+
+    assert_eq!(*values, [1, 2, 3])`
+
+1.92.0 · 【353†Source】
+#### pub fn 【7†new_zeroed_slice】(len: 【350†usize】) -> 【347†Box】<[【351†MaybeUninit】<T>]>
+
+Constructs a new boxed slice with uninitialized contents, with the memory being filled with `0` bytes.
+
+See 【354†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+
+##### 【355†§】Examples
+
+    `let values = Box::<[u32]>::new_zeroed_slice(3);
+    let values = unsafe { values.assume_init() };
+
+    assert_eq!(*values, [0, 0, 0])`
+
+【356†Source】
+#### pub fn 【8†try_new_uninit_slice】( len: 【350†usize】, ) -> 【357†Result】<【347†Box】<[【351†MaybeUninit】<T>]>, 【358†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【359†#32838†github.com】)
+
+Constructs a new boxed slice with uninitialized contents. Returns an error if the allocation fails.
+##### 【360†§】Examples
+
+    `#![feature(allocator_api)]
+
+    let mut values = Box::<[u32]>::try_new_uninit_slice(3)?;
+    // Deferred initialization:
+    values[0].write(1);
+    values[1].write(2);
+    values[2].write(3);
+    let values = unsafe { values.assume_init() };
+
+    assert_eq!(*values, [1, 2, 3]);`
+
+【361†Source】
+#### pub fn 【9†try_new_zeroed_slice】( len: 【350†usize】, ) -> 【357†Result】<【347†Box】<[【351†MaybeUninit】<T>]>, 【358†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【359†#32838†github.com】)
+
+Constructs a new boxed slice with uninitialized contents, with the memory being filled with `0` bytes. Returns an error if the allocation fails.
+
+See 【354†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+##### 【362†§】Examples
+
+    `#![feature(allocator_api)]
+
+    let values = Box::<[u32]>::try_new_zeroed_slice(3)?;
+    let values = unsafe { values.assume_init() };
+
+    assert_eq!(*values, [0, 0, 0]);`
+
+【363†Source】【364†§】
+
+### impl<T, A> 【347†Box】<【348†[T]】, A>
+
+where A: 【365†Allocator】,
+
+【366†Source】
+#### pub fn 【10†new_uninit_slice_in】(len: 【350†usize】, alloc: A) -> 【347†Box】<[【351†MaybeUninit】<T>], A>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【359†#32838†github.com】)
+
+Constructs a new boxed slice with uninitialized contents in the provided allocator.
+##### 【367†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::alloc::System;
+
+    let mut values = Box::<[u32], _>::new_uninit_slice_in(3, System);
+    // Deferred initialization:
+    values[0].write(1);
+    values[1].write(2);
+    values[2].write(3);
+    let values = unsafe { values.assume_init() };
+
+    assert_eq!(*values, [1, 2, 3])`
+
+【368†Source】
+#### pub fn 【11†new_zeroed_slice_in】(len: 【350†usize】, alloc: A) -> 【347†Box】<[【351†MaybeUninit】<T>], A>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【359†#32838†github.com】)
+
+Constructs a new boxed slice with uninitialized contents in the provided allocator, with the memory being filled with `0` bytes.
+
+See 【354†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+##### 【369†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::alloc::System;
+
+    let values = Box::<[u32], _>::new_zeroed_slice_in(3, System);
+    let values = unsafe { values.assume_init() };
+
+    assert_eq!(*values, [0, 0, 0])`
+
+【370†Source】
+#### pub fn 【12†try_new_uninit_slice_in】( len: 【350†usize】, alloc: A, ) -> 【357†Result】<【347†Box】<[【351†MaybeUninit】<T>], A>, 【358†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【359†#32838†github.com】)
+
+Constructs a new boxed slice with uninitialized contents in the provided allocator. Returns an error if the allocation fails.
+##### 【371†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::alloc::System;
+
+    let mut values = Box::<[u32], _>::try_new_uninit_slice_in(3, System)?;
+    // Deferred initialization:
+    values[0].write(1);
+    values[1].write(2);
+    values[2].write(3);
+    let values = unsafe { values.assume_init() };
+
+    assert_eq!(*values, [1, 2, 3]);`
+
+【372†Source】
+#### pub fn 【13†try_new_zeroed_slice_in】( len: 【350†usize】, alloc: A, ) -> 【357†Result】<【347†Box】<[【351†MaybeUninit】<T>], A>, 【358†AllocError】>
+
+🔬This is a nightly-only experimental API. (`allocator_api` 【359†#32838†github.com】)
+
+Constructs a new boxed slice with uninitialized contents in the provided allocator, with the memory being filled with `0` bytes. Returns an error if the allocation fails.
+
+See 【354†`MaybeUninit::zeroed`】 for examples of correct and incorrect usage of this method.
+##### 【373†§】Examples
+
+    `#![feature(allocator_api)]
+
+    use std::alloc::System;
+
+    let values = Box::<[u32], _>::try_new_zeroed_slice_in(3, System)?;
+    let values = unsafe { values.assume_init() };
+
+    assert_eq!(*values, [0, 0, 0]);`
+
+【374†Source】
+#### pub fn 【77†into_array】<const N: 【350†usize】>(self) -> 【357†Result】<【347†Box】<【375†[T; N]】, A>, 【347†Box】<【348†[T]】, A>>
+
+🔬This is a nightly-only experimental API. (`alloc_slice_into_array` 【376†#148082†github.com】)
+
+Converts the boxed slice into a boxed array.
+
+This operation does not reallocate; the underlying array of the slice is simply reinterpreted as an array type.
+
+##### 【377†§】Errors
+
+Returns the original `Box<[T]>` in the `Err` variant if `self.len()` does not equal `N`.
+##### 【378†§】Examples
+
+    `#![feature(alloc_slice_into_array)]
+    let box_slice: Box<[i32]> = Box::new([1, 2, 3]);
+
+    let box_array: Box<[i32; 3]> = box_slice.into_array().unwrap();`
+
+【379†Source】【380†§】
+
+### impl<T, A> 【347†Box】<[【351†MaybeUninit】<T>], A>
+
+where A: 【365†Allocator】,
+
+1.82.0 · 【381†Source】
